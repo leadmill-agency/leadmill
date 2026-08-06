@@ -136,17 +136,12 @@ export function ApplyForm() {
     track("form_submit", { score: result.score, route: result.route, closing_preference: data.closingPreference });
     if (result.route === "qualified") track("qualified_application", { score: result.score });
 
-    const webhook = process.env.NEXT_PUBLIC_FORM_WEBHOOK;
     try {
-      if (webhook) {
-        await fetch(webhook, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-        });
-      } else {
-        console.warn("NEXT_PUBLIC_FORM_WEBHOOK is not set. Application payload:", payload);
-      }
+      await fetch("/api/apply", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
     } catch {
       // Don't strand the applicant on a network hiccup — routing still proceeds.
     }

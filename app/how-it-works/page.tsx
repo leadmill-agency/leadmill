@@ -45,9 +45,8 @@ export default function HowItWorksPage() {
     <>
       <section className="border-b border-line">
         <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-          <p className="eyebrow">The process</p>
-          <h1 className="display mt-2 max-w-3xl text-5xl sm:text-6xl">
-            From Meta Ad to Installed Sign
+          <h1 className="display max-w-3xl text-5xl sm:text-6xl">
+            From Meta ad to installed sign.
           </h1>
           <p className="mt-5 max-w-2xl text-muted">
             No black box. Here is exactly what happens from the day you apply to the day your
@@ -60,7 +59,7 @@ export default function HowItWorksPage() {
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
         <ol className="space-y-6">
           {steps.map((s) => (
-            <li key={s.n} className="flex gap-6 border border-line bg-panel p-6 sm:p-8">
+            <li key={s.n} className="flex gap-6 rounded-2xl border border-line bg-panel p-6 sm:p-8">
               <span className="display shrink-0 text-4xl text-accent sm:text-5xl">{s.n}</span>
               <div>
                 <h2 className="display text-2xl sm:text-3xl">{s.t}</h2>
@@ -69,7 +68,7 @@ export default function HowItWorksPage() {
             </li>
           ))}
         </ol>
-        <div className="mt-10 border border-line bg-panel-2 p-6 text-sm text-muted">
+        <div className="mt-10 rounded-2xl bg-panel p-6 text-sm text-muted">
           <p className="font-semibold text-foreground">The commitment, plainly:</p>
           <p className="mt-2">
             $2,000/month management fee. You fund ad spend separately ($1,500–$3,000/month
@@ -84,7 +83,7 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <CtaSection headline="Ready to See Your Market?" sub="Apply for a Market Review. If your market is open and the fit is right, we'll show you exactly what the program would look like for your shop." />
+      <CtaSection headline="Ready to see your market?" sub="Apply for a Market Review. If your market is open and the fit is right, we'll show you exactly what the program would look like for your shop." />
     </>
   );
 }

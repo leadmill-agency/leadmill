@@ -30,9 +30,8 @@ export default function WhoItsForPage() {
     <>
       <section className="border-b border-line">
         <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-          <p className="eyebrow">Fit check</p>
-          <h1 className="display mt-2 max-w-3xl text-5xl sm:text-6xl">
-            We Reject More Shops Than We Take
+          <h1 className="display max-w-3xl text-5xl sm:text-6xl">
+            We reject more shops than we take.
           </h1>
           <p className="mt-5 max-w-2xl text-muted">
             One shop per market during the pilot. That only works if every shop we take can answer
@@ -45,10 +44,10 @@ export default function WhoItsForPage() {
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
-            <h2 className="display text-3xl text-accent">Strong Fit</h2>
+            <h2 className="text-2xl font-semibold text-accent">Strong fit</h2>
             <div className="mt-6 space-y-4">
               {goodFit.map(([t, d]) => (
-                <div key={t} className="border border-line bg-panel p-5">
+                <div key={t} className="rounded-xl border border-line bg-panel p-5">
                   <h3 className="flex items-center gap-2 font-semibold">
                     <span className="text-accent">✓</span> {t}
                   </h3>
@@ -58,10 +57,10 @@ export default function WhoItsForPage() {
             </div>
           </div>
           <div>
-            <h2 className="display text-3xl text-muted">Poor Fit</h2>
+            <h2 className="text-2xl font-semibold text-muted">Poor fit</h2>
             <div className="mt-6 space-y-4">
               {poorFit.map(([t, d]) => (
-                <div key={t} className="border border-line bg-panel p-5">
+                <div key={t} className="rounded-xl border border-line bg-panel p-5">
                   <h3 className="flex items-center gap-2 font-semibold">
                     <span className="text-danger">✕</span> {t}
                   </h3>
@@ -73,7 +72,7 @@ export default function WhoItsForPage() {
         </div>
       </section>
 
-      <CtaSection headline="Think You're a Fit?" sub="The application takes about 3 minutes and tells us most of what we need. If it looks right, we'll book your Market Review." />
+      <CtaSection headline="Think you're a fit?" sub="The application takes about 3 minutes and tells us most of what we need. If it looks right, we'll book your Market Review." />
     </>
   );
 }

@@ -1,16 +1,16 @@
 import Link from "next/link";
 
 const nav = [
-  { href: "/how-it-works", label: "How It Works" },
+  { href: "/how-it-works", label: "How it works" },
   { href: "/fulfillment", label: "Fulfillment" },
-  { href: "/who-its-for", label: "Who It's For" },
+  { href: "/who-its-for", label: "Who it's for" },
 ];
 
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-background/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link href="/" className="display text-2xl tracking-wide">
+        <Link href="/" className="text-xl font-semibold tracking-tight">
           Lead<span className="text-accent">Mill</span>
         </Link>
         <nav className="hidden items-center gap-8 text-sm text-muted md:flex">
@@ -22,9 +22,9 @@ export function SiteHeader() {
         </nav>
         <Link
           href="/apply"
-          className="display bg-accent px-4 py-2 text-sm text-accent-ink transition hover:brightness-110"
+          className="rounded-[10px] bg-ink px-4 py-2 text-sm font-medium text-white transition hover:opacity-90"
         >
-          Apply for a Market Review
+          Apply now
         </Link>
       </div>
     </header>

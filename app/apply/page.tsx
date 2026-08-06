@@ -10,8 +10,7 @@ export const metadata: Metadata = {
 export default function ApplyPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
-      <p className="eyebrow">Application</p>
-      <h1 className="display mt-2 text-4xl sm:text-5xl">Apply for a Market Review</h1>
+      <h1 className="display text-4xl sm:text-5xl">Apply for a Market Review</h1>
       <p className="mt-4 max-w-xl text-muted">
         Takes about 3 minutes. We review every application by hand and only take one shop per
         market during the pilot. Honest answers get you a faster decision.

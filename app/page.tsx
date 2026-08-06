@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Faq } from "@/components/faq";
 import { CtaSection } from "@/components/cta-section";
@@ -49,22 +50,43 @@ const faqItems = [
   },
 ];
 
-const growth = [
-  "Meta Ads management",
-  "AI-assisted creative",
-  "Lead forms",
-  "Lead routing",
-  "CRM pipeline",
-  "Performance reporting",
+const usedToTake = [
+  "A fabrication shop with channel-letter benders and LED inventory",
+  "Someone who knows permits, engineering stamps, and landlord criteria",
+  "An install crew with a bucket truck and liability coverage",
+  "A steady source of commercial buyers — not walk-ins and yard signs",
+  "A salesperson free to chase every quote for weeks",
 ];
 
-const fulfillment = [
-  "Production quoting",
-  "Freight coordination",
-  "Permit coordination",
-  "Engineering coordination",
-  "Installer sourcing",
-  "Installation coordination",
+const withLeadmill = [
+  "Qualified commercial-sign leads arriving from your local Meta campaign",
+  "You quote and close under your own brand, at your own price",
+  "Wholesale production quoted per job through the fulfillment network",
+  "Permit, engineering, and installer coordination where coverage exists",
+  "A Closing Desk option if nobody on your team can work the leads",
+];
+
+const timeline = [
+  {
+    k: "Week 1",
+    t: "Your campaign goes live",
+    d: "We review your market together, build sign-specific creative, and launch your local Meta campaign. Lead routing lands every inquiry on your phone and inbox within seconds.",
+  },
+  {
+    k: "Weeks 2–4",
+    t: "Leads start arriving",
+    d: "Each lead comes with project basics: sign type, timeline, budget signal, contact details. You call fast, survey, and quote. We track every outcome in the CRM so nothing slips.",
+  },
+  {
+    k: "Days 30–60",
+    t: "Your pipeline takes shape",
+    d: "Quotes go out, jobs close, and fulfillment quotes production for anything your shop can't build in-house. Weekly reporting shows spend, leads, quotes, and closed revenue — not vanity metrics.",
+  },
+  {
+    k: "Day 90",
+    t: "You decide on the numbers",
+    d: "The 90-day commitment ends with a simple review: leads, quotes, closed jobs, and revenue against what you spent. If the math works, we scale. If it doesn't, we part as friends.",
+  },
 ];
 
 const vslUrl = process.env.NEXT_PUBLIC_VSL_URL;
@@ -73,260 +95,313 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-line">
-        <div className="grid-texture absolute inset-0" aria-hidden />
-        <div className="relative mx-auto max-w-6xl px-4 py-24 sm:px-6 sm:py-32">
-          <p className="eyebrow">For established sign, wrap, print & graphics shops</p>
-          <h1 className="display mt-4 max-w-4xl text-5xl sm:text-7xl">
-            Get More Channel-Letter Jobs{" "}
-            <span className="text-accent">Without Building a Factory</span>
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg text-muted">
-            LeadMill runs Meta Ads for established sign, wrap, print, and graphics shops. You own
-            the customer. When needed, our fulfillment network can help coordinate production,
-            permitting, and installation.
-          </p>
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <Link
-              href="/apply"
-              className="display bg-accent px-8 py-4 text-lg text-accent-ink transition hover:brightness-110"
-            >
-              Apply for a Market Review
-            </Link>
-            <Link
-              href="/how-it-works"
-              className="display border border-line px-8 py-4 text-lg transition hover:border-accent"
-            >
-              See the Process
-            </Link>
+      <section className="border-b border-line">
+        <div className="mx-auto max-w-6xl px-4 pt-20 sm:px-6 sm:pt-28">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="rise text-lg text-muted">
+              For established sign, wrap, print &amp; graphics shops:
+            </p>
+            <h1 className="display rise-2 mt-3 text-5xl sm:text-6xl md:text-7xl">
+              Win more <span className="text-accent">channel-letter jobs</span> without building a
+              factory.
+            </h1>
+            <p className="rise-3 mx-auto mt-6 max-w-2xl text-lg text-muted">
+              LeadMill runs your local Meta ads and sends qualified commercial-sign leads straight
+              to your phone. You close and keep the customer. Our fulfillment network builds what
+              your shop can&apos;t.
+            </p>
+            <div className="rise-3 mt-9 flex flex-wrap items-center justify-center gap-4">
+              <Link href="/apply" className="btn-primary text-lg">
+                Apply for a Market Review
+              </Link>
+              <Link href="/how-it-works" className="btn-secondary text-lg">
+                See the process
+              </Link>
+            </div>
+            <p className="rise-3 mt-4 text-sm text-muted">
+              Takes about 3 minutes. No payment required to apply.
+            </p>
           </div>
-          <p className="mt-8 text-sm text-muted">
-            <span className="text-accent">■</span> Built by operators of a real commercial sign company.
-          </p>
+
           {vslUrl && (
-            <div className="mt-12 max-w-3xl border border-line bg-panel p-2">
+            <div className="mx-auto mt-12 max-w-3xl overflow-hidden rounded-2xl border border-line">
               <video src={vslUrl} controls preload="metadata" className="w-full" />
-              <p className="px-3 py-2 text-xs text-muted">
-                Watch: how the program works, who it&apos;s for, and what to expect (5 minutes).
-              </p>
             </div>
           )}
+
+          {/* Product-in-context: real install + the lead alert your phone gets */}
+          <div className="relative mx-auto mt-16 max-w-5xl">
+            <Image
+              src="/work/copper.jpg"
+              alt="Backlit channel letters for Copper Espresso Bar, installed above a storefront at dusk"
+              width={1600}
+              height={1200}
+              priority
+              className="h-[420px] w-full rounded-t-2xl object-cover sm:h-[520px]"
+            />
+            <div className="absolute left-4 top-6 w-72 rounded-xl bg-background/95 p-4 text-left shadow-xl backdrop-blur sm:left-10 sm:top-10">
+              <div className="flex items-center justify-between">
+                <p className="text-xs font-semibold text-accent">New lead — just now</p>
+                <span className="h-2 w-2 rounded-full bg-accent-bright" />
+              </div>
+              <p className="mt-2 text-sm font-semibold">Storefront channel letters</p>
+              <p className="mt-1 text-sm text-muted">
+                New location, ~18 ft fascia. Wants a quote this week.
+              </p>
+              <div className="mt-3 flex gap-2">
+                <span className="rounded-lg bg-ink px-3 py-1.5 text-xs font-medium text-white">
+                  Call now
+                </span>
+                <span className="rounded-lg border border-line px-3 py-1.5 text-xs font-medium text-muted">
+                  View details
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="hazard" />
       </section>
 
-      {/* Problem / identity */}
-      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-        <p className="eyebrow">Sound familiar?</p>
-        <h2 className="display mt-2 max-w-3xl text-4xl sm:text-5xl">
-          More Leads Do Not Help If You Cannot Deliver the Job
+      {/* The trade-off, reframed */}
+      <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+        <h2 className="display max-w-3xl text-4xl sm:text-5xl">
+          Winning big sign jobs used to mean building the whole backend yourself.
         </h2>
-        <p className="mt-4 max-w-2xl text-muted">
-          If you run an established shop, you&apos;re probably one of these three owners.
-        </p>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {[
-            {
-              t: "The referral-dependent shop",
-              d: "You do good work, so referrals and repeat customers keep you alive. But some months they carry you and some months they vanish — and you can't hire, plan, or grow around a lead source you don't control.",
-            },
-            {
-              t: "The shop that turns work away",
-              d: "A $10,000 channel-letter job walks in and you pass on it. No fabrication capacity, no permit experience, no installer. You keep the $500 banner work and watch the real margin go to a competitor.",
-            },
-            {
-              t: "The shop that got burned",
-              d: "You already tried a marketing agency. They sent yard-sign and birthday-banner leads, counted them as wins, and billed you anyway — because they didn't know a channel letter from a coroplast sign.",
-            },
-          ].map((card) => (
-            <div key={card.t} className="border border-line bg-panel p-6">
-              <h3 className="display text-2xl">{card.t}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted">{card.d}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* What changed */}
-      <section className="border-t border-line">
-        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-          <p className="eyebrow">Why this works now</p>
-          <h2 className="display mt-2 max-w-3xl text-4xl sm:text-5xl">
-            Three Things Changed in the Sign Business
-          </h2>
-          <div className="mt-10 grid gap-8 md:grid-cols-3">
-            {[
-              {
-                n: "1",
-                t: "Production went wholesale",
-                d: "You no longer need a factory to sell channel letters. Wholesale fabrication and fulfillment networks build to spec and ship anywhere — the shops winning big storefront jobs are selling and installing, not fabricating.",
-              },
-              {
-                n: "2",
-                t: "Sign buyers moved online",
-                d: "New business owners don't drive around looking for a sign shop anymore. They search, scroll, and fill out a form — and the shop that shows up first and answers first wins the project.",
-              },
-              {
-                n: "3",
-                t: "Local targeting got precise",
-                d: "Meta can put your shop in front of business owners in your service radius for a fraction of what old advertising cost. Most sign shops still haven't noticed. The ones that have are taking the commercial work.",
-              },
-            ].map((s) => (
-              <div key={s.n} className="border-l-2 border-accent pl-5">
-                <span className="display text-4xl text-accent">{s.n}</span>
-                <h3 className="display mt-2 text-2xl">{s.t}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted">{s.d}</p>
-              </div>
-            ))}
+        <div className="mt-12 grid gap-6 lg:grid-cols-2">
+          <div className="rounded-2xl bg-panel p-8 sm:p-10">
+            <p className="text-lg font-semibold">What it used to take</p>
+            <ul className="mt-6 space-y-4 text-muted">
+              {usedToTake.map((item) => (
+                <li key={item} className="flex gap-3">
+                  <span className="mt-1 text-danger">✕</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="rounded-2xl bg-ink p-8 text-white sm:p-10">
+            <p className="text-lg font-semibold">
+              What it takes with Lead<span className="text-accent-bright">Mill</span>
+            </p>
+            <ul className="mt-6 space-y-4 text-white/80">
+              {withLeadmill.map((item) => (
+                <li key={item} className="flex gap-3">
+                  <span className="mt-1 text-accent-bright">✓</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* How it works */}
+      {/* Real work strip */}
       <section className="border-y border-line bg-panel">
-        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-          <p className="eyebrow">How it works</p>
-          <h2 className="display mt-2 text-4xl sm:text-5xl">Three Steps. You Stay in Control.</h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {[
-              {
-                n: "01",
-                t: "We launch your local Meta campaign",
-                d: "Sign-specific ads targeting commercial buyers in your service area. Leads come to you in minutes with a qualified project brief.",
-              },
-              {
-                n: "02",
-                t: "You contact and close the customer",
-                d: "Your shop, your name, your price. You quote and close the job the way you always have — just with more at-bats.",
-              },
-              {
-                n: "03",
-                t: "Use fulfillment when needed",
-                d: "Closed a job you can't build? Our network can quote production, coordinate permits, and source installation — per project, only when you ask.",
-              },
-            ].map((s) => (
-              <div key={s.n} className="border border-line bg-panel-2 p-6">
-                <span className="display text-4xl text-accent">{s.n}</span>
-                <h3 className="display mt-3 text-2xl">{s.t}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted">{s.d}</p>
-              </div>
-            ))}
-          </div>
-          <Link href="/how-it-works" className="mt-8 inline-block text-sm text-accent hover:brightness-110">
-            See the full process →
-          </Link>
-        </div>
-      </section>
-
-      {/* What's included */}
-      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-        <p className="eyebrow">What LeadMill includes</p>
-        <h2 className="display mt-2 text-4xl sm:text-5xl">Growth Up Front. Fulfillment Behind You.</h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          <div className="border border-line bg-panel p-8">
-            <h3 className="display text-3xl">Growth</h3>
-            <ul className="mt-5 space-y-3 text-sm text-muted">
-              {growth.map((item) => (
-                <li key={item} className="flex items-center gap-3">
-                  <span className="h-1.5 w-1.5 bg-accent" /> {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="border border-line bg-panel p-8">
-            <h3 className="display text-3xl">Fulfillment Access</h3>
-            <ul className="mt-5 space-y-3 text-sm text-muted">
-              {fulfillment.map((item) => (
-                <li key={item} className="flex items-center gap-3">
-                  <span className="h-1.5 w-1.5 bg-accent" /> {item}
-                </li>
-              ))}
-            </ul>
-            <p className="mt-5 border-t border-line pt-4 text-xs text-muted">
-              Fulfillment services are quoted separately by project and depend on market coverage.
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <h2 className="display max-w-xl text-3xl sm:text-4xl">
+              The kind of work your leads will ask for.
+            </h2>
+            <p className="max-w-sm text-sm text-muted">
+              Channel letters and storefront signage produced and installed through our fulfillment
+              network&apos;s shops.
             </p>
           </div>
+          <div className="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
+            {[
+              { src: "/work/luce.jpg", alt: "Halo-lit channel letters for Luce Avenue Coffee Roasters, glowing at night" },
+              { src: "/work/karma.jpg", alt: "Dimensional letters for Karma Kolache & Macarons on a brick tower facade" },
+              { src: "/work/slickcity.jpg", alt: "Large front-lit channel letters for Slick City Action Park at dusk" },
+              { src: "/work/nautica.jpg", alt: "Front-lit channel letters for Nautical Bowls above a brick storefront" },
+            ].map((img, i) => (
+              <Image
+                key={img.src}
+                src={img.src}
+                alt={img.alt}
+                width={800}
+                height={1000}
+                className={`w-full rounded-xl object-cover ${i % 2 === 1 ? "mt-6 h-64 sm:h-80" : "h-64 sm:h-80"}`}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Who it's for */}
-      <section className="border-y border-line bg-panel">
-        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-          <h2 className="display text-4xl sm:text-5xl">Built for Real Shops, Not Everyone</h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-            <div className="border border-line bg-panel-2 p-8">
-              <h3 className="display text-2xl text-accent">Good fit</h3>
-              <ul className="mt-5 space-y-3 text-sm text-muted">
-                {[
-                  "Established shops with a track record",
-                  "Commercial customer base",
-                  "Fast lead response",
-                  "Ability to fund ad spend",
-                  "Desire for larger projects",
-                  "Willingness to track lead outcomes",
-                ].map((i) => (
-                  <li key={i} className="flex items-center gap-3">
-                    <span className="text-accent">✓</span> {i}
-                  </li>
-                ))}
+      {/* 90-day timeline */}
+      <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+        <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr]">
+          <div>
+            <h2 className="display text-4xl sm:text-5xl">What the first 90 days look like.</h2>
+            <p className="mt-5 max-w-md text-muted">
+              A 90-day initial commitment, $2,000/month, ad spend funded by you. No long contract,
+              no black box — a weekly report and a hard look at the numbers at the end.
+            </p>
+            <Link href="/how-it-works" className="mt-6 inline-block font-medium text-accent">
+              See the full process →
+            </Link>
+          </div>
+          <ol className="space-y-10 border-l border-line pl-8">
+            {timeline.map((step) => (
+              <li key={step.k} className="relative">
+                <span className="absolute -left-[41px] top-1 h-2.5 w-2.5 rounded-full bg-accent-bright ring-4 ring-background" />
+                <p className="text-sm font-semibold text-accent">{step.k}</p>
+                <h3 className="mt-1 text-xl font-semibold">{step.t}</h3>
+                <p className="mt-2 text-muted">{step.d}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* Sound familiar */}
+      <section className="border-t border-line">
+        <div className="mx-auto max-w-3xl px-4 py-24 sm:px-6">
+          <h2 className="display text-center text-4xl sm:text-5xl">
+            If you run an established shop, one of these is probably you.
+          </h2>
+          <div className="mt-14 space-y-12">
+            <div>
+              <h3 className="text-xl font-semibold">The referral-dependent shop</h3>
+              <p className="mt-2 text-muted">
+                You do good work, so referrals and repeat customers keep you alive. But some months
+                they carry you and some months they vanish — and you can&apos;t hire, plan, or grow
+                around a lead source you don&apos;t control.
+              </p>
+            </div>
+            <div className="border-y border-line py-12">
+              <h3 className="text-xl font-semibold">The shop that turns work away</h3>
+              <p className="mt-2 text-muted">
+                A $10,000 channel-letter job walks in and you pass on it. No fabrication capacity,
+                no permit experience, no installer. You keep the $500 banner work and watch the real
+                margin go to a competitor.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold">The shop that got burned</h3>
+              <p className="mt-2 text-muted">
+                You already tried a marketing agency. They sent yard-sign and birthday-banner leads,
+                counted them as wins, and billed you anyway — because they didn&apos;t know a channel
+                letter from a coroplast sign.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Two ways to run it */}
+      <section className="border-t border-line bg-panel">
+        <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+          <h2 className="display max-w-2xl text-4xl sm:text-5xl">Two ways to run it.</h2>
+          <p className="mt-4 max-w-2xl text-muted">
+            Both include the same campaign, lead routing, CRM, and weekly reporting. The difference
+            is who works the leads.
+          </p>
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            <div className="rounded-2xl border border-line bg-background p-8 sm:p-10">
+              <h3 className="text-2xl font-semibold">Growth</h3>
+              <p className="mt-1 text-muted">Your team closes — we send the leads.</p>
+              <p className="mt-6 text-3xl font-semibold">
+                $2,000<span className="text-lg font-normal text-muted">/month</span>
+              </p>
+              <p className="mt-1 text-sm text-muted">+ your ad spend, paid directly to Meta</p>
+              <ul className="mt-8 space-y-3 text-sm text-muted">
+                <li>Meta campaign setup and management</li>
+                <li>Sign-specific ad creative</li>
+                <li>Lead routing to your phone and inbox</li>
+                <li>CRM pipeline and outcome tracking</li>
+                <li>Weekly performance reporting</li>
+                <li>Fulfillment network access</li>
               </ul>
             </div>
-            <div className="border border-line bg-panel-2 p-8">
-              <h3 className="display text-2xl text-muted">Not a fit</h3>
-              <ul className="mt-5 space-y-3 text-sm text-muted">
-                {[
-                  "Brand-new businesses",
-                  "Hobby shops",
-                  "Residential-only companies",
-                  "Owners who cannot answer leads",
-                  "Shops seeking guaranteed revenue",
-                  "Greater Houston competitors",
-                ].map((i) => (
-                  <li key={i} className="flex items-center gap-3">
-                    <span className="text-danger">✕</span> {i}
-                  </li>
-                ))}
+            <div className="rounded-2xl border-2 border-accent-bright bg-background p-8 sm:p-10">
+              <div className="flex items-center justify-between gap-4">
+                <h3 className="text-2xl font-semibold">Closing Desk</h3>
+                <span className="rounded-full bg-accent-bright px-3 py-1 text-xs font-semibold text-accent-ink">
+                  For shops with no free hands
+                </span>
+              </div>
+              <p className="mt-1 text-muted">We answer, qualify, and quote — you build and install.</p>
+              <p className="mt-6 text-3xl font-semibold">
+                $2,000<span className="text-lg font-normal text-muted">/month</span>
+                <span className="text-lg font-normal text-muted"> + 8% of closed jobs</span>
+              </p>
+              <p className="mt-1 text-sm text-muted">+ your ad spend, paid directly to Meta</p>
+              <ul className="mt-8 space-y-3 text-sm text-muted">
+                <li>Everything in Growth</li>
+                <li>Every lead answered and qualified for you</li>
+                <li>Quotes prepared from your own price sheet</li>
+                <li>Site surveys booked to your calendar</li>
+                <li>You approve every quote before it goes out</li>
               </ul>
             </div>
           </div>
-          <Link href="/who-its-for" className="mt-8 inline-block text-sm text-accent hover:brightness-110">
-            Full fit checklist →
-          </Link>
+          <p className="mt-6 text-sm text-muted">
+            Fulfillment — production, freight, permits, engineering, installation — is quoted
+            separately per project on both tiers, and only when you ask.{" "}
+            <Link href="/fulfillment" className="font-medium text-accent">
+              How fulfillment works →
+            </Link>
+          </p>
         </div>
       </section>
 
-      {/* Why LeadMill */}
-      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-        <p className="eyebrow">Why LeadMill</p>
-        <h2 className="display mt-2 text-4xl sm:text-5xl">Built From Inside the Sign Business</h2>
-        <div className="mt-10 grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
-          {[
-            ["Real operating experience", "We run commercial sign campaigns and projects ourselves — this isn't theory."],
-            ["Sign-specific creative", "Ads built around storefront signage, channel letters, and commercial buyers — not generic 'local business' templates."],
-            ["Channel letters understood", "Faces, returns, raceways, LED specs, landlord criteria — we speak the language your leads speak."],
-            ["Commercial project economics", "Campaigns designed around $5k–$25k project values, not $500 banner tickets."],
-            ["Optional backend fulfillment", "Production, permitting, and installation coordination when you want it. Never forced."],
-            ["You keep the customer", "Your brand, your relationship, your retail price. We stay invisible to your customer."],
-          ].map(([t, d]) => (
-            <div key={t} className="border-l-2 border-accent pl-4">
-              <h3 className="font-semibold">{t}</h3>
-              <p className="mt-1 text-sm text-muted">{d}</p>
-            </div>
-          ))}
+      {/* Fit */}
+      <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+        <h2 className="display text-4xl sm:text-5xl">Built for real shops, not everyone.</h2>
+        <div className="mt-12 grid gap-x-16 gap-y-10 md:grid-cols-2">
+          <div>
+            <p className="text-lg font-semibold">A good fit looks like:</p>
+            <ul className="mt-5 space-y-3 text-muted">
+              {[
+                "An established shop with a track record",
+                "A commercial customer base",
+                "Someone who answers new leads fast",
+                "Room in the budget to fund ad spend",
+                "An appetite for larger projects",
+                "Willingness to track lead outcomes in a CRM",
+              ].map((i) => (
+                <li key={i} className="flex gap-3">
+                  <span className="text-accent">✓</span> {i}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="text-lg font-semibold text-muted">We&apos;re not for:</p>
+            <ul className="mt-5 space-y-3 text-muted">
+              {[
+                "Brand-new businesses or hobby shops",
+                "Residential-only companies",
+                "Owners who can't answer leads",
+                "Shops seeking guaranteed revenue",
+                "Greater Houston competitors",
+              ].map((i) => (
+                <li key={i} className="flex gap-3">
+                  <span className="text-danger">✕</span> {i}
+                </li>
+              ))}
+            </ul>
+            <Link href="/who-its-for" className="mt-6 inline-block font-medium text-accent">
+              Full fit checklist →
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* FAQ */}
       <section className="border-t border-line bg-panel">
-        <div className="mx-auto max-w-3xl px-4 py-20 sm:px-6">
-          <h2 className="display text-center text-4xl sm:text-5xl">Straight Answers</h2>
+        <div className="mx-auto max-w-3xl px-4 py-24 sm:px-6">
+          <h2 className="display text-center text-4xl sm:text-5xl">Straight answers.</h2>
           <div className="mt-10">
             <Faq items={faqItems} />
           </div>
         </div>
       </section>
 
-      <CtaSection />
+      <CtaSection
+        headline="See if your market is open"
+        sub="One shop per market during the pilot. Tell us about yours — if the numbers don't work, we'll say so and part as friends."
+      />
     </>
   );
 }

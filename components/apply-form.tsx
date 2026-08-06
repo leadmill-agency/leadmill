@@ -49,6 +49,18 @@ const SERVICES = [
 
 const steps = ["Contact", "Your Shop", "Sales & Budget"] as const;
 
+// Greater Houston is excluded territory (protects our fulfillment partner's
+// market). We flag it silently from city/state instead of asking applicants.
+const HOUSTON_METRO = [
+  "houston", "katy", "sugar land", "pearland", "the woodlands", "woodlands", "spring",
+  "cypress", "pasadena", "baytown", "league city", "humble", "conroe", "missouri city",
+  "stafford", "tomball", "richmond", "rosenberg", "webster", "friendswood", "channelview",
+  "deer park", "la porte", "kingwood", "atascocita",
+];
+
+const isGreaterHouston = (city: string, state: string) =>
+  state === "TX" && HOUSTON_METRO.includes(city.trim().toLowerCase());
+
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <label className="block">
@@ -59,7 +71,7 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
 }
 
 const inputCls =
-  "w-full border border-line bg-panel-2 px-3 py-2.5 text-sm outline-none transition focus:border-accent";
+  "w-full rounded-lg border border-line bg-background px-3 py-2.5 text-sm outline-none transition focus:border-accent";
 
 export function ApplyForm() {
   const router = useRouter();
@@ -82,7 +94,6 @@ export function ApplyForm() {
       if (!data.fullName || !data.businessName || !data.email || !data.phone || !data.city || !data.state)
         return "Please fill in every field except website.";
       if (!/^\S+@\S+\.\S+$/.test(data.email)) return "That email doesn't look right.";
-      if (!data.greaterHouston) return "Please tell us if you're in the Greater Houston area.";
     }
     if (step === 1) {
       if (!data.yearsInBusiness || !data.employees || !data.commercialPct || !data.largestProject)
@@ -121,9 +132,13 @@ export function ApplyForm() {
     setError("");
     setSubmitting(true);
 
-    const result = scoreApplication(data);
-    const payload = {
+    const scored: Application = {
       ...data,
+      greaterHouston: isGreaterHouston(data.city, data.state) ? "yes" : "no",
+    };
+    const result = scoreApplication(scored);
+    const payload = {
+      ...scored,
       primaryServices: data.primaryServices.join(", "),
       score: result.score,
       route: result.route,
@@ -150,11 +165,11 @@ export function ApplyForm() {
   };
 
   return (
-    <div className="border border-line bg-panel p-6 sm:p-8">
+    <div className="rounded-2xl border border-line bg-panel p-6 sm:p-8">
       <div className="mb-8 flex items-center gap-2">
         {steps.map((label, i) => (
           <div key={label} className="flex flex-1 flex-col gap-2">
-            <div className={`h-1 ${i <= step ? "bg-accent" : "bg-line"}`} />
+            <div className={`h-1 rounded-full ${i <= step ? "bg-accent-bright" : "bg-line"}`} />
             <span className={`text-xs ${i <= step ? "text-foreground" : "text-muted"}`}>{label}</span>
           </div>
         ))}
@@ -187,20 +202,6 @@ export function ApplyForm() {
                 {US_STATES.map((s) => <option key={s}>{s}</option>)}
               </select>
             </Field>
-          </div>
-          <div className="sm:col-span-2">
-            <Field label="Is your shop located in the Greater Houston, TX area?">
-              <select className={inputCls} value={data.greaterHouston} onChange={(e) => set("greaterHouston", e.target.value)}>
-                <option value="">Select…</option>
-                <option value="no">No</option>
-                <option value="yes">Yes</option>
-              </select>
-            </Field>
-            {data.greaterHouston === "yes" && (
-              <p className="mt-2 text-sm text-danger">
-                We don&apos;t operate in Greater Houston. You&apos;re welcome to submit, but we won&apos;t be able to work together in this market.
-              </p>
-            )}
           </div>
         </div>
       )}
@@ -237,8 +238,8 @@ export function ApplyForm() {
                     onClick={() =>
                       set("primaryServices", on ? data.primaryServices.filter((x) => x !== s) : [...data.primaryServices, s])
                     }
-                    className={`border px-2 py-2 text-xs transition ${
-                      on ? "border-accent bg-accent text-accent-ink" : "border-line bg-panel-2 text-muted hover:border-accent"
+                    className={`rounded-lg border px-2 py-2 text-xs transition ${
+                      on ? "border-accent-bright bg-accent-bright text-accent-ink" : "border-line bg-background text-muted hover:border-accent"
                     }`}
                   >
                     {s}
@@ -340,7 +341,7 @@ export function ApplyForm() {
               </select>
             </Field>
           </div>
-          <label className="flex items-start gap-3 border border-line bg-panel-2 p-4 text-sm sm:col-span-2">
+          <label className="flex items-start gap-3 rounded-xl border border-line bg-background p-4 text-sm sm:col-span-2">
             <input
               type="checkbox"
               className="mt-0.5 h-4 w-4 accent-[var(--accent)]"
@@ -366,7 +367,7 @@ export function ApplyForm() {
           <span />
         )}
         {step < steps.length - 1 ? (
-          <button type="button" onClick={next} className="display bg-accent px-6 py-3 text-accent-ink transition hover:brightness-110">
+          <button type="button" onClick={next} className="btn-primary">
             Continue →
           </button>
         ) : (
@@ -374,9 +375,9 @@ export function ApplyForm() {
             type="button"
             onClick={submit}
             disabled={submitting}
-            className="display bg-accent px-6 py-3 text-accent-ink transition hover:brightness-110 disabled:opacity-60"
+            className="btn-primary disabled:opacity-60"
           >
-            {submitting ? "Submitting…" : "Submit Application"}
+            {submitting ? "Submitting…" : "Submit application"}
           </button>
         )}
       </div>

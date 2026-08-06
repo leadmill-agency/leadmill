@@ -1,15 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0e0f11;
-  --panel: #16181b;
-  --panel-2: #1d2024;
-  --border: #2a2d32;
-  --foreground: #f2f1ec;
-  --muted: #a0a2a6;
-  --accent: #ffb020;
-  --accent-ink: #17140a;
-  --danger: #e5484d;
+  /* Light system, Wonderly-lane: white surface, cool ink, one warm accent. */
+  --background: oklch(1 0 0);
+  --panel: oklch(0.972 0.003 75);
+  --panel-2: oklch(0.947 0.004 75);
+  --border: oklch(0.9 0.006 75);
+  --foreground: oklch(0.23 0.02 262);
+  --muted: oklch(0.44 0.022 262);
+  --accent: oklch(0.6 0.145 62); /* deep amber — passes 3:1 for large text on white */
+  --accent-bright: oklch(0.82 0.155 75); /* brand amber #ffb020 — surfaces, never text */
+  --accent-ink: oklch(0.25 0.05 70);
+  --ink: oklch(0.23 0.02 262);
+  --danger: oklch(0.55 0.19 25);
 }
 
 @theme inline {
@@ -20,60 +23,114 @@
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-accent: var(--accent);
+  --color-accent-bright: var(--accent-bright);
   --color-accent-ink: var(--accent-ink);
+  --color-ink: var(--ink);
   --color-danger: var(--danger);
-  --font-sans: var(--font-inter);
-  --font-display: var(--font-barlow);
+  --font-sans: var(--font-geist);
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), system-ui, sans-serif;
+  font-family: var(--font-geist), system-ui, sans-serif;
 }
 
+/* Display headings: weight and size carry the hierarchy — sentence case, no caps. */
 .display {
-  font-family: var(--font-barlow), var(--font-inter), sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.01em;
-  line-height: 0.95;
-  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+  text-wrap: balance;
 }
 
+/* Legacy hook kept for subpages: now a plain small strong label, not a tracked cap. */
 .eyebrow {
-  font-family: var(--font-barlow), sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   color: var(--accent);
 }
 
-.hazard {
-  background-image: repeating-linear-gradient(
-    -45deg,
-    var(--accent) 0 12px,
-    transparent 12px 24px
-  );
-  opacity: 0.9;
-  height: 6px;
+/* Primary action: dark ink pill, Wonderly-style. */
+.btn-primary {
+  display: inline-block;
+  background: var(--ink);
+  color: #fff;
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 0.875rem 1.75rem;
+  transition: transform 0.15s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.15s ease;
+  box-shadow: 0 1px 2px oklch(0.23 0.02 262 / 0.25);
+}
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px oklch(0.23 0.02 262 / 0.22);
+}
+.btn-primary:active {
+  transform: translateY(0);
 }
 
-.grid-texture {
-  background-image:
-    linear-gradient(var(--border) 1px, transparent 1px),
-    linear-gradient(90deg, var(--border) 1px, transparent 1px);
-  background-size: 48px 48px;
-  opacity: 0.25;
-  mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, black 30%, transparent 75%);
+.btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: var(--foreground);
+  font-weight: 500;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.875rem 1.75rem;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.btn-secondary:hover {
+  border-color: var(--foreground);
+  background: var(--panel);
+}
+
+/* Brand memory from the sign trade: a thin amber strip, used sparingly. */
+.hazard {
+  background: var(--accent-bright);
+  height: 4px;
+}
+
+/* Hero entrance: content is visible by default; animation only enhances. */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.rise {
+  animation: rise-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.rise-2 {
+  animation: rise-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+}
+.rise-3 {
+  animation: rise-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.24s both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .rise,
+  .rise-2,
+  .rise-3 {
+    animation: none;
+  }
 }
 
 input,
 select,
 textarea {
-  color-scheme: dark;
+  color-scheme: light;
 }

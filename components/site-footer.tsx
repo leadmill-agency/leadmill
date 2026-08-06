@@ -6,7 +6,7 @@ export function SiteFooter() {
       <div className="hazard" />
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-6 md:grid-cols-3">
         <div>
-          <p className="display text-xl">
+          <p className="text-xl font-semibold tracking-tight">
             Lead<span className="text-accent">Mill</span>
           </p>
           <p className="mt-3 max-w-xs text-sm text-muted">

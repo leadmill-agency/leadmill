@@ -19,8 +19,7 @@ export default async function ThankYouPage({
     <div className="mx-auto max-w-2xl px-4 py-24 text-center sm:px-6">
       {route === "qualified" && (
         <>
-          <p className="eyebrow">Application received</p>
-          <h1 className="display mt-2 text-4xl sm:text-5xl">Good News — You Look Like a Fit</h1>
+          <h1 className="display mt-2 text-4xl sm:text-5xl">Good news — you look like a fit.</h1>
           <p className="mt-4 text-muted">
             Your shop matches what we look for. The next step is a 20–30 minute Market Review call
             where we look at your market, your numbers, and whether the program makes sense for you.
@@ -28,12 +27,12 @@ export default async function ThankYouPage({
           {calendarUrl ? (
             <a
               href={calendarUrl}
-              className="display mt-8 inline-block bg-accent px-8 py-4 text-lg text-accent-ink transition hover:brightness-110"
+              className="btn-primary mt-8 text-lg"
             >
               Book Your Market Review
             </a>
           ) : (
-            <p className="mt-8 border border-line bg-panel px-6 py-4 text-sm">
+            <p className="mt-8 rounded-xl bg-panel px-6 py-4 text-sm">
               We&apos;ll email you within one business day with times for your Market Review call.
             </p>
           )}
@@ -42,8 +41,7 @@ export default async function ThankYouPage({
 
       {route === "review" && (
         <>
-          <p className="eyebrow">Application received</p>
-          <h1 className="display mt-2 text-4xl sm:text-5xl">We&apos;re Reviewing Your Application</h1>
+          <h1 className="display mt-2 text-4xl sm:text-5xl">We&apos;re reviewing your application.</h1>
           <p className="mt-4 text-muted">
             Thanks — we have everything we need. A real person reviews every application. You&apos;ll
             hear from us within one business day, usually sooner.
@@ -53,8 +51,7 @@ export default async function ThankYouPage({
 
       {(route === "nurture" || route === "disqualified") && (
         <>
-          <p className="eyebrow">Application received</p>
-          <h1 className="display mt-2 text-4xl sm:text-5xl">Thanks for Applying</h1>
+          <h1 className="display mt-2 text-4xl sm:text-5xl">Thanks for applying.</h1>
           <p className="mt-4 text-muted">
             {route === "disqualified"
               ? "We don't currently operate in the Greater Houston market, so we won't be able to work together right now. If you open a location in another market, we'd be glad to talk."

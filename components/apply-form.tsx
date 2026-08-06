@@ -25,6 +25,7 @@ const initial: Application = {
   responseTime: "",
   adBudget: "",
   revenueRange: "",
+  closingPreference: "",
   fulfillmentInterest: "",
   crmAgreement: false,
 };
@@ -91,7 +92,7 @@ export function ApplyForm() {
         return "Please answer the channel-letter questions.";
     }
     if (step === 2) {
-      if (!data.whoAnswersLeads || !data.responseTime || !data.adBudget || !data.revenueRange || !data.fulfillmentInterest)
+      if (!data.whoAnswersLeads || !data.responseTime || !data.adBudget || !data.revenueRange || !data.closingPreference || !data.fulfillmentInterest)
         return "Please answer every question on this step.";
       if (!data.crmAgreement)
         return "The program requires using our CRM and reporting lead outcomes. Please confirm to continue.";
@@ -132,7 +133,7 @@ export function ApplyForm() {
       ...getUtms(),
     };
 
-    track("form_submit", { score: result.score, route: result.route });
+    track("form_submit", { score: result.score, route: result.route, closing_preference: data.closingPreference });
     if (result.route === "qualified") track("qualified_application", { score: result.score });
 
     const webhook = process.env.NEXT_PUBLIC_FORM_WEBHOOK;
@@ -324,6 +325,16 @@ export function ApplyForm() {
               <option value="1m-plus">$1M+</option>
             </select>
           </Field>
+          <div className="sm:col-span-2">
+            <Field label="Who should handle closing the leads we send?">
+              <select className={inputCls} value={data.closingPreference} onChange={(e) => set("closingPreference", e.target.value)}>
+                <option value="">Select…</option>
+                <option value="my-team">My team — we just need the leads</option>
+                <option value="leadmill-desk">LeadMill&apos;s closing desk — you answer, qualify, and quote for us</option>
+                <option value="not-sure">Not sure — tell me more on the call</option>
+              </select>
+            </Field>
+          </div>
           <div className="sm:col-span-2">
             <Field label="Are you interested in using our fulfillment network (production, permits, installation)?">
               <select className={inputCls} value={data.fulfillmentInterest} onChange={(e) => set("fulfillmentInterest", e.target.value)}>

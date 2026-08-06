@@ -36,8 +36,12 @@ const faqItems = [
     a: "Fast. Commercial sign buyers get quotes from whoever answers first. We expect leads contacted within minutes, not days — and we track it. If leads get ignored, we pause the campaign rather than waste your money.",
   },
   {
+    q: "What if nobody on my team has time to work new leads?",
+    a: "That's what the Closing Desk tier is for. We answer every lead, qualify it, quote off your price sheet, and book the site survey — your shop fabricates and installs. $2,000/month plus 8% of closed job revenue.",
+  },
+  {
     q: "Do you guarantee closed jobs?",
-    a: "No. Anyone who guarantees closed jobs is lying to you. We generate qualified opportunities and track them honestly; closing is your job, and we only take on shops we believe can close.",
+    a: "No. Anyone who guarantees closed jobs is lying to you. We generate qualified opportunities and track them honestly. Closing is your job — or ours, on the Closing Desk tier — and we only take on shops we believe can win the work.",
   },
   {
     q: "Do you serve Houston?",

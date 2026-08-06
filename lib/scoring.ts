@@ -18,6 +18,7 @@ export type Application = {
   responseTime: string;
   adBudget: string;
   revenueRange: string;
+  closingPreference: string;
   fulfillmentInterest: string;
   crmAgreement: boolean;
 };

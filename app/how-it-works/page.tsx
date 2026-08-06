@@ -26,7 +26,7 @@ const steps = [
   {
     n: "04",
     t: "You quote and close",
-    d: "Your shop, your brand, your price. You survey, quote, and close the way you always have. We track outcomes in a simple CRM pipeline so we both know what the campaign is actually producing — quotes and closed revenue, not just leads.",
+    d: "Your shop, your brand, your price. You survey, quote, and close the way you always have. We track outcomes in a simple CRM pipeline so we both know what the campaign is actually producing — quotes and closed revenue, not just leads. Don't have someone free to work new leads? Our Closing Desk tier answers, qualifies, and quotes off your price sheet for you.",
   },
   {
     n: "05",
@@ -75,6 +75,11 @@ export default function HowItWorksPage() {
             $2,000/month management fee. You fund ad spend separately ($1,500–$3,000/month
             recommended, paid directly to Meta). 90-day initial commitment. Fulfillment quoted per
             project — no membership fee during the pilot.
+          </p>
+          <p className="mt-3">
+            <span className="font-semibold text-foreground">Closing Desk tier:</span> we answer
+            every lead, qualify it, quote off your price sheet, and book the site survey — your
+            shop fabricates and installs. $2,000/month plus 8% of closed job revenue.
           </p>
         </div>
       </section>

@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LeadMill acquisition website
 
-## Getting Started
+Next.js 16 + Tailwind v4. Built from `01_PRD_WEBSITE.md`.
 
-First, run the development server:
+## Run locally
 
-```bash
+```
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Pages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Home, How It Works, Fulfillment, Who It's For, Apply, Thank You, Privacy, Terms.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Application form
 
-## Learn More
+3-step form at `/apply`. Scoring lives in `lib/scoring.ts` (weights from PRD 03:
+maturity 20 / sales 30 / financial 20 / operational 20 / strategic 10).
 
-To learn more about Next.js, take a look at the following resources:
+Routing:
+- Greater Houston = yes → disqualified (hard stop, any score)
+- Ad budget under $1,500 → nurture
+- 75+ → qualified (calendar or "we'll email you")
+- 60–74 → manual review
+- Below 60 → nurture
+- Under 2 years in business → never auto-qualifies, drops to manual review
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Submissions POST as JSON to `NEXT_PUBLIC_FORM_WEBHOOK` with all answers,
+score, route, flags, and stored UTM parameters. Point it at a Zapier/Make
+webhook that emails or Slacks you. No webhook set = payload logged to console
+only, so set this before launch.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Environment
 
-## Deploy on Vercel
+Copy `.env.local.example` to `.env.local`. All keys optional:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `NEXT_PUBLIC_FORM_WEBHOOK` — where applications go (set before launch)
+- `NEXT_PUBLIC_CALENDAR_URL` — booking link for qualified applicants
+- `NEXT_PUBLIC_META_PIXEL_ID` — enables PageView + form_start / form_submit / qualified_application events
+- `NEXT_PUBLIC_GA_ID` — Google Analytics
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploy
+
+Push to GitHub → import to Vercel → set env vars → add domain.

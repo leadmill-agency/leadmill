@@ -9,6 +9,10 @@ const nav = [
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-background/90 backdrop-blur">
+      <Link href="/apply" className="block bg-ink py-2 text-center text-sm text-white transition hover:opacity-90">
+        Pilot open: one shop per market, and markets close as shops claim them.{" "}
+        <span className="font-semibold text-accent-bright">Check if yours is open →</span>
+      </Link>
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="text-xl font-semibold tracking-tight">
           Lead<span className="text-accent">Mill</span>

@@ -253,6 +253,21 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Mid-page CTA */}
+      <section className="border-t border-line bg-panel">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-6 px-4 py-12 sm:px-6">
+          <p className="display max-w-xl text-2xl sm:text-3xl">
+            Your market only fits one shop. Find out if it&apos;s still open.
+          </p>
+          <div className="text-center">
+            <Link href="/apply" className="btn-primary">
+              Apply for a Market Review
+            </Link>
+            <p className="mt-2 text-xs text-muted">3 minutes. No payment to apply.</p>
+          </div>
+        </div>
+      </section>
+
       {/* Sound familiar */}
       <section className="border-t border-line">
         <div className="mx-auto max-w-3xl px-4 py-24 sm:px-6">
@@ -384,6 +399,56 @@ export default function Home() {
             <Link href="/who-its-for" className="mt-6 inline-block font-medium text-accent">
               Full fit checklist →
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Founder letter */}
+      <section className="border-t border-line">
+        <div className="mx-auto max-w-5xl px-4 py-24 sm:px-6">
+          <div className="grid items-start gap-12 lg:grid-cols-[1fr_1.5fr]">
+            <figure>
+              <Image
+                src="/founder.png"
+                alt="Rameel Sheikh, founder of LeadMill, on the floor of a commercial sign fabrication shop"
+                width={1125}
+                height={1451}
+                className="w-full rounded-2xl object-cover"
+              />
+              <figcaption className="mt-3 text-sm text-muted">
+                Rameel Sheikh, on the floor of our fulfillment partner&apos;s fabrication shop.
+              </figcaption>
+            </figure>
+            <div>
+              <h2 className="display text-4xl sm:text-5xl">A note from the founder.</h2>
+              <div className="mt-6 space-y-4 text-muted">
+                <p>
+                  If you&apos;ve been burned by a marketing agency before, you should be skeptical of
+                  this page. Anyone can buy a domain and claim they generate leads.
+                </p>
+                <p>
+                  Here&apos;s what makes us different, plainly: we work inside the sign business.
+                  Our fulfillment network is anchored by a real commercial sign company — the shop
+                  in this photo — and backed by wholesale manufacturing partners. We run Meta
+                  campaigns for local service businesses every day. We know what a channel-letter
+                  buyer looks like in an ad account, and we know what a raceway is when your lead
+                  asks about one.
+                </p>
+                <p>
+                  I won&apos;t show you a wall of testimonials, because the pilot is new and I
+                  refuse to invent proof. What I&apos;ll show you instead is the work, the process,
+                  and a weekly report with real numbers once your campaign is live. One shop per
+                  market. If your market doesn&apos;t make sense for this, I&apos;ll tell you on the
+                  Market Review call and we&apos;ll part as friends.
+                </p>
+                <p className="text-foreground">
+                  — Rameel Sheikh, Founder, LeadMill
+                </p>
+              </div>
+              <Link href="/apply" className="btn-primary mt-8">
+                Apply for a Market Review
+              </Link>
+            </div>
           </div>
         </div>
       </section>

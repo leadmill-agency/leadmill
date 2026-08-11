@@ -73,7 +73,7 @@ export default function HowItWorksPage() {
           <p className="mt-2">
             $2,000/month management fee. You fund ad spend separately ($1,500–$3,000/month
             recommended, paid directly to Meta). 90-day initial commitment. Fulfillment quoted per
-            project — no membership fee during the pilot.
+            project — no membership fee.
           </p>
           <p className="mt-3">
             <span className="font-semibold text-foreground">Closing Desk tier:</span> we answer

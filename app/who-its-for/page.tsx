@@ -12,7 +12,7 @@ const goodFit = [
   ["Commercial customer base", "Business signage is already part of your work — or the part you want to grow."],
   ["Fast lead response", "You or a salesperson can get to a new lead within minutes. Speed wins commercial jobs."],
   ["Able to fund ad spend", "$1,500–$3,000/month in ad spend, paid directly to Meta, on top of the management fee."],
-  ["Hungry for larger projects", "You want $5,000–$25,000 channel-letter and storefront jobs, not more $500 banners."],
+  ["Hungry for larger projects", "You want $5,000–$25,000 exterior-sign projects, not more $500 banners."],
   ["Willing to track outcomes", "You'll use the CRM and record what happened to every lead. That's non-negotiable."],
 ];
 
@@ -34,7 +34,7 @@ export default function WhoItsForPage() {
             We reject more shops than we take.
           </h1>
           <p className="mt-5 max-w-2xl text-muted">
-            One shop per market during the pilot. That only works if every shop we take can answer
+            We only take one shop per market. That only works if every shop we take can answer
             leads, close jobs, and report outcomes. Read this honestly before you apply.
           </p>
         </div>

@@ -13,7 +13,7 @@ const geist = Geist({
 
 export const metadata: Metadata = {
   title: {
-    default: "LeadMill — More Channel-Letter Jobs for Sign Shops",
+    default: "LeadMill — More Exterior Sign Jobs for Sign Shops",
     template: "%s | LeadMill",
   },
   description:

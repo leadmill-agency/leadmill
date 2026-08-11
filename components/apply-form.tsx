@@ -42,7 +42,7 @@ const SERVICES = [
   "Banners & vinyl",
   "Commercial printing",
   "Graphics & design",
-  "Channel letters",
+  "Illuminated signs",
   "Awnings",
   "LED / electronic",
 ];
@@ -100,7 +100,7 @@ export function ApplyForm() {
         return "Please answer every question on this step.";
       if (data.primaryServices.length === 0) return "Select at least one primary service.";
       if (!data.sellsChannelLetters || !data.manufacturesChannelLetters)
-        return "Please answer the channel-letter questions.";
+        return "Please answer the sign questions.";
     }
     if (step === 2) {
       if (!data.whoAnswersLeads || !data.responseTime || !data.adBudget || !data.revenueRange || !data.closingPreference || !data.fulfillmentInterest)
@@ -266,14 +266,14 @@ export function ApplyForm() {
               <option value="15k-plus">$15,000+</option>
             </select>
           </Field>
-          <Field label="Do you currently sell channel letters?">
+          <Field label="Do you currently sell illuminated exterior signs?">
             <select className={inputCls} value={data.sellsChannelLetters} onChange={(e) => set("sellsChannelLetters", e.target.value)}>
               <option value="">Select…</option>
               <option value="yes">Yes</option>
               <option value="no">Not yet, but I want to</option>
             </select>
           </Field>
-          <Field label="Do you manufacture channel letters in-house?">
+          <Field label="Do you manufacture exterior signs in-house?">
             <select className={inputCls} value={data.manufacturesChannelLetters} onChange={(e) => set("manufacturesChannelLetters", e.target.value)}>
               <option value="">Select…</option>
               <option value="no">No — we outsource</option>

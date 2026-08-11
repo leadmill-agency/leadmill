@@ -5,8 +5,8 @@ import { CtaSection } from "@/components/cta-section";
 
 const faqItems = [
   {
-    q: "Do I need to manufacture channel letters?",
-    a: "No. Many of our best-fit shops outsource channel letters entirely. Our fulfillment network can quote production for closed jobs, or you can keep using your existing wholesaler.",
+    q: "Do I need to manufacture the signs myself?",
+    a: "No. Many of our best-fit shops outsource illuminated exterior signs entirely. Our fulfillment network can quote production for closed jobs, or you can keep using your existing wholesaler.",
   },
   {
     q: "What if I already have a wholesaler?",
@@ -30,7 +30,7 @@ const faqItems = [
   },
   {
     q: "Is my market exclusive?",
-    a: "Pilot clients get local protection while they're active — we won't run campaigns for a competing shop in your practical service area. We don't sell permanent citywide exclusivity.",
+    a: "Clients get local protection while their campaign is active — we won't run campaigns for a competing shop in your practical service area. We don't sell permanent citywide exclusivity.",
   },
   {
     q: "How quickly do I need to answer leads?",
@@ -51,7 +51,7 @@ const faqItems = [
 ];
 
 const usedToTake = [
-  "A fabrication shop with channel-letter benders and LED inventory",
+  "A fabrication shop with letter benders, routers, and LED inventory",
   "Someone who knows permits, engineering stamps, and landlord criteria",
   "An install crew with a bucket truck and liability coverage",
   "A steady source of commercial buyers — not walk-ins and yard signs",
@@ -102,7 +102,7 @@ export default function Home() {
               For established sign, wrap, print &amp; graphics shops:
             </p>
             <h1 className="display rise-2 mt-3 text-5xl sm:text-6xl md:text-7xl">
-              Win more <span className="text-accent">channel-letter jobs</span> without building a
+              Win bigger <span className="text-accent">exterior sign jobs</span> without building a
               factory.
             </h1>
             <p className="rise-3 mx-auto mt-6 max-w-2xl text-lg text-muted">
@@ -133,7 +133,7 @@ export default function Home() {
           <div className="relative mx-auto mt-16 max-w-5xl">
             <Image
               src="/work/copper.jpg"
-              alt="Backlit channel letters for Copper Espresso Bar, installed above a storefront at dusk"
+              alt="Backlit exterior sign for Copper Espresso Bar, installed above a storefront at dusk"
               width={1600}
               height={1200}
               priority
@@ -144,7 +144,7 @@ export default function Home() {
                 <p className="text-xs font-semibold text-accent">New lead — just now</p>
                 <span className="h-2 w-2 rounded-full bg-accent-bright" />
               </div>
-              <p className="mt-2 text-sm font-semibold">Storefront channel letters</p>
+              <p className="mt-2 text-sm font-semibold">Illuminated storefront sign</p>
               <p className="mt-1 text-sm text-muted">
                 New location, ~18 ft fascia. Wants a quote this week.
               </p>
@@ -203,16 +203,16 @@ export default function Home() {
               The kind of work your leads will ask for.
             </h2>
             <p className="max-w-sm text-sm text-muted">
-              Channel letters and storefront signage produced and installed through our fulfillment
+              Storefront and building signage produced and installed through our fulfillment
               network&apos;s shops.
             </p>
           </div>
           <div className="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
             {[
-              { src: "/work/luce.jpg", alt: "Halo-lit channel letters for Luce Avenue Coffee Roasters, glowing at night" },
+              { src: "/work/luce.jpg", alt: "Halo-lit exterior sign for Luce Avenue Coffee Roasters, glowing at night" },
               { src: "/work/karma.jpg", alt: "Dimensional letters for Karma Kolache & Macarons on a brick tower facade" },
-              { src: "/work/slickcity.jpg", alt: "Large front-lit channel letters for Slick City Action Park at dusk" },
-              { src: "/work/nautica.jpg", alt: "Front-lit channel letters for Nautical Bowls above a brick storefront" },
+              { src: "/work/slickcity.jpg", alt: "Large front-lit exterior sign for Slick City Action Park at dusk" },
+              { src: "/work/nautica.jpg", alt: "Front-lit exterior sign for Nautical Bowls above a brick storefront" },
             ].map((img, i) => (
               <Image
                 key={img.src}
@@ -286,7 +286,7 @@ export default function Home() {
             <div className="border-y border-line py-12">
               <h3 className="text-xl font-semibold">The shop that turns work away</h3>
               <p className="mt-2 text-muted">
-                A $10,000 channel-letter job walks in and you pass on it. No fabrication capacity,
+                A $10,000 building-sign job walks in and you pass on it. No fabrication capacity,
                 no permit experience, no installer. You keep the $500 banner work and watch the real
                 margin go to a competitor.
               </p>
@@ -295,8 +295,8 @@ export default function Home() {
               <h3 className="text-xl font-semibold">The shop that got burned</h3>
               <p className="mt-2 text-muted">
                 You already tried a marketing agency. They sent yard-sign and birthday-banner leads,
-                counted them as wins, and billed you anyway — because they didn&apos;t know a channel
-                letter from a coroplast sign.
+                counted them as wins, and billed you anyway — because they didn&apos;t know a lighted
+                building sign from a coroplast yard sign.
               </p>
             </div>
           </div>
@@ -430,16 +430,16 @@ export default function Home() {
                   Here&apos;s what makes us different, plainly: we work inside the sign business.
                   Our fulfillment network is anchored by a real commercial sign company — the shop
                   in this photo — and backed by wholesale manufacturing partners. We run Meta
-                  campaigns for local service businesses every day. We know what a channel-letter
+                  campaigns for local service businesses every day. We know what a storefront-sign
                   buyer looks like in an ad account, and we know what a raceway is when your lead
                   asks about one.
                 </p>
                 <p>
-                  I won&apos;t show you a wall of testimonials, because the pilot is new and I
-                  refuse to invent proof. What I&apos;ll show you instead is the work, the process,
-                  and a weekly report with real numbers once your campaign is live. One shop per
-                  market. If your market doesn&apos;t make sense for this, I&apos;ll tell you on the
-                  Market Review call and we&apos;ll part as friends.
+                  We&apos;ve been on both sides of this — running the ad campaigns and delivering
+                  the sign projects. That&apos;s why we report the numbers that matter: leads,
+                  quotes, and closed revenue, every week, not impressions and clicks. And it&apos;s
+                  why we only take one shop per market. If your market doesn&apos;t make sense for
+                  this, I&apos;ll tell you on the Market Review call and we&apos;ll part as friends.
                 </p>
                 <p className="text-foreground">
                   — Rameel Sheikh, Founder, LeadMill
@@ -465,7 +465,7 @@ export default function Home() {
 
       <CtaSection
         headline="See if your market is open"
-        sub="One shop per market during the pilot. Tell us about yours — if the numbers don't work, we'll say so and part as friends."
+        sub="We only take one shop per market. Tell us about yours — if the numbers don't work, we'll say so and part as friends."
       />
     </>
   );

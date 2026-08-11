@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const components = [
-  ["Sign production", "Channel letters, cabinet signs, and exterior signage built to your approved drawings and specs."],
+  ["Sign production", "Illuminated letters, cabinet signs, and exterior signage built to your approved drawings and specs."],
   ["Freight", "Packaging and shipping coordination from factory to your shop or the job site."],
   ["Permit coordination", "Application prep, submission, and correction handling in supported jurisdictions."],
   ["Engineering", "Stamped drawings and structural calcs coordinated when the jurisdiction requires them."],
@@ -26,7 +26,7 @@ export default function FulfillmentPage() {
           </h1>
           <p className="mt-5 max-w-2xl text-muted">
             The most expensive words in the sign business are &quot;we don&apos;t do those.&quot;
-            LeadMill&apos;s fulfillment network lets you say yes to channel-letter and storefront-sign
+            LeadMill&apos;s fulfillment network lets you say yes to exterior-sign and storefront
             projects without buying equipment or hiring crews.
           </p>
         </div>
@@ -52,7 +52,7 @@ export default function FulfillmentPage() {
             <li className="flex gap-3"><span className="text-accent">■</span> Every project is quoted separately. Production, freight, permits, engineering, and installation are individual line items — you see each one.</li>
             <li className="flex gap-3"><span className="text-accent">■</span> You mark it up. You control the retail price to your customer. Our quote is your cost.</li>
             <li className="flex gap-3"><span className="text-accent">■</span> Payment before production. New accounts pay in full before fabrication starts, and nothing is built without your signed drawing approval.</li>
-            <li className="flex gap-3"><span className="text-accent">■</span> No membership fee during the pilot. Agency clients get network access included.</li>
+            <li className="flex gap-3"><span className="text-accent">■</span> No membership fee — agency clients get network access included.</li>
           </ul>
         </div>
       </section>

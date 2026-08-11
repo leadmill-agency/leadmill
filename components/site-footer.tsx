@@ -10,8 +10,8 @@ export function SiteFooter() {
             Lead<span className="text-accent">Mill</span>
           </p>
           <p className="mt-3 max-w-xs text-sm text-muted">
-            Built by operators of a real commercial sign company. We help sign shops win more
-            channel-letter and storefront-sign jobs.
+            Built by operators of a real commercial sign company. We help sign shops win bigger
+            exterior sign jobs.
           </p>
         </div>
         <div className="text-sm">

@@ -41,6 +41,10 @@ const faqItems = [
     a: "No. Leadmill fabricates supported categories of illuminated exterior signage — front-lit, halo-lit, cabinets, and more. Channel letters are one common example.",
   },
   {
+    q: "Where is the fabrication based?",
+    a: "Our fabrication network is anchored by a UL-certified commercial sign facility in Houston, Texas. You're working with a U.S. operation that picks up the phone in your time zone.",
+  },
+  {
     q: "Do you guarantee closed jobs?",
     a: "No. Anyone who guarantees closed jobs is lying to you. We generate qualified opportunities; your shop sells them. We only take on shops we believe can win the work.",
   },
@@ -222,6 +226,51 @@ export default function Home() {
         </div>
       </section>
 
+      {/* The math on doing it yourself */}
+      <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+        <h2 className="display max-w-3xl text-4xl sm:text-5xl">
+          What it costs to build this yourself.
+        </h2>
+        <div className="mt-12 grid gap-6 lg:grid-cols-2">
+          <div className="rounded-2xl bg-panel p-8 sm:p-10">
+            <p className="text-lg font-semibold">Building an in-house fabrication department</p>
+            <ul className="mt-6 space-y-4 text-muted">
+              {[
+                "Letter bender, router, and production space — easily six figures of equipment before your first letter ships",
+                "Production hires, training, and months of trial and error",
+                "Scrap, rework, and warranty lessons paid for out of your margin",
+                "UL standards and electrical components to learn from scratch",
+                "All of it sitting idle between sign jobs",
+              ].map((item) => (
+                <li key={item} className="flex gap-3">
+                  <span className="mt-1 text-danger">✕</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="rounded-2xl bg-ink p-8 text-white sm:p-10">
+            <p className="text-lg font-semibold">
+              Partnering with Lead<span className="text-accent-bright">Mill</span>
+            </p>
+            <ul className="mt-6 space-y-4 text-white/80">
+              {[
+                "$500/month for the demand-generation system",
+                "Trade fabrication quoted per job — pay only when you sell",
+                "Selling illuminated signage in weeks, not next year",
+                "No equipment, no new payroll, no learning curve",
+                "Volume scales up or down with your sales",
+              ].map((item) => (
+                <li key={item} className="flex gap-3">
+                  <span className="mt-1 text-accent-bright">✓</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Responsibility split */}
       <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
         <h2 className="display max-w-3xl text-4xl sm:text-5xl">
@@ -290,6 +339,40 @@ export default function Home() {
         </div>
       </section>
 
+      {/* HSC case study */}
+      <section className="mx-auto max-w-5xl px-4 py-24 sm:px-6">
+        <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.2fr]">
+          <Image
+            src="/work/karma.jpg"
+            alt="Dimensional letters fabricated and installed by Houston Sign Crafters"
+            width={800}
+            height={1000}
+            className="h-96 w-full rounded-2xl object-cover"
+          />
+          <div>
+            <p className="text-sm font-semibold text-accent">How we know this works</p>
+            <h2 className="display mt-2 text-4xl sm:text-5xl">
+              Our first client became our fabrication anchor.
+            </h2>
+            <div className="mt-6 space-y-4 text-muted">
+              <p>
+                Before Leadmill was a partner program, it was us running Meta campaigns for{" "}
+                <span className="font-medium text-foreground">Houston Sign Crafters</span>, a
+                commercial sign company with a UL-certified fabrication facility in Houston. The
+                campaigns put real illuminated-sign opportunities in front of their sales team, and
+                the work on this page came off their production floor.
+              </p>
+              <p>
+                That relationship ran deep enough that HSC became the anchor of Leadmill&apos;s
+                fabrication network. It&apos;s the whole model in one story: ads that create sign
+                work, and a fabricator behind them. Now we&apos;re bringing both sides of it to
+                shops outside Houston.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why $500 */}
       <section className="mx-auto max-w-3xl px-4 py-24 text-center sm:px-6">
         <h2 className="display text-4xl sm:text-5xl">
@@ -325,6 +408,55 @@ export default function Home() {
           <Link href="/apply" className="btn-primary mt-6 w-full text-center">
             Check My Market
           </Link>
+        </div>
+      </section>
+
+      {/* What happens after you book */}
+      <section className="border-t border-line bg-panel">
+        <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+          <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr]">
+            <div>
+              <h2 className="display text-4xl sm:text-5xl">What happens after you book.</h2>
+              <p className="mt-5 max-w-md text-muted">
+                No onboarding maze. The point of the first call is to tell you honestly whether
+                your market and your shop fit the model — and if they do, to move fast.
+              </p>
+              <Link href="/apply" className="mt-6 inline-block font-medium text-accent">
+                Check my market →
+              </Link>
+            </div>
+            <ol className="space-y-10 border-l border-line pl-8">
+              {[
+                {
+                  k: "This week",
+                  t: "The market call",
+                  d: "20–30 minutes. We look at your market, your current sign work, and how you'd handle surveys, permits, and installs. If it doesn't fit, we say so.",
+                },
+                {
+                  k: "Week 1–2",
+                  t: "Your campaign goes live",
+                  d: "We build the creative, targeting, lead forms, and routing. Illuminated-sign inquiries start landing on your phone with automated follow-up behind them.",
+                },
+                {
+                  k: "First weeks",
+                  t: "You quote and close",
+                  d: "Your team works the opportunities under your brand, at your prices. We watch lead quality with you and tune the campaign.",
+                },
+                {
+                  k: "When you close",
+                  t: "We build your sign",
+                  d: "Send the approved specs and measurements. We quote the fabrication at trade pricing, you approve, and production starts. You install, collect, and keep the retail margin.",
+                },
+              ].map((step) => (
+                <li key={step.k} className="relative">
+                  <span className="absolute -left-[41px] top-1 h-2.5 w-2.5 rounded-full bg-accent-bright ring-4 ring-panel" />
+                  <p className="text-sm font-semibold text-accent">{step.k}</p>
+                  <h3 className="mt-1 text-xl font-semibold">{step.t}</h3>
+                  <p className="mt-2 text-muted">{step.d}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
       </section>
 

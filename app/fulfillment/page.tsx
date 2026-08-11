@@ -25,7 +25,8 @@ export default function FabricationPage() {
           </h1>
           <p className="mt-5 max-w-2xl text-muted">
             Sell the project under your own brand. Leadmill fabricates the supported illuminated
-            sign products you order from us — quoted per project at trade pricing.
+            sign products you order from us — quoted per project at trade pricing, anchored by a
+            UL-certified commercial sign facility in Houston, Texas.
           </p>
         </div>
         <div className="hazard" />
@@ -52,6 +53,14 @@ export default function FabricationPage() {
               Leadmill does not provide permitting or installation. Your shop owns the local work —
               that&apos;s exactly why the customer stays yours.
             </p>
+            <div className="mt-4 rounded-xl bg-panel p-5 text-sm">
+              <p className="font-semibold">Where your signs are built</p>
+              <p className="mt-1.5 text-muted">
+                Our network is anchored by a UL-certified commercial sign manufacturing facility in
+                Houston, Texas — the same production floor behind the work on this page. Questions
+                about a spec get answered by people who bend the metal, in your time zone.
+              </p>
+            </div>
           </div>
           <div className="grid grid-cols-2 gap-4">
             <Image

@@ -4,39 +4,39 @@ import { CtaSection } from "@/components/cta-section";
 export const metadata: Metadata = {
   title: "How It Works",
   description:
-    "From Meta ad to installed sign: how LeadMill generates commercial-sign leads for your shop and backs you up with optional fulfillment.",
+    "How the Leadmill partner model works: we generate illuminated-sign opportunities and fabricate at trade pricing. Your shop sells, permits, and installs.",
 };
 
 const steps = [
   {
     n: "01",
-    t: "Market Review",
-    d: "Before any money moves, we look at your market together: competition, demand, realistic project values, and whether permit and installation coordination are supported in your area. If the numbers don't work, we tell you and part as friends.",
+    t: "Market check",
+    d: "Apply and we look at your market together: competition, demand, and whether partner availability is open in your area. If the numbers don't work for your shop, we tell you and part as friends.",
   },
   {
     n: "02",
     t: "Campaign launch",
-    d: "We build your local Meta campaign — sign-specific creative, a lead form that filters out yard-sign and DIY buyers, and routing that gets each lead to your phone and inbox within seconds. Typical launch is about a week after access and payment.",
+    d: "We build your local Meta campaign — creative built around illuminated exterior signage, lead forms that filter out yard-sign and DIY buyers, and routing that gets each lead to your phone and inbox fast.",
   },
   {
     n: "03",
-    t: "Leads come to you",
-    d: "Every lead includes the project basics: sign type, new or replacement, timeline, budget signal, and contact details. You get an alert the moment it lands. Speed matters — commercial buyers talk to whoever answers first.",
+    t: "Leads come to you, qualified",
+    d: "Every lead includes the project basics: sign type, new or replacement, timeline, budget signal, and contact details. Automated follow-up keeps them warm until your team connects.",
   },
   {
     n: "04",
     t: "You quote and close",
-    d: "Your shop, your brand, your price. You survey, quote, and close the way you always have. We track outcomes in a simple CRM pipeline so we both know what the campaign is actually producing — quotes and closed revenue, not just leads. Don't have someone free to work new leads? Our Closing Desk tier answers, qualifies, and quotes off your price sheet for you.",
+    d: "Your shop, your brand, your retail price. You survey the site, quote the project, and close the customer the way you always have.",
   },
   {
     n: "05",
-    t: "Fulfillment when you need it",
-    d: "Close a job you can't build in-house? Send it to the fulfillment network. Production, freight, permit coordination, engineering, installer sourcing — each component quoted separately, per project. Use all of it, some of it, or none of it.",
+    t: "Send us the fabrication order",
+    d: "When you want Leadmill to build the sign, submit the approved artwork, specs, and field measurements. We quote the fabrication wholesale, you approve, we build and ship.",
   },
   {
     n: "06",
-    t: "Weekly reporting",
-    d: "Every week you see spend, leads, cost per qualified lead, quotes, closed jobs, and closed revenue. If leads are being missed, we flag it. If the campaign isn't producing, we fix it or pause it — we don't hide behind impressions.",
+    t: "You deliver the project",
+    d: "Your shop handles permitting, installation, and the customer relationship through closeout. Your customer never hears from Leadmill.",
   },
 ];
 
@@ -46,11 +46,11 @@ export default function HowItWorksPage() {
       <section className="border-b border-line">
         <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
           <h1 className="display max-w-3xl text-5xl sm:text-6xl">
-            From Meta ad to installed sign.
+            From your first campaign to your fabrication partner.
           </h1>
           <p className="mt-5 max-w-2xl text-muted">
             No black box. Here is exactly what happens from the day you apply to the day your
-            customer&apos;s sign is on the wall.
+            customer&apos;s sign is on their wall.
           </p>
         </div>
         <div className="hazard" />
@@ -62,7 +62,7 @@ export default function HowItWorksPage() {
             <li key={s.n} className="flex gap-6 rounded-2xl border border-line bg-panel p-6 sm:p-8">
               <span className="display shrink-0 text-4xl text-accent sm:text-5xl">{s.n}</span>
               <div>
-                <h2 className="display text-2xl sm:text-3xl">{s.t}</h2>
+                <h2 className="text-2xl font-semibold">{s.t}</h2>
                 <p className="mt-2 text-sm leading-relaxed text-muted sm:text-base">{s.d}</p>
               </div>
             </li>
@@ -71,19 +71,14 @@ export default function HowItWorksPage() {
         <div className="mt-10 rounded-2xl bg-panel p-6 text-sm text-muted">
           <p className="font-semibold text-foreground">The commitment, plainly:</p>
           <p className="mt-2">
-            $2,000/month management fee. You fund ad spend separately ($1,500–$3,000/month
-            recommended, paid directly to Meta). 90-day initial commitment. Fulfillment quoted per
-            project — no membership fee.
-          </p>
-          <p className="mt-3">
-            <span className="font-semibold text-foreground">Closing Desk tier:</span> we answer
-            every lead, qualify it, quote off your price sheet, and book the site survey — your
-            shop fabricates and installs. $2,000/month plus 8% of closed job revenue.
+            $500/month partner membership. You fund your Meta ad spend separately ($500–$1,000/month
+            is a sensible test, paid directly to Meta). Fabrication is quoted per project at trade
+            pricing. No revenue share — you keep every dollar of your retail sale.
           </p>
         </div>
       </section>
 
-      <CtaSection headline="Ready to see your market?" sub="Apply for a Market Review. If your market is open and the fit is right, we'll show you exactly what the program would look like for your shop." />
+      <CtaSection headline="Ready to see your market?" sub="Apply and we'll tell you honestly whether the model fits your shop and your area." />
     </>
   );
 }

@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 export function CtaSection({
-  headline = "See if your shop and market are a fit",
-  sub = "Tell us about your shop. If your market is open and the numbers make sense, we'll walk you through exactly how the program works.",
+  headline = "See if your market is open",
+  sub = "Tell us about your shop. If your market is open and the fit is right, we'll walk you through exactly how the partnership works.",
 }: {
   headline?: string;
   sub?: string;
@@ -13,10 +13,10 @@ export function CtaSection({
         <h2 className="display text-4xl text-accent-ink sm:text-5xl">{headline}</h2>
         <p className="mx-auto mt-4 max-w-xl text-accent-ink/80">{sub}</p>
         <Link href="/apply" className="btn-primary mt-8 text-lg">
-          Apply for a Market Review
+          Check My Market
         </Link>
         <p className="mt-4 text-sm text-accent-ink/70">
-          Takes about 3 minutes. No payment required to apply.
+          Takes about 2 minutes. No payment required to apply.
         </p>
       </div>
     </section>

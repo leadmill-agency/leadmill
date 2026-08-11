@@ -38,6 +38,11 @@ const COLUMNS = [
   "utm_content",
   "utm_term",
   "fbclid",
+  // V2 partner-model fields (appended so existing sheet columns don't shift)
+  "businessType",
+  "whoInstalls",
+  "canPermit",
+  "fabricationInterest",
 ] as const;
 
 type Payload = Record<string, string | number | boolean | undefined>;
@@ -120,10 +125,11 @@ async function sendAlertEmail(payload: Payload) {
     line("Score", "score"),
     line("Route", "route"),
     line("Flags", "flags"),
-    line("Closing preference", "closingPreference"),
-    line("Fulfillment interest", "fulfillmentInterest"),
+    line("Business type", "businessType"),
+    line("Fabrication interest", "fabricationInterest"),
+    line("Installs via", "whoInstalls"),
+    line("Can permit", "canPermit"),
     line("Ad budget", "adBudget"),
-    line("Response time", "responseTime"),
     "",
     line("Source", "utm_source"),
     line("Campaign", "utm_campaign"),

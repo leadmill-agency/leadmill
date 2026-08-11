@@ -21,8 +21,9 @@ export default async function ThankYouPage({
         <>
           <h1 className="display mt-2 text-4xl sm:text-5xl">Good news — you look like a fit.</h1>
           <p className="mt-4 text-muted">
-            Your shop matches what we look for. The next step is a 20–30 minute Market Review call
-            where we look at your market, your numbers, and whether the program makes sense for you.
+            Your shop matches what we look for in a partner. The next step is a 20–30 minute call
+            where we look at your market, the numbers, and how the fabrication relationship would
+            work for your shop.
           </p>
           {calendarUrl ? (
             <a
@@ -55,7 +56,7 @@ export default async function ThankYouPage({
           <p className="mt-4 text-muted">
             {route === "disqualified"
               ? "We don't currently operate in the Greater Houston market, so we won't be able to work together right now. If you open a location in another market, we'd be glad to talk."
-              : "Based on your answers, the program isn't the right fit today — usually that comes down to ad budget, lead-response capacity, or time in business. We'll keep your application on file and reach out if that changes."}
+              : "Based on your answers, the partner program isn't the right fit today — usually that comes down to ad budget, or not yet having a way to permit and install locally. We'll keep your application on file and reach out if that changes."}
           </p>
           <Link href="/" className="mt-8 inline-block text-sm text-accent hover:brightness-110">
             ← Back to the homepage

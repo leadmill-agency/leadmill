@@ -5,88 +5,65 @@ import { CtaSection } from "@/components/cta-section";
 
 const faqItems = [
   {
-    q: "Do I need to manufacture the signs myself?",
-    a: "No. Many of our best-fit shops outsource illuminated exterior signs entirely. Our fulfillment network can quote production for closed jobs, or you can keep using your existing wholesaler.",
+    q: "What does Leadmill actually do?",
+    a: "We help qualified print, wrap, graphics, and sign shops generate local illuminated exterior sign opportunities, then provide trade fabrication when your shop wants us to build the sign.",
   },
   {
-    q: "What if I already have a wholesaler?",
-    a: "Keep them. Fulfillment is optional and quoted per project. Plenty of shops use us for leads only and fulfill through their existing relationships.",
+    q: "Who owns the customer?",
+    a: "You do. Your shop controls the customer relationship, retail price, sales process, and collections. Leadmill never solicits your end customer.",
   },
   {
-    q: "Do I keep the customer?",
-    a: "Yes, always. The lead goes to you, you close the job, you set the retail price, and the customer is yours. We stay behind the scenes.",
+    q: "Does Leadmill install the sign?",
+    a: "No. Your shop handles installation, or uses its own local installer.",
   },
   {
-    q: "How much ad spend is required?",
-    a: "We recommend $1,500–$3,000 per month in ad spend, funded by you and paid directly to Meta. That's separate from the management fee.",
+    q: "Does Leadmill handle permitting?",
+    a: "No. Your shop handles permitting directly or through its own permit resource.",
   },
   {
-    q: "Is fulfillment required?",
-    a: "No. It's there when you need it — production, permit coordination, installer sourcing — and every component is quoted separately per project.",
+    q: "Does Leadmill take a percentage of my sale?",
+    a: "No. There is no revenue share. You keep every dollar of the retail sale.",
   },
   {
-    q: "Can you handle permits and installation everywhere?",
-    a: "No, and we won't pretend otherwise. Permit and installation coordination depend on market coverage. We tell you exactly what's supported in your market before you commit.",
+    q: "Who pays for the ads?",
+    a: "Your shop funds its own Meta ad budget, paid directly to Meta. Leadmill manages the campaign as part of the partner membership.",
   },
   {
-    q: "Is my market exclusive?",
-    a: "Clients get local protection while their campaign is active — we won't run campaigns for a competing shop in your practical service area. We don't sell permanent citywide exclusivity.",
+    q: "Is fabrication included in the $500?",
+    a: "No. Fabrication is quoted separately at trade pricing for each project. You mark it up and sell at your own retail price.",
   },
   {
-    q: "How quickly do I need to answer leads?",
-    a: "Fast. Commercial sign buyers get quotes from whoever answers first. We expect leads contacted within minutes, not days — and we track it. If leads get ignored, we pause the campaign rather than waste your money.",
+    q: "Can I send you fabrication jobs that didn't come from Leadmill ads?",
+    a: "Yes — please do. The goal is to become your ongoing fabrication partner. Qualifying projects are welcome no matter how you won the customer.",
   },
   {
-    q: "What if nobody on my team has time to work new leads?",
-    a: "That's what the Closing Desk tier is for. We answer every lead, qualify it, quote off your price sheet, and book the site survey — your shop fabricates and installs. $2,000/month plus 8% of closed job revenue.",
+    q: "Is this only for channel letters?",
+    a: "No. Leadmill fabricates supported categories of illuminated exterior signage — front-lit, halo-lit, cabinets, and more. Channel letters are one common example.",
   },
   {
     q: "Do you guarantee closed jobs?",
-    a: "No. Anyone who guarantees closed jobs is lying to you. We generate qualified opportunities and track them honestly. Closing is your job — or ours, on the Closing Desk tier — and we only take on shops we believe can win the work.",
+    a: "No. Anyone who guarantees closed jobs is lying to you. We generate qualified opportunities; your shop sells them. We only take on shops we believe can win the work.",
   },
   {
     q: "Do you serve Houston?",
-    a: "No. Greater Houston is excluded from the program.",
+    a: "No. Greater Houston is our fabrication operation's home market and is excluded from the partner program.",
   },
 ];
 
-const usedToTake = [
-  "A fabrication shop with letter benders, routers, and LED inventory",
-  "Someone who knows permits, engineering stamps, and landlord criteria",
-  "An install crew with a bucket truck and liability coverage",
-  "A steady source of commercial buyers — not walk-ins and yard signs",
-  "A salesperson free to chase every quote for weeks",
+const leadmillDoes = [
+  "Meta campaign setup and management",
+  "Ad creative built for illuminated-sign buyers",
+  "Lead capture and sign-specific qualification",
+  "Automated follow-up so leads don't go cold",
+  "Trade fabrication of illuminated exterior signs, quoted per job",
 ];
 
-const withLeadmill = [
-  "Qualified commercial-sign leads arriving from your local Meta campaign",
-  "You quote and close under your own brand, at your own price",
-  "Wholesale production quoted per job through the fulfillment network",
-  "Permit, engineering, and installer coordination where coverage exists",
-  "A Closing Desk option if nobody on your team can work the leads",
-];
-
-const timeline = [
-  {
-    k: "Week 1",
-    t: "Your campaign goes live",
-    d: "We review your market together, build sign-specific creative, and launch your local Meta campaign. Lead routing lands every inquiry on your phone and inbox within seconds.",
-  },
-  {
-    k: "Weeks 2–4",
-    t: "Leads start arriving",
-    d: "Each lead comes with project basics: sign type, timeline, budget signal, contact details. You call fast, survey, and quote. We track every outcome in the CRM so nothing slips.",
-  },
-  {
-    k: "Days 30–60",
-    t: "Your pipeline takes shape",
-    d: "Quotes go out, jobs close, and fulfillment quotes production for anything your shop can't build in-house. Weekly reporting shows spend, leads, quotes, and closed revenue — not vanity metrics.",
-  },
-  {
-    k: "Day 90",
-    t: "You decide on the numbers",
-    d: "The 90-day commitment ends with a simple review: leads, quotes, closed jobs, and revenue against what you spent. If the math works, we scale. If it doesn't, we part as friends.",
-  },
+const partnerDoes = [
+  "Sells the project and owns the customer",
+  "Sets the retail price and keeps every dollar of it",
+  "Handles the site survey and field measurements",
+  "Handles permitting and landlord approvals",
+  "Handles installation and electrical connection",
 ];
 
 const vslUrl = process.env.NEXT_PUBLIC_VSL_URL;
@@ -99,27 +76,30 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 pt-20 sm:px-6 sm:pt-28">
           <div className="mx-auto max-w-3xl text-center">
             <p className="rise text-lg text-muted">
-              For established sign, wrap, print &amp; graphics shops:
+              Built for the top 5% of sign, print, wrap &amp; graphics shops:
             </p>
             <h1 className="display rise-2 mt-3 text-5xl sm:text-6xl md:text-7xl">
-              Win bigger <span className="text-accent">exterior sign jobs</span> without building a
-              factory.
+              Start selling <span className="text-accent">illuminated exterior signs</span> without
+              building them yourself.
             </h1>
             <p className="rise-3 mx-auto mt-6 max-w-2xl text-lg text-muted">
-              LeadMill runs your local Meta ads and sends qualified commercial-sign leads straight
-              to your phone. You close and keep the customer. Our fulfillment network builds what
-              your shop can&apos;t.
+              Leadmill generates local illuminated-sign opportunities for your shop — and fabricates
+              the signs at trade pricing when you close the job. You own the customer, the retail
+              price, permitting, and installation.
             </p>
-            <div className="rise-3 mt-9 flex flex-wrap items-center justify-center gap-4">
+            <p className="rise-3 mt-5 text-lg font-semibold">
+              $500/month + your ad budget. No revenue share.
+            </p>
+            <div className="rise-3 mt-8 flex flex-wrap items-center justify-center gap-4">
               <Link href="/apply" className="btn-primary text-lg">
-                Apply for a Market Review
+                Check My Market
               </Link>
               <Link href="/how-it-works" className="btn-secondary text-lg">
-                See the process
+                See how it works
               </Link>
             </div>
             <p className="rise-3 mt-4 text-sm text-muted">
-              Takes about 3 minutes. No payment required to apply.
+              Takes about 2 minutes. Limited partner availability by market.
             </p>
           </div>
 
@@ -162,29 +142,98 @@ export default function Home() {
         <div className="hazard" />
       </section>
 
-      {/* The trade-off, reframed */}
+      {/* The problem */}
+      <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+        <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr]">
+          <div>
+            <h2 className="display max-w-2xl text-4xl sm:text-5xl">
+              Your customers already buy illuminated signs. The question is who they buy them from.
+            </h2>
+            <div className="mt-6 max-w-xl space-y-4 text-muted">
+              <p>
+                You printed their banners, wrapped their vans, made their window graphics. Then they
+                need a lit storefront sign — and because you don&apos;t fabricate illuminated
+                signage, the job gets referred away to a full-service sign company. They keep that
+                customer for the next one, too.
+              </p>
+              <p>
+                Ask most shop owners where their work comes from today and the answer is referrals,
+                repeat customers, and a Google profile. That&apos;s real — but it caps you at the
+                product lines you already sell.
+              </p>
+            </div>
+          </div>
+          <ul className="space-y-4 self-center rounded-2xl bg-panel p-8 text-muted sm:p-10">
+            {[
+              "Add a higher-ticket signage category",
+              "Skip building an in-house fabrication department",
+              "Generate new local illuminated-sign opportunities",
+              "Keep full control of the customer relationship",
+              "Order trade fabrication only when you need it",
+            ].map((item) => (
+              <li key={item} className="flex gap-3">
+                <span className="mt-1 text-accent">✓</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* The four-step flow */}
+      <section className="border-y border-line bg-panel">
+        <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+          <h2 className="display max-w-2xl text-4xl sm:text-5xl">How the partnership works.</h2>
+          <div className="mt-12 grid gap-4 md:grid-cols-4">
+            {[
+              {
+                n: "1",
+                t: "Leadmill generates demand",
+                d: "We launch and manage local Meta campaigns focused on illuminated exterior signage in your market.",
+              },
+              {
+                n: "2",
+                t: "Your shop sells the project",
+                d: "You own the lead, the customer, the retail price, and the sales process — under your brand.",
+              },
+              {
+                n: "3",
+                t: "Leadmill fabricates",
+                d: "Send us the approved specs and we quote the fabrication at trade pricing. You mark it up.",
+              },
+              {
+                n: "4",
+                t: "You handle the local work",
+                d: "Your shop handles the survey, permitting, and installation. Your customer never hears from us.",
+              },
+            ].map((s, i) => (
+              <div key={s.n} className="relative rounded-2xl bg-background p-6">
+                <span className="text-sm font-semibold text-accent">Step {s.n}</span>
+                <h3 className="mt-2 text-lg font-semibold">{s.t}</h3>
+                <p className="mt-2 text-sm text-muted">{s.d}</p>
+                {i < 3 && (
+                  <span className="absolute -right-4 top-1/2 hidden -translate-y-1/2 text-2xl text-accent-bright md:block">
+                    →
+                  </span>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Responsibility split */}
       <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
         <h2 className="display max-w-3xl text-4xl sm:text-5xl">
-          Winning big sign jobs used to mean building the whole backend yourself.
+          A clean split. No gray areas.
         </h2>
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
-          <div className="rounded-2xl bg-panel p-8 sm:p-10">
-            <p className="text-lg font-semibold">What it used to take</p>
-            <ul className="mt-6 space-y-4 text-muted">
-              {usedToTake.map((item) => (
-                <li key={item} className="flex gap-3">
-                  <span className="mt-1 text-danger">✕</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
           <div className="rounded-2xl bg-ink p-8 text-white sm:p-10">
             <p className="text-lg font-semibold">
-              What it takes with Lead<span className="text-accent-bright">Mill</span>
+              Lead<span className="text-accent-bright">Mill</span> handles
             </p>
             <ul className="mt-6 space-y-4 text-white/80">
-              {withLeadmill.map((item) => (
+              {leadmillDoes.map((item) => (
                 <li key={item} className="flex gap-3">
                   <span className="mt-1 text-accent-bright">✓</span>
                   {item}
@@ -192,7 +241,22 @@ export default function Home() {
               ))}
             </ul>
           </div>
+          <div className="rounded-2xl bg-panel p-8 sm:p-10">
+            <p className="text-lg font-semibold">Your shop handles</p>
+            <ul className="mt-6 space-y-4 text-muted">
+              {partnerDoes.map((item) => (
+                <li key={item} className="flex gap-3">
+                  <span className="mt-1 text-accent">✓</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
+        <p className="mt-6 text-sm text-muted">
+          Leadmill does not provide permitting or installation — that local expertise is exactly why
+          the customer belongs to you.
+        </p>
       </section>
 
       {/* Real work strip */}
@@ -200,11 +264,10 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <h2 className="display max-w-xl text-3xl sm:text-4xl">
-              The kind of work your leads will ask for.
+              The kind of work you&apos;ll be selling.
             </h2>
             <p className="max-w-sm text-sm text-muted">
-              Storefront and building signage produced and installed through our fulfillment
-              network&apos;s shops.
+              Illuminated exterior signage from the commercial sign company behind Leadmill.
             </p>
           </div>
           <div className="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
@@ -227,44 +290,41 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 90-day timeline */}
-      <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
-        <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr]">
-          <div>
-            <h2 className="display text-4xl sm:text-5xl">What the first 90 days look like.</h2>
-            <p className="mt-5 max-w-md text-muted">
-              A 90-day initial commitment, $2,000/month, ad spend funded by you. No long contract,
-              no black box — a weekly report and a hard look at the numbers at the end.
-            </p>
-            <Link href="/how-it-works" className="mt-6 inline-block font-medium text-accent">
-              See the full process →
-            </Link>
-          </div>
-          <ol className="space-y-10 border-l border-line pl-8">
-            {timeline.map((step) => (
-              <li key={step.k} className="relative">
-                <span className="absolute -left-[41px] top-1 h-2.5 w-2.5 rounded-full bg-accent-bright ring-4 ring-background" />
-                <p className="text-sm font-semibold text-accent">{step.k}</p>
-                <h3 className="mt-1 text-xl font-semibold">{step.t}</h3>
-                <p className="mt-2 text-muted">{step.d}</p>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      {/* Mid-page CTA */}
-      <section className="border-t border-line bg-panel">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-6 px-4 py-12 sm:px-6">
-          <p className="display max-w-xl text-2xl sm:text-3xl">
-            Your market only fits one shop. Find out if it&apos;s still open.
+      {/* Why $500 */}
+      <section className="mx-auto max-w-3xl px-4 py-24 text-center sm:px-6">
+        <h2 className="display text-4xl sm:text-5xl">
+          Why only $500? Because we&apos;re not an agency.
+        </h2>
+        <div className="mt-6 space-y-4 text-left text-muted sm:text-center">
+          <p>
+            Traditional agencies make all their money on the retainer, so the retainer has to be
+            big. Leadmill makes money when you sell signs — because we&apos;re the fabricator behind
+            them. The $500 membership covers the growth system. Fabrication is quoted per job at
+            trade pricing, you set the retail price, and there&apos;s no revenue share.
           </p>
-          <div className="text-center">
-            <Link href="/apply" className="btn-primary">
-              Apply for a Market Review
-            </Link>
-            <p className="mt-2 text-xs text-muted">3 minutes. No payment to apply.</p>
-          </div>
+          <p className="font-medium text-foreground">
+            When you win, we build. That&apos;s the whole model.
+          </p>
+        </div>
+        <div className="mx-auto mt-10 max-w-md rounded-2xl border-2 border-accent-bright bg-background p-8 text-left">
+          <h3 className="text-2xl font-semibold">Leadmill Partner</h3>
+          <p className="mt-4 text-4xl font-semibold">
+            $500<span className="text-lg font-normal text-muted">/month</span>
+          </p>
+          <p className="mt-1 text-sm text-muted">+ your Meta ad spend, paid directly to Meta</p>
+          <ul className="mt-6 space-y-3 text-sm text-muted">
+            <li>Meta campaign setup and management</li>
+            <li>Illuminated-sign ad creative</li>
+            <li>Lead capture, qualification, and follow-up</li>
+            <li>Simple pipeline and reporting</li>
+            <li>Access to Leadmill trade fabrication</li>
+          </ul>
+          <p className="mt-6 border-t border-line pt-4 text-sm text-muted">
+            No revenue share. Fabrication quoted separately per project.
+          </p>
+          <Link href="/apply" className="btn-primary mt-6 w-full text-center">
+            Check My Market
+          </Link>
         </div>
       </section>
 
@@ -284,11 +344,11 @@ export default function Home() {
               </p>
             </div>
             <div className="border-y border-line py-12">
-              <h3 className="text-xl font-semibold">The shop that turns work away</h3>
+              <h3 className="text-xl font-semibold">The shop that refers the sign job away</h3>
               <p className="mt-2 text-muted">
-                A $10,000 building-sign job walks in and you pass on it. No fabrication capacity,
-                no permit experience, no installer. You keep the $500 banner work and watch the real
-                margin go to a competitor.
+                A customer you&apos;ve served for years asks for a $6,000 lit storefront sign. You
+                don&apos;t fabricate illuminated signage, so you hand them to a sign company — and
+                watch the highest-ticket job in the relationship walk out the door.
               </p>
             </div>
             <div>
@@ -303,102 +363,47 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Two ways to run it */}
+      {/* Fit */}
       <section className="border-t border-line bg-panel">
         <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
-          <h2 className="display max-w-2xl text-4xl sm:text-5xl">Two ways to run it.</h2>
-          <p className="mt-4 max-w-2xl text-muted">
-            Both include the same campaign, lead routing, CRM, and weekly reporting. The difference
-            is who works the leads.
-          </p>
-          <div className="mt-12 grid gap-6 lg:grid-cols-2">
-            <div className="rounded-2xl border border-line bg-background p-8 sm:p-10">
-              <h3 className="text-2xl font-semibold">Growth</h3>
-              <p className="mt-1 text-muted">Your team closes — we send the leads.</p>
-              <p className="mt-6 text-3xl font-semibold">
-                $2,000<span className="text-lg font-normal text-muted">/month</span>
-              </p>
-              <p className="mt-1 text-sm text-muted">+ your ad spend, paid directly to Meta</p>
-              <ul className="mt-8 space-y-3 text-sm text-muted">
-                <li>Meta campaign setup and management</li>
-                <li>Sign-specific ad creative</li>
-                <li>Lead routing to your phone and inbox</li>
-                <li>CRM pipeline and outcome tracking</li>
-                <li>Weekly performance reporting</li>
-                <li>Fulfillment network access</li>
+          <h2 className="display text-4xl sm:text-5xl">Built for real shops, not everyone.</h2>
+          <div className="mt-12 grid gap-x-16 gap-y-10 md:grid-cols-2">
+            <div>
+              <p className="text-lg font-semibold">A strong partner looks like:</p>
+              <ul className="mt-5 space-y-3 text-muted">
+                {[
+                  "An established shop with local business customers",
+                  "Someone comfortable quoting and selling projects",
+                  "Able to handle or coordinate site surveys",
+                  "Able to handle permitting and installation locally",
+                  "Room in the budget for a real ad-spend test",
+                  "Wants fabrication handled by a trade partner",
+                ].map((i) => (
+                  <li key={i} className="flex gap-3">
+                    <span className="text-accent">✓</span> {i}
+                  </li>
+                ))}
               </ul>
             </div>
-            <div className="rounded-2xl border-2 border-accent-bright bg-background p-8 sm:p-10">
-              <div className="flex items-center justify-between gap-4">
-                <h3 className="text-2xl font-semibold">Closing Desk</h3>
-                <span className="rounded-full bg-accent-bright px-3 py-1 text-xs font-semibold text-accent-ink">
-                  For shops with no free hands
-                </span>
-              </div>
-              <p className="mt-1 text-muted">We answer, qualify, and quote — you build and install.</p>
-              <p className="mt-6 text-3xl font-semibold">
-                $2,000<span className="text-lg font-normal text-muted">/month</span>
-                <span className="text-lg font-normal text-muted"> + 8% of closed jobs</span>
-              </p>
-              <p className="mt-1 text-sm text-muted">+ your ad spend, paid directly to Meta</p>
-              <ul className="mt-8 space-y-3 text-sm text-muted">
-                <li>Everything in Growth</li>
-                <li>Every lead answered and qualified for you</li>
-                <li>Quotes prepared from your own price sheet</li>
-                <li>Site surveys booked to your calendar</li>
-                <li>You approve every quote before it goes out</li>
+            <div>
+              <p className="text-lg font-semibold text-muted">Probably not a fit:</p>
+              <ul className="mt-5 space-y-3 text-muted">
+                {[
+                  "Needs us to handle permits or installation",
+                  "No way to survey or measure a site",
+                  "Can't invest anything in advertising",
+                  "Only wants occasional cheap fabrication",
+                  "Greater Houston shops",
+                ].map((i) => (
+                  <li key={i} className="flex gap-3">
+                    <span className="text-danger">✕</span> {i}
+                  </li>
+                ))}
               </ul>
+              <Link href="/who-its-for" className="mt-6 inline-block font-medium text-accent">
+                Full fit checklist →
+              </Link>
             </div>
-          </div>
-          <p className="mt-6 text-sm text-muted">
-            Fulfillment — production, freight, permits, engineering, installation — is quoted
-            separately per project on both tiers, and only when you ask.{" "}
-            <Link href="/fulfillment" className="font-medium text-accent">
-              How fulfillment works →
-            </Link>
-          </p>
-        </div>
-      </section>
-
-      {/* Fit */}
-      <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
-        <h2 className="display text-4xl sm:text-5xl">Built for real shops, not everyone.</h2>
-        <div className="mt-12 grid gap-x-16 gap-y-10 md:grid-cols-2">
-          <div>
-            <p className="text-lg font-semibold">A good fit looks like:</p>
-            <ul className="mt-5 space-y-3 text-muted">
-              {[
-                "An established shop with a track record",
-                "A commercial customer base",
-                "Someone who answers new leads fast",
-                "Room in the budget to fund ad spend",
-                "An appetite for larger projects",
-                "Willingness to track lead outcomes in a CRM",
-              ].map((i) => (
-                <li key={i} className="flex gap-3">
-                  <span className="text-accent">✓</span> {i}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <p className="text-lg font-semibold text-muted">We&apos;re not for:</p>
-            <ul className="mt-5 space-y-3 text-muted">
-              {[
-                "Brand-new businesses or hobby shops",
-                "Residential-only companies",
-                "Owners who can't answer leads",
-                "Shops seeking guaranteed revenue",
-                "Greater Houston competitors",
-              ].map((i) => (
-                <li key={i} className="flex gap-3">
-                  <span className="text-danger">✕</span> {i}
-                </li>
-              ))}
-            </ul>
-            <Link href="/who-its-for" className="mt-6 inline-block font-medium text-accent">
-              Full fit checklist →
-            </Link>
           </div>
         </div>
       </section>
@@ -416,7 +421,7 @@ export default function Home() {
                 className="w-full rounded-2xl object-cover"
               />
               <figcaption className="mt-3 text-sm text-muted">
-                Rameel Sheikh, on the floor of our fulfillment partner&apos;s fabrication shop.
+                Rameel Sheikh, on the production floor.
               </figcaption>
             </figure>
             <div>
@@ -427,26 +432,23 @@ export default function Home() {
                   this page. Anyone can buy a domain and claim they generate leads.
                 </p>
                 <p>
-                  Here&apos;s what makes us different, plainly: we work inside the sign business.
-                  Our fulfillment network is anchored by a real commercial sign company — the shop
-                  in this photo — and backed by wholesale manufacturing partners. We run Meta
-                  campaigns for local service businesses every day. We know what a storefront-sign
-                  buyer looks like in an ad account, and we know what a raceway is when your lead
-                  asks about one.
+                  Here&apos;s what makes us different, plainly: I&apos;m not a marketer who picked
+                  sign shops off a list of niches. We operate a commercial sign business — the shop
+                  in this photo. We quote illuminated signage, fabricate it, and run Meta campaigns
+                  for local businesses every single week. We know what a storefront-sign buyer looks
+                  like in an ad account, and we know what a raceway is when your lead asks about one.
                 </p>
                 <p>
-                  We&apos;ve been on both sides of this — running the ad campaigns and delivering
-                  the sign projects. That&apos;s why we report the numbers that matter: leads,
-                  quotes, and closed revenue, every week, not impressions and clicks. And it&apos;s
-                  why we only take one shop per market. If your market doesn&apos;t make sense for
-                  this, I&apos;ll tell you on the Market Review call and we&apos;ll part as friends.
+                  We&apos;ve been on both sides of this — running the ad campaigns and building the
+                  signs. That&apos;s why the membership is $500 instead of $2,000: we&apos;d rather
+                  be the fabrication partner behind your wins than another agency invoice. If your
+                  market doesn&apos;t make sense for this, I&apos;ll tell you on the call and
+                  we&apos;ll part as friends.
                 </p>
-                <p className="text-foreground">
-                  — Rameel Sheikh, Founder, LeadMill
-                </p>
+                <p className="text-foreground">— Rameel Sheikh, Founder, LeadMill</p>
               </div>
               <Link href="/apply" className="btn-primary mt-8">
-                Apply for a Market Review
+                Check My Market
               </Link>
             </div>
           </div>
@@ -465,7 +467,7 @@ export default function Home() {
 
       <CtaSection
         headline="See if your market is open"
-        sub="We only take one shop per market. Tell us about yours — if the numbers don't work, we'll say so and part as friends."
+        sub="Limited partner availability by market. Tell us about your shop — if the numbers don't work, we'll say so and part as friends."
       />
     </>
   );

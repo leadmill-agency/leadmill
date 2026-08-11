@@ -1,73 +1,99 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { CtaSection } from "@/components/cta-section";
 
 export const metadata: Metadata = {
-  title: "Fulfillment",
+  title: "Trade Fabrication",
   description:
-    "Optional fulfillment for closed commercial-sign jobs: production quoting, freight, permit coordination, engineering, and installer sourcing — quoted per project.",
+    "Trade-only fabrication of illuminated exterior signage for Leadmill partners. Sell under your brand, set your retail price — we build the sign.",
 };
 
-const components = [
-  ["Sign production", "Illuminated letters, cabinet signs, and exterior signage built to your approved drawings and specs."],
-  ["Freight", "Packaging and shipping coordination from factory to your shop or the job site."],
-  ["Permit coordination", "Application prep, submission, and correction handling in supported jurisdictions."],
-  ["Engineering", "Stamped drawings and structural calcs coordinated when the jurisdiction requires them."],
-  ["Installer sourcing", "Vetted, insured installers in supported markets — with pricing before you commit."],
-  ["Installation coordination", "Scheduling, site requirements, and completion documentation for the install."],
+const products = [
+  ["Front-lit channel letters", "The storefront standard — faces illuminated, built to your approved specs."],
+  ["Halo / reverse-lit letters", "Light projects behind the letter for a premium glow against the wall."],
+  ["Illuminated cabinet signs", "One continuous illuminated face for logos that work better as a single piece."],
+  ["Illuminated logo and cloud signs", "Shaped sign bodies that keep detailed logos together."],
 ];
 
-export default function FulfillmentPage() {
+export default function FabricationPage() {
   return (
     <>
       <section className="border-b border-line">
         <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
           <h1 className="display max-w-3xl text-5xl sm:text-6xl">
-            Sell the job. We can help you deliver it.
+            Trade fabrication for illuminated exterior signage.
           </h1>
           <p className="mt-5 max-w-2xl text-muted">
-            The most expensive words in the sign business are &quot;we don&apos;t do those.&quot;
-            LeadMill&apos;s fulfillment network lets you say yes to exterior-sign and storefront
-            projects without buying equipment or hiring crews.
+            Sell the project under your own brand. Leadmill fabricates the supported illuminated
+            sign products you order from us — quoted per project at trade pricing.
           </p>
         </div>
         <div className="hazard" />
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-        <h2 className="display text-3xl sm:text-4xl">What the network covers</h2>
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {components.map(([t, d]) => (
-            <div key={t} className="rounded-xl border border-line bg-panel p-6">
-              <h3 className="text-xl font-semibold">{t}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">{d}</p>
-            </div>
-          ))}
+        <div className="grid gap-10 lg:grid-cols-2">
+          <div>
+            <h2 className="text-2xl font-semibold">How the trade relationship works</h2>
+            <ul className="mt-6 space-y-4 text-muted">
+              {[
+                "You own the end customer — Leadmill never solicits them",
+                "You set the retail price and keep the full retail margin",
+                "Fabrication is quoted per project, wholesale",
+                "Send us jobs from any source — Leadmill ads, referrals, your existing customers",
+                "You provide approved artwork, specs, and field measurements",
+              ].map((i) => (
+                <li key={i} className="flex gap-3">
+                  <span className="text-accent">✓</span> {i}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-8 rounded-xl bg-panel p-5 text-sm font-medium">
+              Leadmill does not provide permitting or installation. Your shop owns the local work —
+              that&apos;s exactly why the customer stays yours.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <Image
+              src="/work/luce.jpg"
+              alt="Halo-lit exterior sign glowing at night"
+              width={800}
+              height={1000}
+              className="h-64 w-full rounded-xl object-cover sm:h-80"
+            />
+            <Image
+              src="/work/copper.jpg"
+              alt="Backlit exterior sign above a storefront at dusk"
+              width={800}
+              height={1000}
+              className="mt-6 h-64 w-full rounded-xl object-cover sm:h-80"
+            />
+          </div>
         </div>
       </section>
 
-      <section className="border-y border-line bg-panel">
-        <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
-          <h2 className="display text-3xl sm:text-4xl">How pricing works</h2>
-          <ul className="mt-6 space-y-4 text-muted">
-            <li className="flex gap-3"><span className="text-accent">■</span> Every project is quoted separately. Production, freight, permits, engineering, and installation are individual line items — you see each one.</li>
-            <li className="flex gap-3"><span className="text-accent">■</span> You mark it up. You control the retail price to your customer. Our quote is your cost.</li>
-            <li className="flex gap-3"><span className="text-accent">■</span> Payment before production. New accounts pay in full before fabrication starts, and nothing is built without your signed drawing approval.</li>
-            <li className="flex gap-3"><span className="text-accent">■</span> No membership fee — agency clients get network access included.</li>
-          </ul>
+      <section className="border-t border-line bg-panel">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+          <h2 className="display text-3xl sm:text-4xl">What we fabricate.</h2>
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            {products.map(([t, d]) => (
+              <div key={t} className="rounded-xl border border-line bg-background p-6">
+                <h3 className="text-xl font-semibold">{t}</h3>
+                <p className="mt-2 text-sm text-muted">{d}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-6 text-sm text-muted">
+            Have a project outside these categories? Send the specs — if it&apos;s within our
+            production capability, we&apos;ll quote it.
+          </p>
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
-        <h2 className="display text-3xl sm:text-4xl">What we won&apos;t promise</h2>
-        <p className="mt-4 text-muted">
-          Permit and installation coordination depend on where the job is. Some jurisdictions and
-          markets are fully supported; others are production-and-freight only. Before you commit to
-          anything, we tell you exactly what&apos;s covered in your market — in writing. No
-          nationwide promises where coverage doesn&apos;t exist.
-        </p>
-      </section>
-
-      <CtaSection headline="Want the backend without building it?" />
+      <CtaSection
+        headline="Want a fabrication partner behind your shop?"
+        sub="Partner membership is $500/month and includes the demand-generation system. Fabrication is quoted per job."
+      />
     </>
   );
 }

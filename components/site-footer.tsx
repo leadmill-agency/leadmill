@@ -10,15 +10,15 @@ export function SiteFooter() {
             Lead<span className="text-accent">Mill</span>
           </p>
           <p className="mt-3 max-w-xs text-sm text-muted">
-            Built by operators of a real commercial sign company. We help sign shops win bigger
-            exterior sign jobs.
+            Built by operators of a real commercial sign company. We help print, wrap, and sign
+            shops sell illuminated exterior signage — and we fabricate it.
           </p>
         </div>
         <div className="text-sm">
           <p className="eyebrow mb-3">Pages</p>
           <ul className="space-y-2 text-muted">
             <li><Link href="/how-it-works" className="hover:text-foreground">How It Works</Link></li>
-            <li><Link href="/fulfillment" className="hover:text-foreground">Fulfillment</Link></li>
+            <li><Link href="/fulfillment" className="hover:text-foreground">Fabrication</Link></li>
             <li><Link href="/who-its-for" className="hover:text-foreground">Who It&apos;s For</Link></li>
             <li><Link href="/apply" className="hover:text-foreground">Apply</Link></li>
           </ul>
@@ -30,7 +30,8 @@ export function SiteFooter() {
             <li><Link href="/terms" className="hover:text-foreground">Terms of Service</Link></li>
           </ul>
           <p className="mt-6 text-xs text-muted">
-            Fulfillment services are quoted separately by project and depend on market coverage.
+            Fabrication is quoted separately per project at trade pricing. Partners handle
+            permitting and installation locally.
           </p>
         </div>
       </div>

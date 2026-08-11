@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const nav = [
   { href: "/how-it-works", label: "How it works" },
-  { href: "/fulfillment", label: "Fulfillment" },
+  { href: "/fulfillment", label: "Fabrication" },
   { href: "/who-its-for", label: "Who it's for" },
 ];
 
@@ -10,8 +10,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-background/90 backdrop-blur">
       <Link href="/apply" className="block bg-ink py-2 text-center text-sm text-white transition hover:opacity-90">
-        One shop per market — and markets close as shops claim them.{" "}
-        <span className="font-semibold text-accent-bright">Check if yours is open →</span>
+        $500/month partner program for print, wrap &amp; sign shops — limited availability by market.{" "}
+        <span className="font-semibold text-accent-bright">Check yours →</span>
       </Link>
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="text-xl font-semibold tracking-tight">

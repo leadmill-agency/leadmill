@@ -13,11 +13,11 @@ const geist = Geist({
 
 export const metadata: Metadata = {
   title: {
-    default: "LeadMill — More Exterior Sign Jobs for Sign Shops",
-    template: "%s | LeadMill",
+    default: "Leadmill — Grow Illuminated Sign Sales Without In-House Fabrication",
+    template: "%s | Leadmill",
   },
   description:
-    "LeadMill runs Meta Ads for established sign, wrap, print, and graphics shops. You own the customer. Our fulfillment network can help coordinate production, permitting, and installation.",
+    "Leadmill helps established print, wrap, graphics, and sign shops generate illuminated exterior sign opportunities and access trade fabrication. Partner membership is $500/month plus ad spend.",
 };
 
 const pixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID;

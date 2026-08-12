@@ -9,6 +9,14 @@ export const metadata: Metadata = {
 
 const calendarUrl = process.env.NEXT_PUBLIC_CALENDAR_URL;
 
+// Google only allows framing its appointment pages in embed mode (?gv=true) on the
+// full calendar.google.com URL. Short calendar.app.google links send X-Frame-Options
+// and render blank in an iframe, so those get a button instead.
+const embedUrl =
+  calendarUrl && calendarUrl.includes("calendar.google.com")
+    ? `${calendarUrl}${calendarUrl.includes("?") ? "&" : "?"}gv=true`
+    : null;
+
 export default function ApplyPage() {
   if (calendarUrl) {
     return (
@@ -18,20 +26,28 @@ export default function ApplyPage() {
           Pick a time that works. We&apos;ll look at your market together and walk through how the
           partnership would work for your shop — about 20–30 minutes, no payment, no pressure.
         </p>
-        <div className="mt-10 overflow-hidden rounded-2xl border border-line bg-background">
-          <iframe
-            src={calendarUrl}
-            title="Book a call with Leadmill"
-            className="h-[900px] w-full"
-            loading="lazy"
-          />
-        </div>
-        <p className="mt-4 text-sm text-muted">
-          Calendar not loading?{" "}
-          <a href={calendarUrl} className="font-medium text-accent" target="_blank" rel="noreferrer">
-            Open the booking page in a new tab →
+        {embedUrl ? (
+          <>
+            <div className="mt-10 overflow-hidden rounded-2xl border border-line bg-background">
+              <iframe
+                src={embedUrl}
+                title="Book a call with Leadmill"
+                className="h-[900px] w-full"
+                loading="lazy"
+              />
+            </div>
+            <p className="mt-4 text-sm text-muted">
+              Calendar not loading?{" "}
+              <a href={calendarUrl} className="font-medium text-accent" target="_blank" rel="noreferrer">
+                Open the booking page in a new tab →
+              </a>
+            </p>
+          </>
+        ) : (
+          <a href={calendarUrl} className="btn-primary mt-10 text-lg" target="_blank" rel="noreferrer">
+            Pick a time →
           </a>
-        </p>
+        )}
       </div>
     );
   }

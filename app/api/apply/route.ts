@@ -136,10 +136,12 @@ async function sendAlertEmail(payload: Payload) {
     line("Submitted", "submittedAt"),
   ].join("\n");
 
+  const who = payload.businessName || payload.fullName || "unknown";
+  const grade = payload.route ? `${payload.route} (${payload.score})` : `via ${payload.page || "meta"}`;
   await transporter.sendMail({
     from: `LeadMill Applications <${user}>`,
     to,
-    subject: `New application: ${payload.businessName ?? "unknown"} — ${payload.route} (${payload.score})`,
+    subject: `New application: ${who} — ${grade}`,
     text: body,
   });
   return "ok";

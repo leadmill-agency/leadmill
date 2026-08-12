@@ -226,6 +226,62 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Sample job economics */}
+      <section className="border-t border-line bg-panel">
+        <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+          <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr]">
+            <div>
+              <h2 className="display text-4xl sm:text-5xl">What one job can look like.</h2>
+              <p className="mt-5 max-w-md text-muted">
+                An illustrative storefront-sign project, using the kind of numbers we see in our
+                own operating experience. Every job is quoted individually — your market, sign
+                size, and site conditions change these figures.
+              </p>
+              <p className="mt-4 max-w-md text-muted">
+                The point isn&apos;t the exact dollars. It&apos;s the shape of the deal: you sell
+                at your retail price, pay trade prices for the parts you outsource, and keep the
+                spread — on a product line you don&apos;t have to build a department for.
+              </p>
+            </div>
+            <div className="self-center overflow-hidden rounded-2xl border border-line bg-background">
+              <div className="border-b border-line bg-ink px-6 py-4 text-white">
+                <p className="font-semibold">Example: illuminated storefront sign</p>
+                <p className="text-sm text-white/70">
+                  New channel-letter set for a local business — a typical $6,000-class project
+                </p>
+              </div>
+              <dl className="divide-y divide-line px-6 text-sm">
+                <div className="flex items-center justify-between py-3.5">
+                  <dt className="text-muted">Your retail price to the customer</dt>
+                  <dd className="font-semibold">$6,000</dd>
+                </div>
+                <div className="flex items-center justify-between py-3.5">
+                  <dt className="text-muted">LeadMill trade fabrication</dt>
+                  <dd className="font-medium">− $3,200</dd>
+                </div>
+                <div className="flex items-center justify-between py-3.5">
+                  <dt className="text-muted">Local permit (varies by jurisdiction)</dt>
+                  <dd className="font-medium">− $600</dd>
+                </div>
+                <div className="flex items-center justify-between py-3.5">
+                  <dt className="text-muted">Local installation (your crew or sub)</dt>
+                  <dd className="font-medium">− $1,000</dd>
+                </div>
+                <div className="flex items-center justify-between bg-panel px-6 py-4 -mx-6">
+                  <dt className="font-semibold">Your gross profit on the job</dt>
+                  <dd className="text-xl font-semibold text-accent">≈ $1,200</dd>
+                </div>
+              </dl>
+              <p className="border-t border-line px-6 py-4 text-xs text-muted">
+                Illustrative only — fabrication is quoted per project, and you set your own retail
+                price. Sell the same job at $7,000 and the spread is yours: that&apos;s the point
+                of owning the customer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* The math on doing it yourself */}
       <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
         <h2 className="display max-w-3xl text-4xl sm:text-5xl">
@@ -408,55 +464,6 @@ export default function Home() {
           <Link href="/apply" className="btn-primary mt-6 w-full text-center">
             Check My Market
           </Link>
-        </div>
-      </section>
-
-      {/* What happens after you book */}
-      <section className="border-t border-line bg-panel">
-        <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
-          <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr]">
-            <div>
-              <h2 className="display text-4xl sm:text-5xl">What happens after you book.</h2>
-              <p className="mt-5 max-w-md text-muted">
-                No onboarding maze. The point of the first call is to tell you honestly whether
-                your market and your shop fit the model — and if they do, to move fast.
-              </p>
-              <Link href="/apply" className="mt-6 inline-block font-medium text-accent">
-                Check my market →
-              </Link>
-            </div>
-            <ol className="space-y-10 border-l border-line pl-8">
-              {[
-                {
-                  k: "This week",
-                  t: "The market call",
-                  d: "20–30 minutes. We look at your market, your current sign work, and how you'd handle surveys, permits, and installs. If it doesn't fit, we say so.",
-                },
-                {
-                  k: "Week 1–2",
-                  t: "Your campaign goes live",
-                  d: "We build the creative, targeting, lead forms, and routing. Illuminated-sign inquiries start landing on your phone with automated follow-up behind them.",
-                },
-                {
-                  k: "First weeks",
-                  t: "You quote and close",
-                  d: "Your team works the opportunities under your brand, at your prices. We watch lead quality with you and tune the campaign.",
-                },
-                {
-                  k: "When you close",
-                  t: "We build your sign",
-                  d: "Send the approved specs and measurements. We quote the fabrication at trade pricing, you approve, and production starts. You install, collect, and keep the retail margin.",
-                },
-              ].map((step) => (
-                <li key={step.k} className="relative">
-                  <span className="absolute -left-[41px] top-1 h-2.5 w-2.5 rounded-full bg-accent-bright ring-4 ring-panel" />
-                  <p className="text-sm font-semibold text-accent">{step.k}</p>
-                  <h3 className="mt-1 text-xl font-semibold">{step.t}</h3>
-                  <p className="mt-2 text-muted">{step.d}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
         </div>
       </section>
 

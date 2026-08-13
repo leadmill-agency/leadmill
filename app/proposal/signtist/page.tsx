@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import RoiCalculator from "@/components/roi-calculator";
 
 export const metadata: Metadata = {
   title: "Proposal — The Signtist",
@@ -96,6 +97,17 @@ export default function SigntistProposalPage() {
           see every lead, every dollar, every week — and it&apos;s month to month, so if the math
           doesn&apos;t work, fire me.
         </p>
+      </section>
+
+      {/* Run your own numbers */}
+      <section className="mt-14">
+        <h2 className="text-2xl font-semibold">Run your own numbers</h2>
+        <p className="mt-3 max-w-2xl text-muted">
+          Don&apos;t take my defaults — drag every slider to whatever you believe. The starting
+          values are our own shop&apos;s real campaign numbers and a conservative close rate.
+          This is the math you and John are actually deciding on.
+        </p>
+        <RoiCalculator />
       </section>
 
       {/* Pricing */}

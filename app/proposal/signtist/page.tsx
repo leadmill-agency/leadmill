@@ -141,7 +141,7 @@ export default function SigntistProposalPage() {
       <section className="mt-14">
         <h2 className="text-2xl font-semibold">What I need from you to start</h2>
         <ol className="mt-5 list-decimal space-y-2 pl-5 text-muted">
-          <li>Payment via the link I sent (that&apos;s the whole commitment — $500, month one).</li>
+          <li>Payment — $500, month one. That&apos;s the whole commitment (button below).</li>
           <li>Partner access to your Meta Business Manager / ad account and Facebook page.</li>
           <li>A folder of your best photos and videos — installs, fabrication, before/afters,
             John&apos;s sketches if you&apos;re open to it.</li>
@@ -174,10 +174,16 @@ export default function SigntistProposalPage() {
       <section className="mt-14 rounded-2xl bg-panel p-8 text-center">
         <h2 className="display text-3xl">Ready when you and John are.</h2>
         <p className="mx-auto mt-3 max-w-xl text-muted">
-          Use the payment link I sent you, or text me and I&apos;ll resend it. From payment,
-          I&apos;m building your campaign the same week — in time to bank a pipeline before the
-          winter quiet you told me about.
+          From payment, I&apos;m building your campaign the same week — in time to bank a
+          pipeline before the winter quiet you told me about.
         </p>
+        <a
+          href="https://buy.stripe.com/7sY5kDesH5VYebc3ED2sM09"
+          className="mt-6 inline-block rounded-full bg-ink px-8 py-3.5 font-semibold text-white transition-opacity hover:opacity-85"
+        >
+          Start The Signtist campaign — $500/month
+        </a>
+        <p className="mt-3 text-sm text-muted">Secure checkout via Stripe · month to month, cancel anytime</p>
         <p className="mt-6 text-sm text-muted">— Rameel Sheikh, LeadMill · Houston, TX</p>
       </section>
     </div>

@@ -96,10 +96,10 @@ export default function PrintSignageProposalPage() {
         <h2 className="text-2xl font-semibold">Honest expectations</h2>
         <p className="mt-4 max-w-2xl text-muted">
           I won&apos;t promise you a lead count — you told me yourself everybody who calls
-          you promises the world. Here&apos;s what I&apos;ll show you instead: the campaigns
-          we run for our own sign shop in Houston average roughly $36 per qualified lead. At
-          $25 a day, you can do that math yourself — and you said a win is closing one or two
-          signs. Run your own numbers below and see what the bar actually is. It&apos;s month
+          you promises the world. Here&apos;s what I&apos;ll show you instead: over the last
+          thirty days, the campaigns we run for our own sign shop in Houston averaged around
+          $20 per qualified lead. At $25 a day, you can do that math yourself — and you said
+          a win is closing one or two signs. Run your own numbers below and see what the bar actually is. It&apos;s month
           to month: if the math doesn&apos;t work, fire me.
         </p>
       </section>

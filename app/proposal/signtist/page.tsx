@@ -86,9 +86,9 @@ export default function SigntistProposalPage() {
       <section className="mt-14">
         <h2 className="text-2xl font-semibold">Honest expectations</h2>
         <p className="mt-4 max-w-2xl text-muted">
-          The campaign I showed you on our call — our own sign shop&apos;s — ran 72 leads in 30
-          days on about $2,600 in spend, roughly $36 per lead. At your $25/day start
-          (~$750/month), that same math pencils to about 20–30 qualified leads a month once the
+          The campaign I showed you on our call — our own sign shop&apos;s — has averaged
+          around $20 per qualified lead over the last thirty days. At your $25/day start
+          (~$750/month), that math pencils to roughly 30–35 qualified leads a month once the
           campaign settles in, and I&apos;ll be pushing to beat it. Closing is then a numbers
           game — shops in our experience close on the order of one in ten of these on
           $6,000–$20,000 work, and that depends on follow-up speed, which you clearly have. I

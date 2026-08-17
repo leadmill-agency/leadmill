@@ -28,7 +28,7 @@ export default function ApplyPage() {
         </p>
         <p className="mt-3 max-w-xl text-muted">
           Rather skip the calendar?{" "}
-          <a href="sms:+19362618323" className="font-medium text-accent">Text us now</a> and
+          <a href="sms:+19362618323?body=Hey%20LeadMill%20%E2%80%94%20I%20run%20a%20shop%20and%20want%20more%20sign%20leads.%20Shop%20name%3A%20" className="font-medium text-accent">Text us now</a> and
           we&apos;ll take it from there — shop hours, evenings, whenever.
         </p>
         {embedUrl ? (

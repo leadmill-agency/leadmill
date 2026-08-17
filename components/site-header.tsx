@@ -26,7 +26,7 @@ export function SiteHeader() {
         </nav>
         <div className="flex items-center gap-3">
           <a
-            href="sms:+19362618323"
+            href="sms:+19362618323?body=Hey%20LeadMill%20%E2%80%94%20I%20run%20a%20shop%20and%20want%20more%20sign%20leads.%20Shop%20name%3A%20"
             className="rounded-[10px] border border-line px-3 py-2 text-sm font-medium transition hover:border-ink sm:px-4"
           >
             Text us now

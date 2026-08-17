@@ -27,9 +27,9 @@ export default function ApplyPage() {
           partnership would work for your shop — about 20–30 minutes, no payment, no pressure.
         </p>
         <p className="mt-3 max-w-xl text-muted">
-          Rather skip the calendar? Call or text Rameel anytime:{" "}
+          Rather skip the calendar? Call or text us anytime:{" "}
           <a href="tel:+19362618323" className="font-medium text-accent">(936) 261-8323</a>.
-          Shop hours, evenings, whenever — he answers.
+          Shop hours, evenings, whenever — we answer.
         </p>
         {embedUrl ? (
           <>

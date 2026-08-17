@@ -29,8 +29,7 @@ export function SiteHeader() {
             href="sms:+19362618323"
             className="rounded-[10px] border border-line px-3 py-2 text-sm font-medium transition hover:border-ink sm:px-4"
           >
-            <span className="sm:hidden">Text us now</span>
-            <span className="hidden sm:inline">Text us now · (936) 261-8323</span>
+            Text us now
           </a>
           <Link
             href="/apply"

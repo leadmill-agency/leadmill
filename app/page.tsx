@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Faq } from "@/components/faq";
 import { CtaSection } from "@/components/cta-section";
+import RoiCalculator from "@/components/roi-calculator";
 
 const faqItems = [
   {
@@ -80,19 +81,21 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 pt-20 sm:px-6 sm:pt-28">
           <div className="mx-auto max-w-3xl text-center">
             <p className="rise text-lg text-muted">
-              Built for the top 5% of sign, print, wrap &amp; graphics shops:
+              For sign, print, wrap &amp; graphics shops:
             </p>
             <h1 className="display rise-2 mt-3 text-5xl sm:text-6xl md:text-7xl">
-              Start selling <span className="text-accent">illuminated exterior signs</span> without
-              building them yourself.
+              More <span className="text-accent">$6,000&#43; sign jobs</span>. Not more junk
+              leads.
             </h1>
             <p className="rise-3 mx-auto mt-6 max-w-2xl text-lg text-muted">
-              Leadmill generates local illuminated-sign opportunities for your shop — and fabricates
-              the signs at trade pricing when you close the job. You own the customer, the retail
-              price, permitting, and installation.
+              Leadmill runs local Meta campaigns that put commercial sign buyers on your phone —
+              built by operators of a real commercial sign company. You sell under your brand and
+              keep every dollar. When a job needs fabrication, our UL-certified Houston facility
+              builds it at trade pricing.
             </p>
             <p className="rise-3 mt-5 text-lg font-semibold">
-              $500/month + your ad budget. No revenue share.
+              $500/month &#43; your ad spend (~$750/mo to start) — about $1,250 all-in. No revenue
+              share.
             </p>
             <div className="rise-3 mt-8 flex flex-wrap items-center justify-center gap-4">
               <Link href="/apply" className="btn-primary text-lg">
@@ -146,34 +149,71 @@ export default function Home() {
         <div className="hazard" />
       </section>
 
+      {/* Proof band — our own account, real numbers */}
+      <section className="border-b border-line bg-ink text-white">
+        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+          <div className="grid items-center gap-10 lg:grid-cols-[1fr_1.2fr]">
+            <div>
+              <p className="text-sm font-semibold text-accent-bright">Not a promise — a screenshot</p>
+              <h2 className="display mt-2 text-4xl sm:text-5xl">
+                The same system, running for our own shop.
+              </h2>
+              <dl className="mt-8 grid grid-cols-2 gap-6">
+                <div>
+                  <dd className="text-4xl font-semibold">~$20</dd>
+                  <dt className="mt-1 text-sm text-white/70">average cost per qualified lead, last 30 days</dt>
+                </div>
+                <div>
+                  <dd className="text-4xl font-semibold">144</dd>
+                  <dt className="mt-1 text-sm text-white/70">sign leads in those 30 days</dt>
+                </div>
+              </dl>
+              <p className="mt-6 max-w-md text-sm text-white/70">
+                Our own commercial sign shop&apos;s Meta ad account — the exact system partners
+                get. Your market&apos;s costs will differ, and you&apos;ll see every number,
+                every week.
+              </p>
+            </div>
+            <Image
+              src="/proof-meta-30d.png"
+              alt="Meta Ads Manager screenshot: three campaigns, 144 leads in 30 days at $17-26 per lead"
+              width={1600}
+              height={474}
+              className="w-full rounded-xl border border-white/15"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* The problem */}
       <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr]">
           <div>
             <h2 className="display max-w-2xl text-4xl sm:text-5xl">
-              Your customers already buy illuminated signs. The question is who they buy them from.
+              Referrals built your shop. They just can&apos;t be scheduled.
             </h2>
             <div className="mt-6 max-w-xl space-y-4 text-muted">
               <p>
-                You printed their banners, wrapped their vans, made their window graphics. Then they
-                need a lit storefront sign — and because you don&apos;t fabricate illuminated
-                signage, the job gets referred away to a full-service sign company. They keep that
-                customer for the next one, too.
+                Ask most shop owners where their work comes from and the answer is referrals,
+                repeat customers, and a Google profile. That&apos;s real — but some months they
+                carry you and some months they vanish, and you can&apos;t hire, plan, or grow
+                around a lead source you don&apos;t control.
               </p>
               <p>
-                Ask most shop owners where their work comes from today and the answer is referrals,
-                repeat customers, and a Google profile. That&apos;s real — but it caps you at the
-                product lines you already sell.
+                The agencies that promise to fix that mostly haven&apos;t set foot in a shop.
+                They&apos;ll count a yard-sign inquiry as a win and bill you either way. We run a
+                sign shop — we know what a real commercial sign buyer looks like, in an ad
+                account and on the phone.
               </p>
             </div>
           </div>
           <ul className="space-y-4 self-center rounded-2xl bg-panel p-8 text-muted sm:p-10">
             {[
-              "Add a higher-ticket signage category",
-              "Skip building an in-house fabrication department",
-              "Generate new local illuminated-sign opportunities",
-              "Keep full control of the customer relationship",
-              "Order trade fabrication only when you need it",
+              "Commercial-sign inquiries coming in every week",
+              "Every lead qualified before it reaches your phone",
+              "Your brand, your customer, your retail price",
+              "One shop per market — yours is exclusive",
+              "Trade fabrication backup, only if you want it",
             ].map((item) => (
               <li key={item} className="flex gap-3">
                 <span className="mt-1 text-accent">✓</span>
@@ -202,13 +242,13 @@ export default function Home() {
               },
               {
                 n: "3",
-                t: "Leadmill fabricates",
-                d: "Send us the approved specs and we quote the fabrication at trade pricing. You mark it up.",
+                t: "You deliver the job",
+                d: "Survey, permitting, installation — your shop, your way. Your local expertise is exactly why the customer stays yours.",
               },
               {
                 n: "4",
-                t: "You handle the local work",
-                d: "Your shop handles the survey, permitting, and installation. Your customer never hears from us.",
+                t: "Optional: we fabricate",
+                d: "Need the sign built? Our UL-certified Houston facility quotes it at trade pricing and ships it. Plenty of partners never use it.",
               },
             ].map((s, i) => (
               <div key={s.n} className="relative rounded-2xl bg-background p-6">
@@ -231,11 +271,13 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
           <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr]">
             <div>
-              <h2 className="display text-4xl sm:text-5xl">What one job can look like.</h2>
+              <h2 className="display text-4xl sm:text-5xl">
+                If you use our fabrication, one job can look like this.
+              </h2>
               <p className="mt-5 max-w-md text-muted">
-                An illustrative storefront-sign project, using the kind of numbers we see in our
-                own operating experience. Every job is quoted individually — your market, sign
-                size, and site conditions change these figures.
+                Fabricate in-house? Skip this section — the leads are yours and you keep the full
+                margin. For shops that want the sign built for them, here&apos;s an illustrative
+                storefront-sign project using numbers from our own operating experience.
               </p>
               <p className="mt-4 max-w-md text-muted">
                 The point isn&apos;t the exact dollars. It&apos;s the shape of the deal: you sell
@@ -282,49 +324,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* The math on doing it yourself */}
+      {/* Run your own numbers */}
       <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
-        <h2 className="display max-w-3xl text-4xl sm:text-5xl">
-          What it costs to build this yourself.
-        </h2>
-        <div className="mt-12 grid gap-6 lg:grid-cols-2">
-          <div className="rounded-2xl bg-panel p-8 sm:p-10">
-            <p className="text-lg font-semibold">Building an in-house fabrication department</p>
-            <ul className="mt-6 space-y-4 text-muted">
-              {[
-                "Letter bender, router, and production space — easily six figures of equipment before your first letter ships",
-                "Production hires, training, and months of trial and error",
-                "Scrap, rework, and warranty lessons paid for out of your margin",
-                "UL standards and electrical components to learn from scratch",
-                "All of it sitting idle between sign jobs",
-              ].map((item) => (
-                <li key={item} className="flex gap-3">
-                  <span className="mt-1 text-danger">✕</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="rounded-2xl bg-ink p-8 text-white sm:p-10">
-            <p className="text-lg font-semibold">
-              Partnering with Lead<span className="text-accent-bright">Mill</span>
-            </p>
-            <ul className="mt-6 space-y-4 text-white/80">
-              {[
-                "$500/month for the demand-generation system",
-                "Trade fabrication quoted per job — pay only when you sell",
-                "Selling illuminated signage in weeks, not next year",
-                "No equipment, no new payroll, no learning curve",
-                "Volume scales up or down with your sales",
-              ].map((item) => (
-                <li key={item} className="flex gap-3">
-                  <span className="mt-1 text-accent-bright">✓</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        <h2 className="display max-w-3xl text-4xl sm:text-5xl">Run your own numbers.</h2>
+        <p className="mt-5 max-w-2xl text-muted">
+          Don&apos;t take our defaults — drag every slider to whatever you believe. The starting
+          values are our own shop&apos;s real campaign numbers and a conservative close rate.
+          This is the math you&apos;re actually deciding on.
+        </p>
+        <RoiCalculator />
       </section>
 
       {/* Responsibility split */}
@@ -450,7 +458,15 @@ export default function Home() {
           <p className="mt-4 text-4xl font-semibold">
             $500<span className="text-lg font-normal text-muted">/month</span>
           </p>
-          <p className="mt-1 text-sm text-muted">+ your Meta ad spend, paid directly to Meta</p>
+          <p className="mt-1 text-sm text-muted">
+            &#43; your Meta ad spend (~$750/month at the $25/day start, paid directly to Meta) —
+            about $1,250 all-in
+          </p>
+          <p className="mt-3 rounded-lg bg-panel px-3 py-2 text-sm">
+            <span className="font-semibold">Founding-partner rate.</span>{" "}
+            <span className="text-muted">$500 locks in for as long as you stay active — the
+            rate rises as markets fill.</span>
+          </p>
           <ul className="mt-6 space-y-3 text-sm text-muted">
             <li>Meta campaign setup and management</li>
             <li>Illuminated-sign ad creative</li>
@@ -483,19 +499,19 @@ export default function Home() {
               </p>
             </div>
             <div className="border-y border-line py-12">
-              <h3 className="text-xl font-semibold">The shop that refers the sign job away</h3>
-              <p className="mt-2 text-muted">
-                A customer you&apos;ve served for years asks for a $6,000 lit storefront sign. You
-                don&apos;t fabricate illuminated signage, so you hand them to a sign company — and
-                watch the highest-ticket job in the relationship walk out the door.
-              </p>
-            </div>
-            <div>
               <h3 className="text-xl font-semibold">The shop that got burned</h3>
               <p className="mt-2 text-muted">
                 You already tried a marketing agency. They sent yard-sign and birthday-banner leads,
                 counted them as wins, and billed you anyway — because they didn&apos;t know a lighted
                 building sign from a coroplast yard sign.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold">The shop that refers the sign job away</h3>
+              <p className="mt-2 text-muted">
+                A customer you&apos;ve served for years asks for a $6,000 lit storefront sign. You
+                don&apos;t fabricate illuminated signage, so you hand them to a sign company — and
+                watch the highest-ticket job in the relationship walk out the door.
               </p>
             </div>
           </div>
@@ -516,7 +532,7 @@ export default function Home() {
                   "Able to handle or coordinate site surveys",
                   "Able to handle permitting and installation locally",
                   "Room in the budget for a real ad-spend test",
-                  "Wants fabrication handled by a trade partner",
+                  "Wants a lead source they actually control",
                 ].map((i) => (
                   <li key={i} className="flex gap-3">
                     <span className="text-accent">✓</span> {i}

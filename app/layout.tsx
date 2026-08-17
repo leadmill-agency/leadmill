@@ -13,11 +13,11 @@ const geist = Geist({
 
 export const metadata: Metadata = {
   title: {
-    default: "Leadmill — Grow Illuminated Sign Sales Without In-House Fabrication",
+    default: "Leadmill — Commercial Sign Leads for Sign, Print & Wrap Shops",
     template: "%s | Leadmill",
   },
   description:
-    "Leadmill helps established print, wrap, graphics, and sign shops generate illuminated exterior sign opportunities and access trade fabrication. Partner membership is $500/month plus ad spend.",
+    "Leadmill runs local Meta campaigns that bring $6,000+ commercial sign jobs to sign, print, wrap, and graphics shops — built by operators of a real sign company, with optional trade fabrication. $500/month plus ad spend, no revenue share.",
 };
 
 const pixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID;

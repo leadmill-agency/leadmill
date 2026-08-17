@@ -24,12 +24,21 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <Link
-          href="/apply"
-          className="rounded-[10px] bg-ink px-4 py-2 text-sm font-medium text-white transition hover:opacity-90"
-        >
-          Apply now
-        </Link>
+        <div className="flex items-center gap-3">
+          <a
+            href="sms:+19362618323"
+            className="rounded-[10px] border border-line px-3 py-2 text-sm font-medium transition hover:border-ink sm:px-4"
+          >
+            <span className="sm:hidden">Text us</span>
+            <span className="hidden sm:inline">Text Rameel · (936) 261-8323</span>
+          </a>
+          <Link
+            href="/apply"
+            className="rounded-[10px] bg-ink px-4 py-2 text-sm font-medium text-white transition hover:opacity-90"
+          >
+            Book a time
+          </Link>
+        </div>
       </div>
     </header>
   );

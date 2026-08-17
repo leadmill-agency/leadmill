@@ -26,6 +26,11 @@ export default function ApplyPage() {
           Pick a time that works. We&apos;ll look at your market together and walk through how the
           partnership would work for your shop — about 20–30 minutes, no payment, no pressure.
         </p>
+        <p className="mt-3 max-w-xl text-muted">
+          Rather skip the calendar? Call or text Rameel anytime:{" "}
+          <a href="tel:+19362618323" className="font-medium text-accent">(936) 261-8323</a>.
+          Shop hours, evenings, whenever — he answers.
+        </p>
         {embedUrl ? (
           <>
             <div className="mt-10 overflow-hidden rounded-2xl border border-line bg-background">

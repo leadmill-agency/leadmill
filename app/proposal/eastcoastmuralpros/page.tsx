@@ -39,29 +39,6 @@ export default function EastCoastMuralProsProposalPage() {
         </ul>
       </section>
 
-      {/* Straight answer on references */}
-      <section className="mt-14 rounded-2xl bg-panel p-8">
-        <h2 className="text-2xl font-semibold">The references question, answered straight</h2>
-        <p className="mt-3 text-muted">
-          You asked for two references. Here&apos;s the honest version: the LeadMill partner
-          program is weeks old — you&apos;d be one of the first shops in it, which is exactly
-          why the rate is $500 and locks in for as long as you stay active. I won&apos;t
-          manufacture references to look bigger than we are. What I can offer instead:
-        </p>
-        <ul className="mt-4 space-y-3 text-muted">
-          <li className="flex gap-3"><span className="text-accent">1.</span>
-            A reference call with a current ad-management client of ours (different industry,
-            same system — I&apos;ll connect you directly and you can ask them anything).</li>
-          <li className="flex gap-3"><span className="text-accent">2.</span>
-            Open books on our own operation: I&apos;ll screen-share our shop&apos;s live Ads
-            Manager and any numbers you want to see, on a call, no screenshots to take on
-            faith.</li>
-          <li className="flex gap-3"><span className="text-accent">3.</span>
-            Terms that carry the risk for you: month to month, no contract, you approve every
-            ad before it runs, and if it&apos;s not working you fire me.</li>
-        </ul>
-      </section>
-
       {/* The plan */}
       <section className="mt-14">
         <h2 className="text-2xl font-semibold">The plan for East Coast Mural Pros</h2>

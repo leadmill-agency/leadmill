@@ -19,7 +19,8 @@ const goodFit = [
 const poorFit = [
   ["Needs us to permit or install", "Leadmill doesn't provide permitting or installation. The local work is yours."],
   ["No commercial customer base", "The model is built on selling to local businesses, not walk-in retail."],
-  ["Can't fund any ad spend", "The demand engine needs a real test budget — $500–$1,000/month to start."],
+  ["Can't fund any ad spend", "The demand engine needs a real test budget — $500–$1,000/month to start. As a rule of thumb, the model fits shops doing roughly $30k+/month in revenue."],
+  ["Meta ad account restricted or banned", "Campaigns run in your own ad account. If Meta has restricted your account, resolve that with Meta first — we can't and won't run ads around a restriction."],
   ["Can't sell a $5,000+ project", "Illuminated exterior signage is higher-ticket work. Someone has to close it."],
   ["Only wants cheap one-off fabrication", "The partnership is built for shops growing a signage product line, not occasional price-shopping."],
   ["Greater Houston shops", "Houston is our fabrication operation's home market. No exceptions."],

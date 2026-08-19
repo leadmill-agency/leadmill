@@ -533,7 +533,7 @@ export default function Home() {
                   "Someone comfortable quoting and selling projects",
                   "Able to handle or coordinate site surveys",
                   "Able to handle permitting and installation locally",
-                  "Room in the budget for a real ad-spend test",
+                  "Doing roughly $30k+/month in revenue, with room for a real ad-spend test",
                   "Wants a lead source they actually control",
                 ].map((i) => (
                   <li key={i} className="flex gap-3">
@@ -548,7 +548,7 @@ export default function Home() {
                 {[
                   "Needs us to handle permits or installation",
                   "No way to survey or measure a site",
-                  "Can't invest anything in advertising",
+                  "Can't invest anything in advertising, or ad account not in good standing with Meta",
                   "Only wants occasional cheap fabrication",
                   "Greater Houston shops",
                 ].map((i) => (

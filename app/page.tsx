@@ -94,8 +94,8 @@ export default function Home() {
               builds it at trade pricing.
             </p>
             <p className="rise-3 mt-5 text-lg font-semibold">
-              $500/month &#43; your ad spend (~$750/mo to start) — about $1,250 all-in. No revenue
-              share.
+              First 21 days: you fund only the ad spend (~$20/day) — our work is free. Then
+              $500/month flat. No revenue share, no contract.
             </p>
             <div className="rise-3 mt-8 flex flex-wrap items-center justify-center gap-4">
               <Link href="/apply" className="btn-primary text-lg">
@@ -445,9 +445,11 @@ export default function Home() {
         <div className="mt-6 space-y-4 text-left text-muted sm:text-center">
           <p>
             Traditional agencies make all their money on the retainer, so the retainer has to be
-            big. Leadmill makes money when you sell signs — because we&apos;re the fabricator behind
-            them. The $500 membership covers the growth system. Fabrication is quoted per job at
-            trade pricing, you set the retail price, and there&apos;s no revenue share.
+            big — and you pay it before you&apos;ve seen a single lead. We flip that: for the
+            first 21 days you fund only the ad spend, and our work is free. You watch your own
+            market&apos;s real numbers before the $500/month ever starts. We can afford to work
+            this way because Leadmill makes its real money when you sell signs — we&apos;re the
+            fabricator behind them, quoted per job at trade pricing, no revenue share.
           </p>
           <p className="font-medium text-foreground">
             When you win, we build. That&apos;s the whole model.
@@ -459,13 +461,14 @@ export default function Home() {
             $500<span className="text-lg font-normal text-muted">/month</span>
           </p>
           <p className="mt-1 text-sm text-muted">
-            &#43; your Meta ad spend (~$750/month at the $25/day start, paid directly to Meta) —
-            about $1,250 all-in
+            &#43; your Meta ad spend, paid directly to Meta. Scale it up or down anytime.
           </p>
           <p className="mt-3 rounded-lg bg-panel px-3 py-2 text-sm">
-            <span className="font-semibold">Founding-partner rate.</span>{" "}
-            <span className="text-muted">$500 locks in for as long as you stay active — the
-            rate rises as markets fill.</span>
+            <span className="font-semibold">First 21 days: you only fund the ads.</span>{" "}
+            <span className="text-muted">We build and manage everything free (~$20/day to Meta,
+            about $420). Happy with the leads on day 22? The $500/month founding rate starts
+            then and locks in for as long as you stay active — the rate rises as markets
+            fill. Not happy? Walk — no contract.</span>
           </p>
           <ul className="mt-6 space-y-3 text-sm text-muted">
             <li>Meta campaign setup and management</li>

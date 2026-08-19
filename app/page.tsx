@@ -7,51 +7,35 @@ import RoiCalculator from "@/components/roi-calculator";
 const faqItems = [
   {
     q: "What does Leadmill actually do?",
-    a: "We help qualified print, wrap, graphics, and sign shops generate local illuminated exterior sign opportunities, then provide trade fabrication when your shop wants us to build the sign.",
+    a: "We generate illuminated-sign leads for your shop, and fabricate at trade pricing when you want us to.",
   },
   {
     q: "Who owns the customer?",
-    a: "You do. Your shop controls the customer relationship, retail price, sales process, and collections. Leadmill never solicits your end customer.",
+    a: "You do — the relationship, the retail price, and every dollar of the sale.",
   },
   {
-    q: "Does Leadmill install the sign?",
-    a: "No. Your shop handles installation, or uses its own local installer.",
-  },
-  {
-    q: "Does Leadmill handle permitting?",
-    a: "No. Your shop handles permitting directly or through its own permit resource.",
+    q: "Does Leadmill handle permits or installation?",
+    a: "No. That local work is yours — it's exactly why the customer stays yours.",
   },
   {
     q: "Does Leadmill take a percentage of my sale?",
-    a: "No. There is no revenue share. You keep every dollar of the retail sale.",
+    a: "No. No revenue share, ever.",
   },
   {
     q: "Who pays for the ads?",
-    a: "Your shop funds its own Meta ad budget, paid directly to Meta. Leadmill manages the campaign as part of the partner membership.",
+    a: "You fund your own Meta ad budget, paid directly to Meta.",
   },
   {
     q: "Is fabrication included in the $1,000?",
-    a: "No. Fabrication is quoted separately at trade pricing for each project. You mark it up and sell at your own retail price.",
-  },
-  {
-    q: "Can I send you fabrication jobs that didn't come from Leadmill ads?",
-    a: "Yes — please do. The goal is to become your ongoing fabrication partner. Qualifying projects are welcome no matter how you won the customer.",
-  },
-  {
-    q: "Is this only for channel letters?",
-    a: "No. Leadmill fabricates supported categories of illuminated exterior signage — front-lit, halo-lit, cabinets, and more. Channel letters are one common example.",
-  },
-  {
-    q: "Where is the fabrication based?",
-    a: "Our fabrication network is anchored by a UL-certified commercial sign facility in Houston, Texas. You're working with a U.S. operation that picks up the phone in your time zone.",
+    a: "No — fabrication is quoted per project at trade pricing, and it's always optional.",
   },
   {
     q: "Do you guarantee closed jobs?",
-    a: "No. Anyone who guarantees closed jobs is lying to you. We generate qualified opportunities; your shop sells them. We only take on shops we believe can win the work.",
+    a: "No. Anyone who guarantees closed jobs is lying to you.",
   },
   {
     q: "Do you serve Houston?",
-    a: "No. Greater Houston is our fabrication operation's home market and is excluded from the partner program.",
+    a: "No — Greater Houston is our own shop's market and is excluded.",
   },
 ];
 
@@ -88,10 +72,8 @@ export default function Home() {
               leads.
             </h1>
             <p className="rise-3 mx-auto mt-6 max-w-2xl text-lg text-muted">
-              Leadmill runs local Meta campaigns that put commercial sign buyers on your phone —
-              built by operators of a real commercial sign company. You sell under your brand and
-              keep every dollar. When a job needs fabrication, our UL-certified Houston facility
-              builds it at trade pricing.
+              Meta campaigns that put commercial sign buyers on your phone — run by
+              people who own a sign shop. You sell. You keep every dollar.
             </p>
             <p className="rise-3 mt-5 text-lg font-semibold">
               First 21 days: you fund only the ad spend (~$20/day) — our work is free. Then
@@ -169,9 +151,8 @@ export default function Home() {
                 </div>
               </dl>
               <p className="mt-6 max-w-md text-sm text-white/70">
-                Our own commercial sign shop&apos;s Meta ad account — the exact system partners
-                get. Your market&apos;s costs will differ, and you&apos;ll see every number,
-                every week.
+                Our own shop&apos;s account. Your market will differ — you&apos;ll see every
+                number, weekly.
               </p>
             </div>
             <Image
@@ -192,20 +173,9 @@ export default function Home() {
             <h2 className="display max-w-2xl text-4xl sm:text-5xl">
               Referrals built your shop. They just can&apos;t be scheduled.
             </h2>
-            <div className="mt-6 max-w-xl space-y-4 text-muted">
-              <p>
-                Ask most shop owners where their work comes from and the answer is referrals,
-                repeat customers, and a Google profile. That&apos;s real — but some months they
-                carry you and some months they vanish, and you can&apos;t hire, plan, or grow
-                around a lead source you don&apos;t control.
-              </p>
-              <p>
-                The agencies that promise to fix that mostly haven&apos;t set foot in a shop.
-                They&apos;ll count a yard-sign inquiry as a win and bill you either way. We run a
-                sign shop — we know what a real commercial sign buyer looks like, in an ad
-                account and on the phone.
-              </p>
-            </div>
+            <p className="mt-6 max-w-xl text-muted">
+              Some months they show up. Some months they don&apos;t.
+            </p>
           </div>
           <ul className="space-y-4 self-center rounded-2xl bg-panel p-8 text-muted sm:p-10">
             {[
@@ -233,22 +203,22 @@ export default function Home() {
               {
                 n: "1",
                 t: "Leadmill generates demand",
-                d: "We launch and manage local Meta campaigns focused on illuminated exterior signage in your market.",
+                d: "Local Meta campaigns for illuminated signage, in your market only.",
               },
               {
                 n: "2",
                 t: "Your shop sells the project",
-                d: "You own the lead, the customer, the retail price, and the sales process — under your brand.",
+                d: "Your lead, your customer, your retail price.",
               },
               {
                 n: "3",
                 t: "You deliver the job",
-                d: "Survey, permitting, installation — your shop, your way. Your local expertise is exactly why the customer stays yours.",
+                d: "Survey, permits, install — your shop, your way.",
               },
               {
                 n: "4",
                 t: "Optional: we fabricate",
-                d: "Need the sign built? Our UL-certified Houston facility quotes it at trade pricing and ships it. Plenty of partners never use it.",
+                d: "Trade-priced from our UL-certified Houston facility. Many partners never use it.",
               },
             ].map((s, i) => (
               <div key={s.n} className="relative rounded-2xl bg-background p-6">
@@ -275,14 +245,7 @@ export default function Home() {
                 If you use our fabrication, one job can look like this.
               </h2>
               <p className="mt-5 max-w-md text-muted">
-                Fabricate in-house? Skip this section — the leads are yours and you keep the full
-                margin. For shops that want the sign built for them, here&apos;s an illustrative
-                storefront-sign project using numbers from our own operating experience.
-              </p>
-              <p className="mt-4 max-w-md text-muted">
-                The point isn&apos;t the exact dollars. It&apos;s the shape of the deal: you sell
-                at your retail price, pay trade prices for the parts you outsource, and keep the
-                spread — on a product line you don&apos;t have to build a department for.
+                Fabricate in-house? Skip this section — the leads are yours either way.
               </p>
             </div>
             <div className="self-center overflow-hidden rounded-2xl border border-line bg-background">
@@ -315,9 +278,7 @@ export default function Home() {
                 </div>
               </dl>
               <p className="border-t border-line px-6 py-4 text-xs text-muted">
-                Illustrative only — fabrication is quoted per project, and you set your own retail
-                price. Sell the same job at $7,000 and the spread is yours: that&apos;s the point
-                of owning the customer.
+                Illustrative — quoted per project. You set the retail price.
               </p>
             </div>
           </div>
@@ -328,9 +289,7 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
         <h2 className="display max-w-3xl text-4xl sm:text-5xl">Run your own numbers.</h2>
         <p className="mt-5 max-w-2xl text-muted">
-          Don&apos;t take our defaults — drag every slider to whatever you believe. The starting
-          values are our own shop&apos;s real campaign numbers and a conservative close rate.
-          This is the math you&apos;re actually deciding on.
+          Drag the sliders. The defaults are our shop&apos;s real numbers.
         </p>
         <RoiCalculator />
       </section>
@@ -418,21 +377,12 @@ export default function Home() {
             <h2 className="display mt-2 text-4xl sm:text-5xl">
               Our first client became our fabrication anchor.
             </h2>
-            <div className="mt-6 space-y-4 text-muted">
-              <p>
-                Before Leadmill was a partner program, it was us running Meta campaigns for{" "}
-                <span className="font-medium text-foreground">Houston Sign Crafters</span>, a
-                commercial sign company with a UL-certified fabrication facility in Houston. The
-                campaigns put real illuminated-sign opportunities in front of their sales team, and
-                the work on this page came off their production floor.
-              </p>
-              <p>
-                That relationship ran deep enough that HSC became the anchor of Leadmill&apos;s
-                fabrication network. It&apos;s the whole model in one story: ads that create sign
-                work, and a fabricator behind them. Now we&apos;re bringing both sides of it to
-                shops outside Houston.
-              </p>
-            </div>
+            <p className="mt-6 max-w-lg text-muted">
+              Leadmill started as the campaigns behind{" "}
+              <span className="font-medium text-foreground">Houston Sign Crafters</span> — the
+              UL-certified shop whose work fills this page, and the anchor of our fabrication
+              network. Now both sides of that system run for shops outside Houston.
+            </p>
           </div>
         </div>
       </section>
@@ -442,17 +392,11 @@ export default function Home() {
         <h2 className="display text-4xl sm:text-5xl">
           Why $1,000 and not an agency retainer?
         </h2>
-        <div className="mt-6 space-y-4 text-left text-muted sm:text-center">
-          <p>
-            Traditional agencies make all their money on the retainer, so the retainer has to be
-            big — and you pay it before you&apos;ve seen a single lead. We flip that: for the
-            first 21 days you fund only the ad spend, and our work is free. You watch your own
-            market&apos;s real numbers before the $1,000/month ever starts. We can afford to work
-            this way because Leadmill makes its real money when you sell signs — we&apos;re the
-            fabricator behind them, quoted per job at trade pricing, no revenue share.
-          </p>
+        <div className="mt-6 space-y-2 text-left text-muted sm:text-center">
+          <p>Agencies charge you before you&apos;ve seen a lead.</p>
+          <p>We work free for 21 days — you fund only the ads.</p>
           <p className="font-medium text-foreground">
-            When you win, we build. That&apos;s the whole model.
+            We make our real money when you sell signs. When you win, we build.
           </p>
         </div>
         <div className="mx-auto mt-10 max-w-md rounded-2xl border-2 border-accent-bright bg-background p-8 text-left">
@@ -463,12 +407,14 @@ export default function Home() {
           <p className="mt-1 text-sm text-muted">
             &#43; your Meta ad spend, paid directly to Meta. Scale it up or down anytime.
           </p>
-          <p className="mt-3 rounded-lg bg-panel px-3 py-2 text-sm">
-            <span className="font-semibold">First 21 days: you only fund the ads.</span>{" "}
-            <span className="text-muted">We build and manage everything free (~$20/day to Meta,
-            about $420). Happy with the leads on day 22? It&apos;s $1,000/month from there, and
-            your rate locks in for as long as you stay active. Not happy? Walk — no contract.</span>
-          </p>
+          <div className="mt-3 rounded-lg bg-panel px-3 py-2 text-sm">
+            <p className="font-semibold">First 21 days free — you only fund the ads.</p>
+            <ul className="mt-1.5 space-y-1 text-muted">
+              <li>~$20/day to Meta (about $420 total)</li>
+              <li>Day 22: continue at $1,000/month, or walk</li>
+              <li>No contract. Rate locks while you stay active.</li>
+            </ul>
+          </div>
           <ul className="mt-6 space-y-3 text-sm text-muted">
             <li>Meta campaign setup and management</li>
             <li>Illuminated-sign ad creative</li>
@@ -482,41 +428,6 @@ export default function Home() {
           <Link href="/apply" className="btn-primary mt-6 w-full text-center">
             Check My Market
           </Link>
-        </div>
-      </section>
-
-      {/* Sound familiar */}
-      <section className="border-t border-line">
-        <div className="mx-auto max-w-3xl px-4 py-24 sm:px-6">
-          <h2 className="display text-center text-4xl sm:text-5xl">
-            If you run an established shop, one of these is probably you.
-          </h2>
-          <div className="mt-14 space-y-12">
-            <div>
-              <h3 className="text-xl font-semibold">The referral-dependent shop</h3>
-              <p className="mt-2 text-muted">
-                You do good work, so referrals and repeat customers keep you alive. But some months
-                they carry you and some months they vanish — and you can&apos;t hire, plan, or grow
-                around a lead source you don&apos;t control.
-              </p>
-            </div>
-            <div className="border-y border-line py-12">
-              <h3 className="text-xl font-semibold">The shop that got burned</h3>
-              <p className="mt-2 text-muted">
-                You already tried a marketing agency. They sent yard-sign and birthday-banner leads,
-                counted them as wins, and billed you anyway — because they didn&apos;t know a lighted
-                building sign from a coroplast yard sign.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">The shop that refers the sign job away</h3>
-              <p className="mt-2 text-muted">
-                A customer you&apos;ve served for years asks for a $6,000 lit storefront sign. You
-                don&apos;t fabricate illuminated signage, so you hand them to a sign company — and
-                watch the highest-ticket job in the relationship walk out the door.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -585,22 +496,17 @@ export default function Home() {
               <h2 className="display text-4xl sm:text-5xl">A note from the founder.</h2>
               <div className="mt-6 space-y-4 text-muted">
                 <p>
-                  If you&apos;ve been burned by a marketing agency before, you should be skeptical of
-                  this page. Anyone can buy a domain and claim they generate leads.
+                  If you&apos;ve been burned by an agency, you should be skeptical of this page.
                 </p>
                 <p>
-                  Here&apos;s what makes us different, plainly: I&apos;m not a marketer who picked
-                  sign shops off a list of niches. We operate a commercial sign business — the shop
-                  in this photo. We quote illuminated signage, fabricate it, and run Meta campaigns
-                  for local businesses every single week. We know what a storefront-sign buyer looks
-                  like in an ad account, and we know what a raceway is when your lead asks about one.
+                  So here&apos;s the plain version: I&apos;m not a marketer who picked your niche
+                  off a list. I own the sign shop in this photo. We quote illuminated signage,
+                  build it, and run these exact campaigns for ourselves every week — that&apos;s
+                  why the first 21 days are free.
                 </p>
                 <p>
-                  We&apos;ve been on both sides of this — running the ad campaigns and building the
-                  signs. That&apos;s why the first 21 days are free and the membership is $1,000 instead of a $2,500 agency retainer: we&apos;d rather
-                  be the fabrication partner behind your wins than another agency invoice. If your
-                  market doesn&apos;t make sense for this, I&apos;ll tell you on the call and
-                  we&apos;ll part as friends.
+                  If your market doesn&apos;t make sense for this, I&apos;ll tell you on the call
+                  and we&apos;ll part as friends.
                 </p>
                 <p className="text-foreground">— Rameel Sheikh, Founder, LeadMill</p>
               </div>
@@ -624,7 +530,7 @@ export default function Home() {
 
       <CtaSection
         headline="See if your market is open"
-        sub="Limited partner availability by market. Tell us about your shop — if the numbers don't work, we'll say so and part as friends."
+        sub="One shop per market. If the numbers don't work for yours, we'll say so."
       />
     </>
   );

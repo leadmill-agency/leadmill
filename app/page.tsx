@@ -63,21 +63,17 @@ export default function Home() {
       {/* Hero */}
       <section className="border-b border-line">
         <div className="mx-auto max-w-6xl px-4 pt-20 sm:px-6 sm:pt-28">
-          <div className="mx-auto max-w-3xl text-center">
+          <div className="mx-auto max-w-5xl text-center">
             <p className="rise text-lg text-muted">
               For sign, print, wrap &amp; graphics shops:
             </p>
             <h1 className="display rise-2 mt-3 text-5xl sm:text-6xl md:text-7xl">
-              More <span className="text-accent">$6,000&#43; sign jobs</span>. Not more junk
-              leads.
+              More <span className="text-accent">$6,000&#43; sign jobs</span>.
+              <br className="hidden sm:block" /> Not more junk leads.
             </h1>
-            <p className="rise-3 mx-auto mt-6 max-w-2xl text-lg text-muted">
-              Meta campaigns that put commercial sign buyers on your phone — run by
-              people who own a sign shop. You sell. You keep every dollar.
-            </p>
-            <p className="rise-3 mt-5 text-lg font-semibold">
-              First 21 days: you fund only the ad spend (~$20/day) — our work is free. Then
-              $1,000/month flat. No revenue share, no contract.
+            <p className="rise-3 mx-auto mt-6 max-w-3xl text-lg text-muted">
+              Social media ad campaigns that put commercial sign buyers on your phone — run
+              by people who own a sign shop.
             </p>
             <div className="rise-3 mt-8 flex flex-wrap items-center justify-center gap-4">
               <Link href="/apply" className="btn-primary text-lg">
@@ -87,8 +83,9 @@ export default function Home() {
                 See how it works
               </Link>
             </div>
-            <p className="rise-3 mt-4 text-sm text-muted">
-              Takes about 2 minutes. Limited partner availability by market.
+            <p className="rise-3 mx-auto mt-5 max-w-2xl text-sm text-muted">
+              First 21 days: you fund only the ad spend (~$20/day). We work for free. Then
+              $1,000/month flat if you like what we built.
             </p>
           </div>
 

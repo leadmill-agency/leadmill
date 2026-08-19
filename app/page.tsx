@@ -30,7 +30,7 @@ const faqItems = [
     a: "Your shop funds its own Meta ad budget, paid directly to Meta. Leadmill manages the campaign as part of the partner membership.",
   },
   {
-    q: "Is fabrication included in the $500?",
+    q: "Is fabrication included in the $1,000?",
     a: "No. Fabrication is quoted separately at trade pricing for each project. You mark it up and sell at your own retail price.",
   },
   {
@@ -95,7 +95,7 @@ export default function Home() {
             </p>
             <p className="rise-3 mt-5 text-lg font-semibold">
               First 21 days: you fund only the ad spend (~$20/day) — our work is free. Then
-              $500/month flat. No revenue share, no contract.
+              $1,000/month flat. No revenue share, no contract.
             </p>
             <div className="rise-3 mt-8 flex flex-wrap items-center justify-center gap-4">
               <Link href="/apply" className="btn-primary text-lg">
@@ -437,17 +437,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why $500 */}
+      {/* Why the price */}
       <section className="mx-auto max-w-3xl px-4 py-24 text-center sm:px-6">
         <h2 className="display text-4xl sm:text-5xl">
-          Why only $500? Because we&apos;re not an agency.
+          Why $1,000 and not an agency retainer?
         </h2>
         <div className="mt-6 space-y-4 text-left text-muted sm:text-center">
           <p>
             Traditional agencies make all their money on the retainer, so the retainer has to be
             big — and you pay it before you&apos;ve seen a single lead. We flip that: for the
             first 21 days you fund only the ad spend, and our work is free. You watch your own
-            market&apos;s real numbers before the $500/month ever starts. We can afford to work
+            market&apos;s real numbers before the $1,000/month ever starts. We can afford to work
             this way because Leadmill makes its real money when you sell signs — we&apos;re the
             fabricator behind them, quoted per job at trade pricing, no revenue share.
           </p>
@@ -458,7 +458,7 @@ export default function Home() {
         <div className="mx-auto mt-10 max-w-md rounded-2xl border-2 border-accent-bright bg-background p-8 text-left">
           <h3 className="text-2xl font-semibold">Leadmill Partner</h3>
           <p className="mt-4 text-4xl font-semibold">
-            $500<span className="text-lg font-normal text-muted">/month</span>
+            $1,000<span className="text-lg font-normal text-muted">/month</span>
           </p>
           <p className="mt-1 text-sm text-muted">
             &#43; your Meta ad spend, paid directly to Meta. Scale it up or down anytime.
@@ -466,9 +466,8 @@ export default function Home() {
           <p className="mt-3 rounded-lg bg-panel px-3 py-2 text-sm">
             <span className="font-semibold">First 21 days: you only fund the ads.</span>{" "}
             <span className="text-muted">We build and manage everything free (~$20/day to Meta,
-            about $420). Happy with the leads on day 22? The $500/month founding rate starts
-            then and locks in for as long as you stay active — the rate rises as markets
-            fill. Not happy? Walk — no contract.</span>
+            about $420). Happy with the leads on day 22? It&apos;s $1,000/month from there, and
+            your rate locks in for as long as you stay active. Not happy? Walk — no contract.</span>
           </p>
           <ul className="mt-6 space-y-3 text-sm text-muted">
             <li>Meta campaign setup and management</li>
@@ -598,7 +597,7 @@ export default function Home() {
                 </p>
                 <p>
                   We&apos;ve been on both sides of this — running the ad campaigns and building the
-                  signs. That&apos;s why the membership is $500 instead of $2,000: we&apos;d rather
+                  signs. That&apos;s why the first 21 days are free and the membership is $1,000 instead of a $2,500 agency retainer: we&apos;d rather
                   be the fabrication partner behind your wins than another agency invoice. If your
                   market doesn&apos;t make sense for this, I&apos;ll tell you on the call and
                   we&apos;ll part as friends.

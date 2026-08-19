@@ -10,7 +10,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-background/90 backdrop-blur">
       <Link href="/apply" className="block bg-ink py-2 text-center text-sm text-white transition hover:opacity-90">
-        $500/month partner program for print, wrap &amp; sign shops — limited availability by market.{" "}
+        Free 21-day trial for print, wrap &amp; sign shops — you fund only the ads. Limited availability by market.{" "}
         <span className="font-semibold text-accent-bright">Check yours →</span>
       </Link>
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">

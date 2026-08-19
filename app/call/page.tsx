@@ -119,7 +119,8 @@ export default function CallPage() {
         <div className="grid gap-10 lg:grid-cols-2">
           <div className="rounded-2xl border-2 border-accent-bright p-8">
             <h3 className="text-2xl font-semibold">LeadMill Partner</h3>
-            <p className="mt-4 text-4xl font-semibold">$500<span className="text-lg font-normal text-muted">/month</span></p>
+            <p className="mt-4 text-4xl font-semibold">$1,000<span className="text-lg font-normal text-muted">/month</span></p>
+            <p className="mt-1 text-sm font-semibold text-accent">First 21 days free — you fund only the ad spend</p>
             <p className="mt-1 text-sm text-muted">+ your Meta ad spend ($500–$1,000/mo to start), paid directly to Meta</p>
             <ul className="mt-6 space-y-2.5 text-sm text-muted">
               <li>No revenue share — you keep every dollar of your retail sale</li>

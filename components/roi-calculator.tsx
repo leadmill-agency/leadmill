@@ -47,14 +47,13 @@ function Slider({
   );
 }
 
-export default function RoiCalculator() {
+export default function RoiCalculator({ fee = 1000 }: { fee?: number }) {
   const [adSpend, setAdSpend] = useState(750);
   const [costPerLead, setCostPerLead] = useState(20);
   const [closeRate, setCloseRate] = useState(10);
   const [jobValue, setJobValue] = useState(8000);
   const [margin, setMargin] = useState(50);
 
-  const fee = 500;
   const totalCost = fee + adSpend;
   const leads = adSpend / costPerLead;
   const jobs = leads * (closeRate / 100);
@@ -138,7 +137,7 @@ export default function RoiCalculator() {
               <dd className="font-semibold tabular-nums">{fmt(gross)}</dd>
             </div>
             <div className="flex justify-between border-b border-white/10 pb-3">
-              <dt className="text-white/80">Total cost ($500 + ads)</dt>
+              <dt className="text-white/80">{`Total cost ($${fee.toLocaleString("en-US")} + ads)`}</dt>
               <dd className="font-semibold tabular-nums">{fmt(totalCost)}</dd>
             </div>
             <div className="flex justify-between">

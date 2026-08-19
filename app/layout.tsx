@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | Leadmill",
   },
   description:
-    "Leadmill runs local Meta campaigns that bring $6,000+ commercial sign jobs to sign, print, wrap, and graphics shops — built by operators of a real sign company, with optional trade fabrication. $500/month plus ad spend, no revenue share.",
+    "Leadmill runs local Meta campaigns that bring $6,000+ commercial sign jobs to sign, print, wrap, and graphics shops — built by operators of a real sign company, with optional trade fabrication. Free 21-day trial, then $1,000/month plus ad spend — no revenue share.",
 };
 
 const pixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID;

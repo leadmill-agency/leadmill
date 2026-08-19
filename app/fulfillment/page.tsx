@@ -101,7 +101,7 @@ export default function FabricationPage() {
 
       <CtaSection
         headline="Want a fabrication partner behind your shop?"
-        sub="Partner membership is $500/month and includes the demand-generation system. Fabrication is quoted per job."
+        sub="Partner membership is $1,000/month after a free 21-day trial, and includes the demand-generation system. Fabrication is quoted per job."
       />
     </>
   );

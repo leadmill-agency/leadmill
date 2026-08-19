@@ -112,7 +112,7 @@ export default function PrintSignageProposalPage() {
           starting values are our own shop&apos;s real campaign numbers and a conservative
           close rate.
         </p>
-        <RoiCalculator />
+        <RoiCalculator fee={500} />
       </section>
 
       {/* Pricing */}

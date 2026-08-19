@@ -107,7 +107,7 @@ export default function SigntistProposalPage() {
           values are our own shop&apos;s real campaign numbers and a conservative close rate.
           This is the math you and John are actually deciding on.
         </p>
-        <RoiCalculator />
+        <RoiCalculator fee={500} />
       </section>
 
       {/* Pricing */}

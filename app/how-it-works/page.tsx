@@ -71,7 +71,7 @@ export default function HowItWorksPage() {
         <div className="mt-10 rounded-2xl bg-panel p-6 text-sm text-muted">
           <p className="font-semibold text-foreground">The commitment, plainly:</p>
           <p className="mt-2">
-            $500/month partner membership. You fund your Meta ad spend separately ($500–$1,000/month
+            $1,000/month partner membership after a free 21-day trial. You fund your Meta ad spend separately ($500–$1,000/month
             is a sensible test, paid directly to Meta). Fabrication is quoted per project at trade
             pricing. No revenue share — you keep every dollar of your retail sale.
           </p>

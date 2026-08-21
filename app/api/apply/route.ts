@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import crypto from "node:crypto";
 import nodemailer from "nodemailer";
 
-// Column order for the Google Sheet (lean schema, 2026-08-19 — 20 columns).
+// Column order for the Google Sheet (lean schema, 2026-08-21 — 21 columns; status = stage dropdown, notes = free text).
 // MUST match the sheet's header row exactly; new fields go at the END.
 const COLUMNS = [
   "submittedAt",
@@ -25,6 +25,7 @@ const COLUMNS = [
   "nextTouch",
   "trialStart",
   "market",
+  "notes",
 ] as const;
 
 type Payload = Record<string, string | number | boolean | undefined>;

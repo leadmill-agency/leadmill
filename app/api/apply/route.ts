@@ -2,8 +2,8 @@ import { NextResponse } from "next/server";
 import crypto from "node:crypto";
 import nodemailer from "nodemailer";
 
-// Column order for the Google Sheet. New fields go at the END so existing
-// sheet data never shifts under old columns.
+// Column order for the Google Sheet (lean schema, 2026-08-19 — 20 columns).
+// MUST match the sheet's header row exactly; new fields go at the END.
 const COLUMNS = [
   "submittedAt",
   "fullName",
@@ -13,36 +13,18 @@ const COLUMNS = [
   "website",
   "city",
   "state",
-  "greaterHouston",
-  "yearsInBusiness",
-  "employees",
-  "primaryServices",
-  "commercialPct",
-  "largestProject",
   "sellsChannelLetters",
-  "manufacturesChannelLetters",
-  "whoAnswersLeads",
-  "responseTime",
   "adBudget",
   "revenueRange",
-  "closingPreference",
   "fulfillmentInterest",
-  "crmAgreement",
-  "score",
-  "route",
-  "flags",
   "page",
-  "utm_source",
   "utm_medium",
-  "utm_campaign",
   "utm_content",
-  "utm_term",
-  "fbclid",
-  // V2 partner-model fields (appended so existing sheet columns don't shift)
-  "businessType",
-  "whoInstalls",
-  "canPermit",
-  "fabricationInterest",
+  "booked",
+  "status",
+  "nextTouch",
+  "trialStart",
+  "market",
 ] as const;
 
 type Payload = Record<string, string | number | boolean | undefined>;
@@ -153,6 +135,11 @@ export async function POST(request: Request) {
     payload = (await request.json()) as Payload;
   } catch {
     return NextResponse.json({ error: "invalid JSON" }, { status: 400 });
+  }
+
+  // V2 website form sends fabricationInterest; the sheet's canonical column is fulfillmentInterest.
+  if (payload.fabricationInterest !== undefined && payload.fulfillmentInterest === undefined) {
+    payload.fulfillmentInterest = payload.fabricationInterest;
   }
 
   // Both effects run even if one fails; the applicant is never blocked on our plumbing.

@@ -18,6 +18,7 @@ const cfg = {
   ],
   "heard": [],
   "focus": "Albuquerque campaigns for commercial sign buyers, with fabrication backup from our UL-certified Houston shop \u2014 so you can say yes to full projects, not just install work.",
+  "showEconomics": true,
   "smsBody": "Rameel \u2014 Matthew at Signs Installed 4U. Let's start the trial."
 };
 

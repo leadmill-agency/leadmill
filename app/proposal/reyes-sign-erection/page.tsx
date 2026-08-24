@@ -18,6 +18,7 @@ const cfg = {
   ],
   "heard": [],
   "focus": "NorCal campaigns for illuminated sign buyers. You sell and install; when a job needs fabrication, our UL-certified Houston facility builds it at trade pricing and ships it. You keep the customer and the margin.",
+  "showEconomics": true,
   "smsBody": "Rameel \u2014 Miguel at Reyes Sign Erection LLC. Let's start the trial."
 };
 

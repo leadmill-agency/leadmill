@@ -63,33 +63,28 @@ export function TrialProposal(cfg: TrialProposalConfig) {
       </section>
 
       {/* Who you're talking to + proof */}
-      <section className="mt-14 grid items-center gap-8 rounded-2xl bg-ink p-8 text-white lg:grid-cols-[1fr_1.4fr]">
+      <section className="mt-14 rounded-2xl bg-ink p-8 text-white">
+        <p className="text-sm font-semibold text-accent-bright">Not a promise — a screenshot</p>
+        <h2 className="display mt-2 text-3xl sm:text-4xl">
+          We run this exact system for our own sign shop.
+        </h2>
+        <dl className="mt-6 grid grid-cols-2 gap-6 sm:max-w-md">
+          <div>
+            <dd className="text-4xl font-semibold">~$23</dd>
+            <dt className="mt-1 text-sm text-white/70">per qualified lead, last 30 days</dt>
+          </div>
+          <div>
+            <dd className="text-4xl font-semibold">144</dd>
+            <dt className="mt-1 text-sm text-white/70">sign leads in those 30 days</dt>
+          </div>
+        </dl>
         <Image
-          src="/founder.png"
-          alt="Rameel Sheikh on the sign fabrication floor"
-          width={1125}
-          height={1451}
-          className="w-full rounded-xl object-cover"
+          src="/proof-meta-30d.png"
+          alt="Our shop's Meta Ads Manager — last 30 days, 144 leads"
+          width={1600}
+          height={612}
+          className="mt-6 w-full rounded-xl border border-white/15"
         />
-        <div>
-          <p className="text-sm font-semibold text-accent-bright">Not a promise — a screenshot</p>
-          <h2 className="display mt-2 text-3xl sm:text-4xl">
-            We run this exact system for our own sign shop.
-          </h2>
-          <dl className="mt-6 grid grid-cols-2 gap-6">
-            <div>
-              <dd className="text-4xl font-semibold">~$23</dd>
-              <dt className="mt-1 text-sm text-white/70">per qualified lead, last 30 days</dt>
-            </div>
-            <div>
-              <dd className="text-4xl font-semibold">144</dd>
-              <dt className="mt-1 text-sm text-white/70">sign leads in those 30 days</dt>
-            </div>
-          </dl>
-          <a href="/proof-meta-30d.png" target="_blank" className="mt-5 inline-block text-sm font-medium text-accent-bright">
-            See the Ads Manager screenshot →
-          </a>
-        </div>
       </section>
 
       {/* How it works */}

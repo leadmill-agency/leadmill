@@ -78,7 +78,7 @@ export function TrialProposal(cfg: TrialProposalConfig) {
           </h2>
           <dl className="mt-6 grid grid-cols-2 gap-6">
             <div>
-              <dd className="text-4xl font-semibold">~$20</dd>
+              <dd className="text-4xl font-semibold">~$23</dd>
               <dt className="mt-1 text-sm text-white/70">per qualified lead, last 30 days</dt>
             </div>
             <div>
@@ -168,7 +168,7 @@ export function TrialProposal(cfg: TrialProposalConfig) {
           <p className="border-t border-line px-8 py-4 text-sm text-muted">
             Includes: ad creative (you approve every ad before launch), campaign build and
             management, qualification forms, leads to your email and phone instantly, weekly
-            numbers. Our own sign shop&apos;s account has run ~$20 per qualified lead over the
+            numbers. Our own sign shop&apos;s account has run ~$23 per qualified lead over the
             last 30 days — your market will differ, and you&apos;ll see every number.
           </p>
         </div>

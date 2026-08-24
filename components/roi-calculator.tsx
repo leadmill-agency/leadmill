@@ -49,7 +49,7 @@ function Slider({
 
 export default function RoiCalculator({ fee = 1000 }: { fee?: number }) {
   const [adSpend, setAdSpend] = useState(750);
-  const [costPerLead, setCostPerLead] = useState(20);
+  const [costPerLead, setCostPerLead] = useState(23);
   const [closeRate, setCloseRate] = useState(10);
   const [jobValue, setJobValue] = useState(8000);
   const [margin, setMargin] = useState(50);
@@ -81,7 +81,7 @@ export default function RoiCalculator({ fee = 1000 }: { fee?: number }) {
         />
         <Slider
           label="Cost per qualified lead"
-          note="Our own shop's campaign ran ~$20 over the last 30 days. Drag it worse if you're skeptical."
+          note="Our own shop's campaign ran ~$23 over the last 30 days. Drag it worse if you're skeptical."
           value={costPerLead}
           onChange={setCostPerLead}
           min={12}

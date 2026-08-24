@@ -139,7 +139,7 @@ export default function Home() {
               </h2>
               <dl className="mt-8 grid grid-cols-2 gap-6">
                 <div>
-                  <dd className="text-4xl font-semibold">~$20</dd>
+                  <dd className="text-4xl font-semibold">~$23</dd>
                   <dt className="mt-1 text-sm text-white/70">average cost per qualified lead, last 30 days</dt>
                 </div>
                 <div>

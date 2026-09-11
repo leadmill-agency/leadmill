@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 
 const SMS_HREF =
   "sms:+19362618323?body=Rameel%20%E2%80%94%20Brendan%20at%20Class%201%20Graphics.";
+const STRIPE_HREF = "https://buy.stripe.com/aFa8wP3O3702ebc4IH2sM0b";
 
 export default function Class1GraphicsProposalPage() {
   return (
@@ -122,32 +123,34 @@ export default function Class1GraphicsProposalPage() {
           </div>
           <ol className="list-decimal space-y-5 p-8 pl-12 text-muted">
             <li>
-              <span className="font-semibold text-foreground">Start the trial on Stripe.</span>{" "}
-              The link in my email starts the 21-day free trial — card on file, $0 today,
-              nothing charged until day 22, cancel anytime before that and pay nothing.
+              <span className="font-semibold text-foreground">Start the trial:</span>{" "}
+              <a href={STRIPE_HREF} className="underline decoration-accent underline-offset-4 hover:text-foreground">
+                this link
+              </a>{" "}
+              starts the 21-day free trial — card on file, $0 today, nothing charged until
+              day 22, cancel anytime before that and pay nothing.
             </li>
             <li>
-              <span className="font-semibold text-foreground">Meta access.</span> Give me
-              partner access to your Facebook business page and ad account (or if you
-              don&apos;t have Business Manager set up, that&apos;s fine — I&apos;ll set it up
-              with you on a 15-minute screen share). Ad spend runs in YOUR ad account, on
-              your card, paid straight to Meta.
+              <span className="font-semibold text-foreground">Meta access:</span> partner
+              access to your Facebook business page and ad account (no Business Manager set
+              up? That&apos;s fine — we&apos;ll do it together on a 15-minute screen share).
+              Ad spend runs in YOUR ad account, on your card, paid straight to Meta.
             </li>
             <li>
-              <span className="font-semibold text-foreground">Photos and video.</span> Your
-              best finished work from BOTH sides: storefront sign installs and vehicle
-              wraps — before/afters, walk-arounds, phone footage is perfect. A photo of
+              <span className="font-semibold text-foreground">Photos and video:</span> your
+              best finished work from BOTH sides — storefront sign installs and vehicle
+              wraps. Before/afters, walk-arounds, phone footage is perfect. A photo of
               yourself too if you&apos;re open to being in the ads (it works), or skip it
               and we lead with the work.
             </li>
             <li>
-              <span className="font-semibold text-foreground">Service area + lead routing.</span>{" "}
-              The towns/counties you actually want jobs from, and where leads should land:
+              <span className="font-semibold text-foreground">Service area + lead routing:</span>{" "}
+              the towns/counties you actually want jobs from, and where leads should land —
               instant text + email always, and we&apos;ll wire them into Jobber as requests
               so they drop straight into your existing workflow.
             </li>
             <li>
-              <span className="font-semibold text-foreground">Approve the ads.</span> I build
+              <span className="font-semibold text-foreground">Approve the ads:</span> I build
               both campaigns from your material; nothing runs until you&apos;ve seen and
               approved every ad. The 21-day clock starts only when ads go live.
             </li>
@@ -160,43 +163,24 @@ export default function Class1GraphicsProposalPage() {
         </div>
       </section>
 
-      {/* Small-market honesty */}
-      <section className="mt-14 rounded-2xl bg-panel p-8">
-        <h2 className="text-2xl font-semibold">The Central PA question, answered honestly</h2>
-        <p className="mt-3 text-muted">
-          Same answer as our first call: lead volume scales with population, and I won&apos;t
-          promise Central PA behaves like a top-10 metro. That&apos;s what the 21 days are
-          for — your market&apos;s real numbers, in your own ad account, before a dollar of
-          management fee. If the math doesn&apos;t work, we&apos;ll both see it in the data.
-        </p>
-      </section>
-
-      {/* Fabrication */}
-      <section className="mt-14">
-        <h2 className="text-2xl font-semibold">Fabrication: the standing offer</h2>
-        <p className="mt-4 max-w-2xl text-muted">
-          Separate from the leads entirely: our UL-certified Houston facility fabricates
-          illuminated exterior signage at trade pricing and ships nationwide. Send me a
-          production file from any current job and I&apos;ll quote it against your local
-          wholesale guy. If we beat him, you&apos;ve found a second source; if we don&apos;t,
-          you&apos;ve confirmed he&apos;s good. No strings on quotes — ever.
-        </p>
-      </section>
-
       <section className="mt-14 rounded-2xl bg-panel p-8 text-center">
         <h2 className="display text-3xl">Welcome aboard, Brendan.</h2>
         <p className="mx-auto mt-3 max-w-xl text-muted">
-          Questions on any step — or want to knock out the Meta access on a quick screen
-          share — text or call anytime.
+          One click starts the clock rolling — $0 today, nothing charged until day 22,
+          cancel anytime before that.
         </p>
         <a
-          href={SMS_HREF}
+          href={STRIPE_HREF}
           className="mt-6 inline-block rounded-full bg-ink px-8 py-3.5 font-semibold text-white transition-opacity hover:opacity-85"
         >
-          Text me · (936) 261-8323
+          Start your 21-day free trial
         </a>
         <p className="mt-3 text-sm text-muted">
-          Or call anytime — shop hours, evenings, whenever.
+          Questions on any step?{" "}
+          <a href={SMS_HREF} className="underline underline-offset-4 hover:text-foreground">
+            Text
+          </a>{" "}
+          or call (936) 261-8323 — shop hours, evenings, whenever.
         </p>
         <p className="mt-6 text-sm text-muted">— Rameel Sheikh, LeadMill · Houston, TX</p>
       </section>

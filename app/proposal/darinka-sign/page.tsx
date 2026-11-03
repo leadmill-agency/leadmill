@@ -8,8 +8,9 @@ export const metadata: Metadata = {
 
 // Unlisted proposal page for Daria Protsiuk, Darinka Sign (Riverhead, NY). First held call
 // 2026-10-30 (WAVE4, A1 referrals video); she decides with her husband. Built 11/3 for the
-// follow-up Meet. Uses the 11/2 bundle (ads + website + SEO + AI search, $1,000/mo, full work
-// in the 21-day trial) and the approved guarantee wording. Doubles as her onboarding checklist. Rameel 11/3: no
+// follow-up Meet. She signed 11/3 for META ADS ONLY ($1,000/mo after the 21-day trial), so the
+// website / SEO / ChatGPT sections were taken off. Uses the approved guarantee wording and
+// doubles as her onboarding checklist. Rameel 11/3: no
 // "correction" of on-call claims, no "you don't pay per lead", no lead-quality section.
 
 const SMS_HREF = "sms:+19362618323?body=Rameel%20%E2%80%94%20Daria%20from%20Darinka%20Sign%20here.";
@@ -77,13 +78,9 @@ export default function DarinkaSignProposalPage() {
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
           {[
             ["Facebook and Instagram ads",
-              "Ads that go after commercial sign jobs in your area: storefront signs, channel letters, monuments. Each lead goes straight to your phone and email."],
-            ["A better website",
-              "We rebuild darinkasign.com so it looks like the best sign shop on the East End, and turns more visitors into quote requests: a quote button on every page, tap to call or text, and your best work up front."],
-            ["SEO",
-              "Links from other trusted sites, blog posts, and pages for each service and town, so Google shows Darinka Sign to people searching for a sign shop near them."],
-            ["ChatGPT and AI search",
-              "We work on getting Darinka Sign named when people ask ChatGPT and similar tools for a sign company on Long Island."],
+              "Ads that go after commercial sign jobs in your area: storefront signs, channel letters, monuments. Each new lead is emailed to you as soon as it comes in."],
+            ["Ads made from your own work",
+              "We build the ads from photos and video of your real jobs. You approve every ad before it runs."],
           ].map(([t, d]) => (
             <div key={t} className="rounded-2xl bg-panel p-6">
               <h3 className="font-semibold">{t}</h3>
@@ -118,8 +115,7 @@ export default function DarinkaSignProposalPage() {
             <div>
               <p className="text-3xl font-semibold">Days 1–21<span className="text-base font-normal text-muted"> · free</span></p>
               <p className="mt-1 text-sm text-muted">
-                The full work, not a sample: ads live, website rebuilt, SEO and ChatGPT work
-                started. You pay us nothing. You pay Facebook for the ads directly, at least
+                The full work, not a sample: your ads built and running. You pay us nothing. You pay Facebook for the ads directly, at least
                 $25 a day (about $525 over 21 days).
               </p>
             </div>
@@ -151,9 +147,7 @@ export default function DarinkaSignProposalPage() {
             </p>
           </div>
           <p className="border-t border-line px-8 py-4 text-sm text-muted">
-            Your Facebook page, ad account, leads and domain name
-            stay yours. The new website is built and hosted by LeadMill as part of the plan, so
-            it stays with LeadMill if you cancel.
+            Your Facebook page, ad account and leads stay yours.
           </p>
         </div>
       </section>
@@ -164,7 +158,7 @@ export default function DarinkaSignProposalPage() {
           <div className="bg-ink px-8 py-6 text-white">
             <h2 className="text-2xl font-semibold">How to get set up</h2>
             <p className="mt-1 text-sm text-white/70">
-              About 30 minutes in total. If any screen looks different from these steps, text
+              About 20 minutes in total. If any screen looks different from these steps, text
               me a screenshot and I&apos;ll walk you through it.
             </p>
           </div>
@@ -196,17 +190,6 @@ export default function DarinkaSignProposalPage() {
               Facebook, never to us.
             </li>
             <li>
-              <span className={label}>Website access (5 minutes).</span>{" "}Tell me who hosts
-              darinkasign.com (for example GoDaddy, Wix or Squarespace) and either add
-              rameel@leadmill.co as a user or send me your web person&apos;s contact. Your
-              domain stays in your name.
-            </li>
-            <li>
-              <span className={label}>Google Business Profile (3 minutes).</span>{" "}On Google,
-              search &quot;Darinka Sign&quot; while logged in, open your profile&apos;s menu,
-              go to Business Profile settings, then Managers, and add rameel@leadmill.co.
-            </li>
-            <li>
               <span className={label}>Photos and video (text them today).</span>{" "}10 to 20
               photos of your best finished work, especially lit storefront signs, channel
               letters and monuments, plus any phone video of your shop and installs. Real
@@ -214,7 +197,7 @@ export default function DarinkaSignProposalPage() {
             </li>
             <li>
               <span className={label}>Tell me where leads go and where you want work.</span>{" "}
-              Who gets the new-lead text and email (you, your husband, or both), the Suffolk
+              Who gets the new-lead emails (you, your husband, or both), the Suffolk
               County towns you want first, and the jobs you want most and least.
             </li>
           </ol>
@@ -227,9 +210,9 @@ export default function DarinkaSignProposalPage() {
         <div className="mt-6 grid gap-4 md:grid-cols-4">
           {[
             ["Days 1–2", "Ads built", "I build the ads from your photos and send them to you. Nothing runs until you approve them."],
-            ["Days 2–3", "Ads live", "Leads start arriving by text and email. The 60-day guarantee clock starts here."],
-            ["Weeks 1–2", "New website", "Your new site is built. You review it before it goes live."],
-            ["Week 3", "SEO and ChatGPT", "First service and town pages, blog posts and a before-and-after ChatGPT check. On day 18 I'll call and ask if you want to continue."],
+            ["Days 2–3", "Ads live", "Leads start arriving in your email. The 60-day guarantee clock starts here."],
+            ["Days 3–21", "We tune the ads", "We watch which ads bring leads and put more of your budget behind the ones that work."],
+            ["Day 18", "Check-in call", "I'll call and ask if you want to continue after day 21."],
           ].map(([n, t, d]) => (
             <div key={n} className="rounded-2xl bg-panel p-5">
               <span className="text-sm font-semibold text-accent">{n}</span>

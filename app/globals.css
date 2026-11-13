@@ -7,7 +7,7 @@
   --panel-2: oklch(0.947 0.004 75);
   --border: oklch(0.9 0.006 75);
   --foreground: oklch(0.23 0.02 262);
-  --muted: oklch(0.44 0.022 262);
+  --muted: oklch(0.39 0.022 262);
   --accent: oklch(0.6 0.145 62); /* deep amber — passes 3:1 for large text on white */
   --accent-bright: oklch(0.82 0.155 75); /* brand amber #ffb020 — surfaces, never text */
   --accent-ink: oklch(0.25 0.05 70);
@@ -48,9 +48,10 @@ body {
 
 /* Display headings: weight and size carry the hierarchy — sentence case, no caps. */
 .display {
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  line-height: 1.08;
+  font-family: var(--font-display), var(--font-geist), system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  line-height: 0.98;
   text-wrap: balance;
 }
 

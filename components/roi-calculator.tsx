@@ -47,7 +47,13 @@ function Slider({
   );
 }
 
-export default function RoiCalculator({ fee = 1000 }: { fee?: number }) {
+export default function RoiCalculator({
+  fee = 1000,
+  generic = false,
+}: {
+  fee?: number;
+  generic?: boolean;
+}) {
   const [adSpend, setAdSpend] = useState(750);
   const [costPerLead, setCostPerLead] = useState(23);
   const [closeRate, setCloseRate] = useState(10);
@@ -71,7 +77,7 @@ export default function RoiCalculator({ fee = 1000 }: { fee?: number }) {
       <div className="space-y-5 rounded-2xl bg-panel p-6 sm:p-8">
         <Slider
           label="Monthly ad spend"
-          note="Paid directly to Meta. $750 ≈ the $25/day start."
+          note={generic ? undefined : "Paid directly to Meta. $750 ≈ the $25/day start."}
           value={adSpend}
           onChange={setAdSpend}
           min={500}
@@ -81,7 +87,11 @@ export default function RoiCalculator({ fee = 1000 }: { fee?: number }) {
         />
         <Slider
           label="Cost per qualified lead"
-          note="Our own shop's campaign ran ~$23 over the last 30 days. Drag it worse if you're skeptical."
+          note={
+            generic
+              ? undefined
+              : "Our own shop's campaign ran ~$23 over the last 30 days. Drag it worse if you're skeptical."
+          }
           value={costPerLead}
           onChange={setCostPerLead}
           min={12}
@@ -91,7 +101,7 @@ export default function RoiCalculator({ fee = 1000 }: { fee?: number }) {
         />
         <Slider
           label="Leads you close"
-          note="Depends on your follow-up speed and sales process."
+          note={generic ? undefined : "Depends on your follow-up speed and sales process."}
           value={closeRate}
           onChange={setCloseRate}
           min={5}
@@ -103,14 +113,15 @@ export default function RoiCalculator({ fee = 1000 }: { fee?: number }) {
           label="Average job value"
           value={jobValue}
           onChange={setJobValue}
-          min={5000}
-          max={20000}
-          step={500}
+          min={generic ? 1000 : 5000}
+          max={generic ? 100000 : 20000}
+          step={generic ? 1000 : 500}
           display={fmt(jobValue)}
         />
+        {!generic && (
         <Slider
           label="Your gross margin"
-          note="Fabricating in-house, most shops sit well above 40%."
+          note={generic ? undefined : "Fabricating in-house, most shops sit well above 40%."}
           value={margin}
           onChange={setMargin}
           min={30}
@@ -118,11 +129,12 @@ export default function RoiCalculator({ fee = 1000 }: { fee?: number }) {
           step={5}
           display={margin + "%"}
         />
+        )}
       </div>
 
       <div className="flex flex-col justify-between rounded-2xl bg-ink p-6 text-white sm:p-8">
         <div>
-          <p className="text-sm text-white/60">With YOUR numbers above</p>
+          <p className="text-sm text-white/60">With your numbers</p>
           <dl className="mt-4 space-y-3">
             <div className="flex justify-between border-b border-white/10 pb-3">
               <dt className="text-white/80">Qualified leads / month</dt>
@@ -133,7 +145,7 @@ export default function RoiCalculator({ fee = 1000 }: { fee?: number }) {
               <dd className="font-semibold tabular-nums">~{jobs.toFixed(1)}</dd>
             </div>
             <div className="flex justify-between border-b border-white/10 pb-3">
-              <dt className="text-white/80">Gross profit / month</dt>
+              <dt className="text-white/80">{generic ? "Gross profit / month, at a 50% margin" : "Gross profit / month"}</dt>
               <dd className="font-semibold tabular-nums">{fmt(gross)}</dd>
             </div>
             <div className="flex justify-between border-b border-white/10 pb-3">
@@ -142,7 +154,7 @@ export default function RoiCalculator({ fee = 1000 }: { fee?: number }) {
             </div>
             <div className="flex justify-between">
               <dt className="text-white/80">Net / month</dt>
-              <dd className={`text-xl font-semibold tabular-nums ${net >= 0 ? "text-accent-bright" : "text-red-400"}`}>
+              <dd className={`text-3xl font-semibold tabular-nums ${net >= 0 ? "text-accent-bright" : "text-red-400"}`}>
                 {net >= 0 ? "+" : "−"}{fmt(Math.abs(net))}
               </dd>
             </div>

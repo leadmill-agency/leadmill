@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Barlow_Condensed, Geist } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
@@ -13,12 +13,18 @@ const geist = Geist({
 
 export const metadata: Metadata = {
   title: {
-    default: "Leadmill — Commercial Sign Leads for Sign, Print & Wrap Shops",
+    default: "Leadmill — The Growth Department for Independent Shops",
     template: "%s | Leadmill",
   },
   description:
-    "Leadmill runs local Meta campaigns that bring $6,000+ commercial sign jobs to sign, print, wrap, and graphics shops — built by operators of a real sign company, with optional trade fabrication. Free 21-day trial, then $1,000/month plus ad spend — no revenue share.",
+    "Leadmill is the growth department for independent sign, print and wrap shops: Facebook and Instagram ads, a better website, SEO, and ChatGPT and AI search for one flat fee. Built in a working sign shop. Free 21-day trial, then $1,000 a month plus ad spend. No contract.",
 };
+
+const display = Barlow_Condensed({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: ["600", "700"],
+});
 
 const pixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID;
 const gaId = process.env.NEXT_PUBLIC_GA_ID;
@@ -29,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geist.variable} h-full antialiased`}>
+    <html lang="en" className={`${geist.variable} ${display.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
         <UtmCapture />
         <SiteHeader />

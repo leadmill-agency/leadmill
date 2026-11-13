@@ -10,8 +10,8 @@ export function SiteFooter() {
             Lead<span className="text-accent">Mill</span>
           </p>
           <p className="mt-3 max-w-xs text-sm text-muted">
-            Built by operators of a real commercial sign company. We help print, wrap, and sign
-            shops sell illuminated exterior signage — and we fabricate it.
+            The growth department for independent shops. Built and tested in a working
+            commercial sign shop.
           </p>
         </div>
         <div className="text-sm">
@@ -30,8 +30,8 @@ export function SiteFooter() {
             <li><Link href="/terms" className="hover:text-foreground">Terms of Service</Link></li>
           </ul>
           <p className="mt-6 text-xs text-muted">
-            Fabrication is quoted separately per project at trade pricing. Partners handle
-            permitting and installation locally.
+            Sign fabrication is quoted separately per project at trade pricing. Partners do
+            their own permitting and installation.
           </p>
         </div>
       </div>

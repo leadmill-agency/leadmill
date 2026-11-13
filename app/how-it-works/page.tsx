@@ -4,39 +4,39 @@ import { CtaSection } from "@/components/cta-section";
 export const metadata: Metadata = {
   title: "How It Works",
   description:
-    "How the Leadmill partner model works: we generate illuminated-sign opportunities and fabricate at trade pricing. Your shop sells, permits, and installs.",
+    "How Leadmill works for local trades that sell to businesses: Facebook and Instagram ads, a better website, SEO, and ChatGPT and AI search in one plan. The full work is free for 21 days, then $1,000 a month.",
 };
 
 const steps = [
   {
     n: "01",
     t: "Market check",
-    d: "Apply and we look at your market together: competition, demand, and whether partner availability is open in your area. If the numbers don't work for your shop, we tell you and part as friends.",
+    d: "Apply and we look at your market together: competition, demand, and whether your area is still open. We take one shop per market. If the numbers don't work for you, we tell you and part as friends.",
   },
   {
     n: "02",
-    t: "Campaign launch",
-    d: "We build your local Meta campaign — creative built around illuminated exterior signage, lead forms that filter out yard-sign and DIY buyers, and routing that gets each lead to your phone and inbox fast.",
+    t: "Setup: a few short steps on your side",
+    d: "You give us access to your Facebook page and ad account, put your card on the ad account, and send photos and videos of finished work. We do the rest.",
   },
   {
     n: "03",
-    t: "Leads come to you, qualified",
-    d: "Every lead includes the project basics: sign type, new or replacement, timeline, budget signal, and contact details. Automated follow-up keeps them warm until your team connects.",
+    t: "Ads go live",
+    d: "We build Facebook and Instagram ads from your own work, with a lead form that screens out small jobs and DIY buyers. Each lead goes straight to your phone and email. Your 21 free days start here.",
   },
   {
     n: "04",
-    t: "You quote and close",
-    d: "Your shop, your brand, your retail price. You survey the site, quote the project, and close the customer the way you always have.",
+    t: "Your website gets rebuilt",
+    d: "We rebuild your site so it looks like the best company in town and turns more visitors into quote requests: a quote button on every page, tap to call or text, and your best work up front. Already have a web person? We work with them.",
   },
   {
     n: "05",
-    t: "Send us the fabrication order",
-    d: "When you want Leadmill to build the sign, submit the approved artwork, specs, and field measurements. We quote the fabrication wholesale, you approve, we build and ship.",
+    t: "Google and ChatGPT",
+    d: "We add pages for each service and town, blog posts, and links from other trusted sites, so Google shows your company to local searchers. We also work on getting your company named when buyers ask ChatGPT and Google's AI who to call.",
   },
   {
     n: "06",
-    t: "You deliver the project",
-    d: "Your shop handles permitting, installation, and the customer relationship through closeout. Your customer never hears from Leadmill.",
+    t: "Day 22: you decide",
+    d: "Keep going at $1,000 a month, or walk. No contract. You quote, sell and deliver every job the way you always have, and your customer never hears from Leadmill.",
   },
 ];
 
@@ -46,11 +46,11 @@ export default function HowItWorksPage() {
       <section className="border-b border-line">
         <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
           <h1 className="display max-w-3xl text-5xl sm:text-6xl">
-            From your first campaign to your fabrication partner.
+            What happens after you apply.
           </h1>
           <p className="mt-5 max-w-2xl text-muted">
-            No black box. Here is exactly what happens from the day you apply to the day your
-            customer&apos;s sign is on their wall.
+            No black box. Here is what we do in your 21 free days, in order, and what happens on
+            day 22.
           </p>
         </div>
         <div className="hazard" />
@@ -71,9 +71,12 @@ export default function HowItWorksPage() {
         <div className="mt-10 rounded-2xl bg-panel p-6 text-sm text-muted">
           <p className="font-semibold text-foreground">The commitment, plainly:</p>
           <p className="mt-2">
-            $1,000/month partner membership after a free 21-day trial. You fund your Meta ad spend separately ($500–$1,000/month
-            is a sensible test, paid directly to Meta). Fabrication is quoted per project at trade
-            pricing. No revenue share — you keep every dollar of your retail sale.
+            $1,000 a month after a free 21-day trial. You pay Facebook directly for your ads, at
+            least $25 a day. No contract and no revenue share: you keep every dollar of your retail
+            sale. Our guarantee: 20 commercial leads in your first 60 days of ads, or we keep
+            working free until you get them. That needs ad spend of at least $25 a day. A
+            commercial lead is a business in your service area asking about a commercial job. The
+            guarantee covers our fee, not ad spend.
           </p>
         </div>
       </section>

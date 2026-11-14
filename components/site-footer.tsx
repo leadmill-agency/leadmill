@@ -10,7 +10,7 @@ export function SiteFooter() {
             Lead<span className="text-accent">Mill</span>
           </p>
           <p className="mt-3 max-w-xs text-sm text-muted">
-            The growth department for independent shops. Built and tested in a working
+            The growth department for commercial contractors. Built and tested in a working
             commercial sign shop.
           </p>
         </div>

@@ -10,7 +10,7 @@ const faqItems = [
   },
   {
     q: "Who is it built for?",
-    a: "Independent sign shops and other specialty contractors with a crew.",
+    a: "Commercial contractors with a crew: sign companies, window tinters and other specialty trades.",
   },
   {
     q: "I own a franchise location. Can I still work with you?",
@@ -34,7 +34,7 @@ const faqItems = [
   },
   {
     q: "Do you guarantee closed jobs?",
-    a: "No. Anyone who guarantees closed jobs is lying to you. We guarantee leads, in the wording at the top of this page.",
+    a: "No. Anyone who guarantees closed jobs is lying to you. We guarantee leads, in the wording on this page.",
   },
   {
     q: "Do you take a percentage of my sale?",
@@ -180,32 +180,23 @@ const steps = [
 export default function Home() {
   return (
     <>
-      {/* Hero: the guarantee, in its approved wording, is the headline */}
+      {/* Hero */}
       <section className="border-b border-line">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-10 sm:px-6 lg:grid-cols-[1.35fr_1fr] lg:gap-14 lg:py-12">
           <div>
-            <p className="rise inline-block rounded-full border border-line px-4 py-1.5 text-sm font-medium">
-              The growth department for independent shops
-            </p>
-            <h1 className="display rise mt-5 text-5xl sm:text-6xl lg:text-[4.25rem]">
-              <span className="text-accent">20 commercial leads</span> in your first 60 days
-              of ads, or we keep working free until you get them.
+            <h1 className="display rise text-6xl sm:text-7xl lg:text-[5.25rem]">
+              The growth department for{" "}
+              <span className="text-accent">commercial contractors</span>.
             </h1>
             <p className="rise-2 mt-5 max-w-xl text-xl text-muted">
-              We believe in this enough to work free for your first 21 days. You only pay for
-              your ads.
+              Franchises pay a royalty for their marketing department. Try yours free for 21
+              days.
             </p>
             <Link href="/apply" className="btn-primary rise-3 mt-7 text-lg">
               Schedule a call
             </Link>
-            <p className="rise-3 mt-7 max-w-lg border-l-2 border-ink pl-4 text-lg">
-              <span className="font-semibold">$24,000 in jobs sold from $603 in ads.</span>{" "}
-              <span className="text-muted">Class 1 Graphics, Pennsylvania.</span>
-            </p>
-            <p className="rise-3 mt-6 max-w-lg text-sm text-muted">
-              With ad spend of at least $25 a day. A commercial lead is a business in your
-              service area asking about a commercial job. The guarantee covers our fee, not ad
-              spend.
+            <p className="rise-3 mt-4 text-sm text-muted">
+              Free for 21 days. You only pay for your ads.
             </p>
           </div>
           <figure className="rise-2">
@@ -228,7 +219,7 @@ export default function Home() {
       <section className="bg-ink text-white">
         <div className="mx-auto max-w-6xl px-4 pb-16 pt-20 sm:px-6">
           <h2 className="display max-w-4xl text-5xl sm:text-7xl">
-            Three independent shops. Their numbers.
+            Three shops. Their numbers.
           </h2>
           <div className="mt-14">
             {cases.map((c) => (
@@ -375,6 +366,21 @@ export default function Home() {
               </li>
             ))}
           </ol>
+        </div>
+      </section>
+
+      {/* Guarantee */}
+      <section className="bg-accent-bright">
+        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+          <p className="font-medium text-accent-ink/80">Our guarantee</p>
+          <p className="display mt-3 max-w-5xl text-5xl text-accent-ink sm:text-7xl">
+            20 commercial leads in your first 60 days of ads, or we keep working free until you
+            get them.
+          </p>
+          <p className="mt-6 max-w-2xl text-accent-ink/80">
+            With ad spend of at least $25 a day. A commercial lead is a business in your service
+            area asking about a commercial job. The guarantee covers our fee, not ad spend.
+          </p>
         </div>
       </section>
 

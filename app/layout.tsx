@@ -13,11 +13,11 @@ const geist = Geist({
 
 export const metadata: Metadata = {
   title: {
-    default: "Leadmill — The Growth Department for Independent Shops",
+    default: "Leadmill — The Growth Department for Commercial Contractors",
     template: "%s | Leadmill",
   },
   description:
-    "Leadmill is the growth department for independent sign, print and wrap shops: Facebook and Instagram ads, a better website, SEO, and ChatGPT and AI search for one flat fee. Built in a working sign shop. Free 21-day trial, then $1,000 a month plus ad spend. No contract.",
+    "Leadmill is the growth department for commercial contractors, from sign companies to window tinters: Facebook and Instagram ads, a better website, SEO, and ChatGPT and AI search for one flat fee. Built in a working sign shop. Free 21-day trial, then $1,000 a month plus ad spend. No contract.",
 };
 
 const display = Barlow_Condensed({

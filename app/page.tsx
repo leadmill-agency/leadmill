@@ -151,22 +151,21 @@ const work = [
   },
 ];
 
-const franchisePays = [
-  "A royalty on every sale: about 6% at the big sign franchises",
-  "A marketing fee on top of the royalty",
-  "A website that corporate owns",
-  "A territory that corporate sets",
-  "A multi-year franchise agreement",
-  "Facebook ads still left to the owner",
+const usualDeal = [
+  "Leads sold to several contractors at once",
+  "You pay before you've seen a single lead",
+  "Often a contract, with a fee to leave",
+  "Often the agency holds your ad account",
+  "The same template for every client",
 ];
 
 const youGet = [
-  "Commercial leads sent straight to your phone",
-  "A website that turns visitors into quote requests",
-  "Buyers find you on Google and when they ask ChatGPT",
-  "Every dollar of every sale stays yours",
-  "The only shop we work with in your market",
-  "Leave any time. No contract",
+  "Leads that go only to you, from ads in your own account",
+  "21 days of full work before you pay us anything",
+  "No contract. Pause or leave any time",
+  "Your ad account, page and leads stay yours",
+  "Ads built from your own jobs, crew and photos",
+  "One company per trade in each market",
 ];
 
 const steps = [
@@ -189,14 +188,13 @@ export default function Home() {
               <span className="text-accent">commercial contractors</span>.
             </h1>
             <p className="rise-2 mt-5 max-w-xl text-xl text-muted">
-              Franchises pay a royalty for their marketing department. Try yours free for 21
-              days.
+              Leads that go only to you. No contract. Free for your first 21 days.
             </p>
             <Link href="/apply" className="btn-primary rise-3 mt-7 text-lg">
               Schedule a call
             </Link>
             <p className="rise-3 mt-4 text-sm text-muted">
-              Free for 21 days. You only pay for your ads.
+              You only pay Facebook for your ads.
             </p>
           </div>
           <figure className="rise-2">
@@ -290,20 +288,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Franchise comparison: two panels, the price as the punchline */}
+      {/* The usual deal against ours */}
       <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
         <h2 className="display max-w-4xl text-5xl sm:text-7xl">
-          The marketing department a franchise owner gets, without the royalty.
+          You&apos;ve seen the usual deal. Here&apos;s ours.
         </h2>
         <p className="mt-6 max-w-2xl text-xl text-muted">
-          You already do the work, often as a subcontractor for franchises and national chains
-          that keep the customer and the margin.
+          Shared leads, long contracts and an agency that keeps your accounts. Contractors tell
+          the same story about lead sellers and marketing companies.
         </p>
         <div className="mt-14 grid gap-6 lg:grid-cols-2">
           <div className="flex flex-col rounded-2xl border border-line bg-panel p-8 sm:p-10">
-            <h3 className="font-semibold text-muted">What a franchise owner pays for</h3>
+            <h3 className="font-semibold text-muted">The usual deal</h3>
             <ul className="mt-7 space-y-4 text-lg text-muted">
-              {franchisePays.map((i) => (
+              {usualDeal.map((i) => (
                 <li key={i} className="flex items-start gap-3.5">
                   <span
                     aria-hidden
@@ -316,14 +314,12 @@ export default function Home() {
               ))}
             </ul>
             <div className="mt-auto pt-10">
-              <p className="display text-6xl text-muted sm:text-7xl">$5,000</p>
-              <p className="mt-2 text-lg text-muted">
-                a month in royalties, on $1 million a year in sales
-              </p>
+              <p className="display text-6xl text-muted sm:text-7xl">Pay first</p>
+              <p className="mt-2 text-lg text-muted">and find out later whether it works</p>
             </div>
           </div>
           <div className="flex flex-col rounded-2xl border-2 border-ink bg-background p-8 shadow-[0_18px_50px_-18px_oklch(0.23_0.02_262/0.35)] sm:p-10">
-            <h3 className="font-semibold">What you get with Leadmill</h3>
+            <h3 className="font-semibold">With Leadmill</h3>
             <ul className="mt-7 space-y-4 text-lg">
               {youGet.map((i) => (
                 <li key={i} className="flex items-start gap-3.5">
@@ -338,14 +334,16 @@ export default function Home() {
               ))}
             </ul>
             <div className="mt-auto pt-10">
-              <p className="display text-6xl sm:text-7xl">$1,000</p>
-              <p className="mt-2 text-lg text-muted">a month, flat, plus your ad spend</p>
+              <p className="display text-6xl sm:text-7xl">$0 for 21 days</p>
+              <p className="mt-2 text-lg text-muted">
+                then $1,000 a month, flat, plus your ad spend
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Four places a sign buyer looks */}
+      {/* Four places a buyer looks */}
       <section className="border-y border-line bg-panel">
         <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
           <h2 className="display max-w-4xl text-5xl sm:text-7xl">
@@ -428,8 +426,8 @@ export default function Home() {
       </section>
 
       <CtaSection
-        headline="One shop per market. Is yours open?"
-        sub="If the numbers don't work for your shop, we'll say so on the call."
+        headline="One company per trade in each market. Is yours open?"
+        sub="If the numbers don't work for your company, we'll say so on the call."
       />
     </>
   );

@@ -11,7 +11,7 @@ const steps = [
   {
     n: "01",
     t: "Market check",
-    d: "Apply and we look at your market together: competition, demand, and whether your area is still open. We take one shop per market. If the numbers don't work for you, we tell you and part as friends.",
+    d: "Schedule a call and we look at your market together: competition, demand, and whether your area is still open. We take one company per trade in each market. If the numbers don't work for you, we tell you and part as friends.",
   },
   {
     n: "02",
@@ -46,7 +46,7 @@ export default function HowItWorksPage() {
       <section className="border-b border-line">
         <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
           <h1 className="display max-w-3xl text-5xl sm:text-6xl">
-            What happens after you apply.
+            What happens after you schedule a call.
           </h1>
           <p className="mt-5 max-w-2xl text-muted">
             No black box. Here is what we do in your 21 free days, in order, and what happens on
@@ -78,7 +78,7 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <CtaSection headline="Ready to see your market?" sub="Apply and we'll tell you honestly whether the model fits your shop and your area." />
+      <CtaSection headline="Ready to see your market?" sub="Schedule a call and we'll tell you honestly whether this fits your company and your area." />
     </>
   );
 }

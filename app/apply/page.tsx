@@ -21,10 +21,10 @@ export default function ApplyPage() {
   if (calendarUrl) {
     return (
       <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
-        <h1 className="display text-4xl sm:text-5xl">Book your market call</h1>
+        <h1 className="display text-4xl sm:text-5xl">Schedule a call</h1>
         <p className="mt-4 max-w-xl text-muted">
-          Pick a time that works. We&apos;ll look at your market together and walk through how the
-          partnership would work for your shop — about 20–30 minutes, no payment, no pressure.
+          Pick a time that works. We&apos;ll look at your market together and walk through how
+          your first 21 days would work. About 20 to 30 minutes, no payment, no pressure.
         </p>
         <p className="mt-3 max-w-xl text-muted">
           Rather skip the calendar?{" "}

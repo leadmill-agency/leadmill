@@ -101,7 +101,7 @@ const cases = [
     logoH: 400,
     what: "Commercial window tinting · Greater Houston",
     story:
-      "A one-man sales operation. Four jobs inside the free trial brought in $3,271 from about $465 in ads, so he stayed on and has been a client since August. When he asked for more commercial work, we built a campaign for it: leads at $8.07 each.",
+      "A one-man sales operation. Four jobs inside the free trial brought in $3,271 from about $465 in ads. When he asked for more commercial work, we built a campaign for it: leads at $8.07 each.",
     quote: "The amount of leads has been crazy bro I love it.",
     who: "Danial, owner",
     big: { n: "40 leads", l: "in the 21-day trial, from about $465 in ads" },
@@ -349,7 +349,7 @@ export default function Home() {
       <section className="border-y border-line bg-panel">
         <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
           <h2 className="display max-w-4xl text-5xl sm:text-7xl">
-            A commercial buyer looks in four places. We put you in all four.
+            A buyer looks in four places. We put you in all four.
           </h2>
           <ol className="mt-14 border-b border-ink">
             {buyerPlaces.map((p) => (

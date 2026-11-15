@@ -18,7 +18,6 @@ export function SiteFooter() {
           <p className="eyebrow mb-3">Pages</p>
           <ul className="space-y-2 text-muted">
             <li><Link href="/how-it-works" className="hover:text-foreground">How It Works</Link></li>
-            <li><Link href="/fulfillment" className="hover:text-foreground">Fabrication</Link></li>
             <li><Link href="/who-its-for" className="hover:text-foreground">Who It&apos;s For</Link></li>
             <li><Link href="/apply" className="hover:text-foreground">Apply</Link></li>
           </ul>
@@ -29,10 +28,6 @@ export function SiteFooter() {
             <li><Link href="/privacy" className="hover:text-foreground">Privacy Policy</Link></li>
             <li><Link href="/terms" className="hover:text-foreground">Terms of Service</Link></li>
           </ul>
-          <p className="mt-6 text-xs text-muted">
-            Sign fabrication is quoted separately per project at trade pricing. Partners do
-            their own permitting and installation.
-          </p>
         </div>
       </div>
       <div className="border-t border-line py-4 text-center text-xs text-muted">

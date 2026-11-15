@@ -3,7 +3,6 @@ import Link from "next/link";
 const nav = [
   { href: "/how-it-works", label: "How it works" },
   { href: "/who-its-for", label: "Who it's for" },
-  { href: "/fulfillment", label: "Fabrication" },
 ];
 
 export function SiteHeader() {

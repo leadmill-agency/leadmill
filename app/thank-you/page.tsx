@@ -22,8 +22,8 @@ export default async function ThankYouPage({
           <h1 className="display mt-2 text-4xl sm:text-5xl">Good news — you look like a fit.</h1>
           <p className="mt-4 text-muted">
             Your shop matches what we look for in a partner. The next step is a 20–30 minute call
-            where we look at your market, the numbers, and how the fabrication relationship would
-            work for your shop.
+            where we look at your market, the numbers, and how the first 21 days would work for
+            your shop.
           </p>
           {calendarUrl ? (
             <a

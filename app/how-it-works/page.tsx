@@ -73,10 +73,7 @@ export default function HowItWorksPage() {
           <p className="mt-2">
             $1,000 a month after a free 21-day trial. You pay Facebook directly for your ads, at
             least $25 a day. No contract and no revenue share: you keep every dollar of your retail
-            sale. Our guarantee: 20 commercial leads in your first 60 days of ads, or we keep
-            working free until you get them. That needs ad spend of at least $25 a day. A
-            commercial lead is a business in your service area asking about a commercial job. The
-            guarantee covers our fee, not ad spend.
+            sale.
           </p>
         </div>
       </section>

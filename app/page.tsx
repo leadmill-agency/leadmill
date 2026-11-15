@@ -34,7 +34,7 @@ const faqItems = [
   },
   {
     q: "Do you guarantee closed jobs?",
-    a: "No. Anyone who guarantees closed jobs is lying to you. We guarantee leads, in the wording on this page.",
+    a: "No. Anyone who guarantees closed jobs is lying to you. You get 21 days of full work free, so you can judge the leads before you pay us anything.",
   },
   {
     q: "Do you take a percentage of my sale?",
@@ -68,7 +68,7 @@ const buyerPlaces = [
   {
     when: "Before they call",
     t: "A better website",
-    d: "Rebuilt to look like the best shop in town and turn visitors into quote requests.",
+    d: "Rebuilt to look like the best in town and turn visitors into quote requests.",
     built: "Built in weeks 1–2",
   },
 ];
@@ -83,7 +83,7 @@ const cases = [
     logoH: 248,
     what: "Signs and vehicle wraps · Palmyra, Pennsylvania",
     story:
-      "A four-person shop. The ads brought a $16,000 sign job and about $8,000 in wrap jobs. He paused them because he was booked through the end of the year, and restarts in January.",
+      "A four-person shop. The ads brought a $16,000 sign job and about $8,000 in wrap jobs. They brought in so much work that he paused them: he was booked through the end of the year.",
     quote: "This is the best results we've had so far with advertising… especially for the price.",
     who: "Brendan Moyer, owner",
     big: { n: "$24,000", l: "in jobs sold from $603 in ads" },
@@ -101,7 +101,7 @@ const cases = [
     logoH: 400,
     what: "Commercial window tinting · Greater Houston",
     story:
-      "A one-man sales operation. He stayed on after the trial and has been a paying client since August. The early leads were mostly homeowners, so in October we built a separate campaign for commercial jobs.",
+      "A one-man sales operation. Four jobs inside the free trial brought in $3,271 from about $465 in ads, so he stayed on and has been a client since August. When he asked for more commercial work, we built a campaign for it: leads at $8.07 each.",
     quote: "The amount of leads has been crazy bro I love it.",
     who: "Danial, owner",
     big: { n: "40 leads", l: "in the 21-day trial, from about $465 in ads" },
@@ -119,7 +119,7 @@ const cases = [
     logoH: 142,
     what: "Commercial signs · Houston",
     story:
-      "The sign shop where we built this system, and still run it every week. The sales figure is from 90 days of the shop's own job records.",
+      "This is where Leadmill started. We built the system for this Houston sign company, and it still runs there every week. In 90 days, its Facebook leads turned into 11 signed jobs.",
     quote: "",
     who: "",
     big: { n: "$74,799", l: "in signs sold from 90 days of Facebook leads" },
@@ -152,7 +152,7 @@ const work = [
 ];
 
 const franchisePays = [
-  "A royalty of about 6% on every sale",
+  "A royalty on every sale: about 6% at the big sign franchises",
   "A marketing fee on top of the royalty",
   "A website that corporate owns",
   "A territory that corporate sets",
@@ -271,10 +271,6 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <p className="border-t border-white/20 pt-8 text-lg text-white/70">
-            Below: three signs Houston Sign Crafters built and installed. Your numbers will
-            differ, and you&apos;ll see them weekly.
-          </p>
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr]">
           {work.map((w) => (
@@ -297,15 +293,15 @@ export default function Home() {
       {/* Franchise comparison: two panels, the price as the punchline */}
       <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
         <h2 className="display max-w-4xl text-5xl sm:text-7xl">
-          What a franchise gives its shops, without the franchise.
+          The marketing department a franchise owner gets, without the royalty.
         </h2>
         <p className="mt-6 max-w-2xl text-xl text-muted">
-          You already build and install the signs. Often for franchises and brokers, who keep the
-          customer and the margin.
+          You already do the work, often as a subcontractor for franchises and national chains
+          that keep the customer and the margin.
         </p>
         <div className="mt-14 grid gap-6 lg:grid-cols-2">
           <div className="flex flex-col rounded-2xl border border-line bg-panel p-8 sm:p-10">
-            <h3 className="font-semibold text-muted">What a franchise sign shop pays for</h3>
+            <h3 className="font-semibold text-muted">What a franchise owner pays for</h3>
             <ul className="mt-7 space-y-4 text-lg text-muted">
               {franchisePays.map((i) => (
                 <li key={i} className="flex items-start gap-3.5">
@@ -320,8 +316,10 @@ export default function Home() {
               ))}
             </ul>
             <div className="mt-auto pt-10">
-              <p className="display text-6xl text-muted sm:text-7xl">$60,000</p>
-              <p className="mt-2 text-lg text-muted">a year in royalties, on $1 million in sales</p>
+              <p className="display text-6xl text-muted sm:text-7xl">$5,000</p>
+              <p className="mt-2 text-lg text-muted">
+                a month in royalties, on $1 million a year in sales
+              </p>
             </div>
           </div>
           <div className="flex flex-col rounded-2xl border-2 border-ink bg-background p-8 shadow-[0_18px_50px_-18px_oklch(0.23_0.02_262/0.35)] sm:p-10">
@@ -340,8 +338,8 @@ export default function Home() {
               ))}
             </ul>
             <div className="mt-auto pt-10">
-              <p className="display text-6xl sm:text-7xl">$12,000</p>
-              <p className="mt-2 text-lg text-muted">a year: $1,000 a month flat, plus your ad spend</p>
+              <p className="display text-6xl sm:text-7xl">$1,000</p>
+              <p className="mt-2 text-lg text-muted">a month, flat, plus your ad spend</p>
             </div>
           </div>
         </div>
@@ -351,7 +349,7 @@ export default function Home() {
       <section className="border-y border-line bg-panel">
         <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
           <h2 className="display max-w-4xl text-5xl sm:text-7xl">
-            A sign buyer looks in four places. We put your shop in all four.
+            A commercial buyer looks in four places. We put you in all four.
           </h2>
           <ol className="mt-14 border-b border-ink">
             {buyerPlaces.map((p) => (
@@ -366,21 +364,6 @@ export default function Home() {
               </li>
             ))}
           </ol>
-        </div>
-      </section>
-
-      {/* Guarantee */}
-      <section className="bg-accent-bright">
-        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-          <p className="font-medium text-accent-ink/80">Our guarantee</p>
-          <p className="display mt-3 max-w-5xl text-5xl text-accent-ink sm:text-7xl">
-            20 commercial leads in your first 60 days of ads, or we keep working free until you
-            get them.
-          </p>
-          <p className="mt-6 max-w-2xl text-accent-ink/80">
-            With ad spend of at least $25 a day. A commercial lead is a business in your service
-            area asking about a commercial job. The guarantee covers our fee, not ad spend.
-          </p>
         </div>
       </section>
 

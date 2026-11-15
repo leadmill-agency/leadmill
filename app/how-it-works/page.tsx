@@ -4,14 +4,14 @@ import { CtaSection } from "@/components/cta-section";
 export const metadata: Metadata = {
   title: "How It Works",
   description:
-    "How Leadmill works for local trades that sell to businesses: Facebook and Instagram ads, a better website, SEO, and ChatGPT and AI search in one plan. The full work is free for 21 days, then $1,000 a month.",
+    "How Leadmill works for contractors and the trades: Facebook and Instagram ads, a better website, SEO, ChatGPT and AI search, and a CRM and project tracker in one plan. The full work is free for 21 days, then $1,000 a month.",
 };
 
 const steps = [
   {
     n: "01",
-    t: "Market check",
-    d: "Schedule a call and we look at your market together: competition, demand, and whether your area is still open. We take one company per trade in each market. If the numbers don't work for you, we tell you and part as friends.",
+    t: "Start, or talk to us first",
+    d: "Start your free 21 days online (the 21 days count from the day you start), or book a call and we look at your company and your area together: competition, demand, and whether the numbers work. If they don't, we tell you and part as friends.",
   },
   {
     n: "02",
@@ -21,7 +21,7 @@ const steps = [
   {
     n: "03",
     t: "Ads go live",
-    d: "We build Facebook and Instagram ads from your own work, with a lead form that screens out small jobs and DIY buyers. Each lead goes straight to your phone and email. Your 21 free days start here.",
+    d: "We build Facebook and Instagram ads from your own work, with a lead form that screens out small jobs and DIY buyers. Each lead goes straight to your phone and email.",
   },
   {
     n: "04",
@@ -78,7 +78,7 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <CtaSection headline="Ready to see your market?" sub="Schedule a call and we'll tell you honestly whether this fits your company and your area." />
+      <CtaSection headline="Ready to start?" />
     </>
   );
 }

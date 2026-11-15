@@ -2,35 +2,49 @@ import Image from "next/image";
 import Link from "next/link";
 import { Faq } from "@/components/faq";
 import { CtaSection } from "@/components/cta-section";
+import { StartButton } from "@/components/start-button";
+import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/links";
 
 const faqItems = [
   {
-    q: "What does Leadmill actually do?",
-    a: "Four things for one flat fee: Facebook and Instagram ads, a better website, SEO, and ChatGPT and AI search. All four aim at one result: more commercial sign jobs.",
+    q: "What does Leadmill do?",
+    a: "Five things for one flat fee: Facebook and Instagram ads, a rebuilt website, SEO, ChatGPT and AI search, and a CRM and project tracker. All five aim at one result: more jobs. It is done for you. You don't log in to anything or manage a campaign.",
+  },
+  {
+    q: "How much does it cost?",
+    a: "Nothing for the first 21 days. Then $1,000 a month, flat. You also pay Facebook directly for your ads, at least $25 a day. There are no setup fees and no hourly billing.",
+  },
+  {
+    q: "Is there a contract?",
+    a: "No. It is month to month. Pause or cancel any time.",
+  },
+  {
+    q: "How fast does it start?",
+    a: "Ads go live in week 1. The website is built in weeks 1 and 2, and you review it before it goes live. SEO and AI search start in week 3.",
   },
   {
     q: "Who is it built for?",
-    a: "Commercial contractors with a crew: sign companies, window tinters and other specialty trades.",
-  },
-  {
-    q: "I own a franchise location. Can I still work with you?",
-    a: "Yes. Franchise owners use us for Facebook and Instagram ads, alongside what corporate already provides.",
+    a: "Contractors and trades with a crew: landscapers, painters, remodelers, fence companies, window tinters, sign companies and others. Your customers can be homeowners, businesses or both.",
   },
   {
     q: "What do I have to do?",
     a: "Answer the leads, quote and sell the job, send us photos and videos of finished work, and pay Facebook directly for the ads.",
   },
   {
-    q: "Can you work with my current website or web person?",
-    a: "Yes. We can rebuild your site, or work alongside the person who already runs it.",
+    q: "Who owns the leads and the accounts?",
+    a: "You do. The ads run in your own ad account, and every lead goes to you and nobody else. Your domain name, Facebook page, ad account and leads are always yours.",
   },
   {
     q: "Who owns the website?",
-    a: "Leadmill builds and hosts it as part of the plan, so it stays with Leadmill if you cancel. Your domain name, Facebook page, ad account and leads are always yours.",
+    a: "Leadmill builds and hosts it as part of the plan, so it stays with Leadmill if you cancel. We can also work alongside the person who already runs your site.",
   },
   {
-    q: "Who pays for the ads?",
-    a: "You do, straight to Facebook, at least $25 a day. Our fee never includes ad spend.",
+    q: "What does the CRM and project tracker do?",
+    a: "The CRM puts every lead in one list with its status, so none gets lost between the ad and the quote. The project tracker follows each job you win until it is finished. We set both up for you.",
+  },
+  {
+    q: "What results do clients see?",
+    a: "A four-person sign and wrap shop sold about $24,000 in jobs from $603 in ads. A window tint company got 40 leads in its 21-day trial from about $465 in ads. A Houston sign company sold $74,799 in signs from 90 days of Facebook leads.",
   },
   {
     q: "Do you guarantee closed jobs?",
@@ -41,36 +55,86 @@ const faqItems = [
     a: "No. The customer, the price and every dollar of the job are yours.",
   },
   {
-    q: "Do you serve Houston?",
-    a: "No. Greater Houston is Houston Sign Crafters' market and is excluded.",
+    q: "I own a franchise location. Can I still work with you?",
+    a: "Yes. Franchise owners use us for Facebook and Instagram ads, alongside what corporate already provides.",
   },
 ];
 
-const buyerPlaces = [
+const heroStats = [
+  { n: "$74,799", l: "in jobs from 90 days of leads" },
+  { n: "$24,000", l: "in jobs from $603 in ads" },
+  { n: "$0", l: "for your first 21 days" },
+];
+
+const whatWeDo = [
   {
-    when: "When they scroll",
-    t: "Facebook and Instagram ads",
-    d: "Your work in front of local businesses before they search. Leads go straight to your phone.",
-    built: "Live in week 1",
+    t: "Ads that send leads only to you",
+    d: "Facebook and Instagram ads in your own ad account. No lead is ever sold to another contractor.",
+    chip: "40 leads in one 21-day trial",
   },
   {
-    when: "When they search",
-    t: "SEO",
-    d: "Service pages, blog posts and links, so Google shows you when they search nearby.",
-    built: "Starts in week 3",
+    t: "Built from your own jobs and crew",
+    d: "We make the videos and write the ads from your finished work. You send photos; we do the rest.",
+    chip: "$19.51 a lead on the best ad",
   },
   {
-    when: "When they ask AI",
-    t: "ChatGPT and AI search",
-    d: "We work on getting you named when buyers ask ChatGPT who to call.",
-    built: "Starts in week 3",
+    t: "A website, SEO and AI search",
+    d: "A site rebuilt to turn visitors into quote requests, then the pages and links that get you found on Google and named by ChatGPT.",
+    chip: "Website live in weeks 1–2",
   },
   {
-    when: "Before they call",
-    t: "A better website",
-    d: "Rebuilt to look like the best in town and turn visitors into quote requests.",
-    built: "Built in weeks 1–2",
+    t: "A CRM and project tracker",
+    d: "Every lead in one list with its status, and every job you win tracked to the finish. Set up for you.",
+    chip: "",
   },
+];
+
+// Preview only (Rameel, 2026-11-15: "i just want to see what it looks like"). These are the
+// franchises independents compete with, NOT Leadmill clients, so the heading must never say
+// "trusted by". Names are set as type, not logo files.
+const franchises = [
+  { n: "Signarama", c: "font-bold tracking-tight" },
+  { n: "FASTSIGNS", c: "font-black italic tracking-tight" },
+  { n: "CertaPro Painters", c: "font-semibold" },
+  { n: "Five Star Painting", c: "font-medium tracking-wide" },
+  { n: "Jani-King", c: "font-black tracking-tight" },
+  { n: "Tint World", c: "font-bold italic" },
+  { n: "U.S. Lawns", c: "font-semibold tracking-wide" },
+  { n: "The Grounds Guys", c: "font-bold tracking-tight" },
+];
+
+const notThis = [
+  {
+    label: "Not a lead site",
+    t: "Your leads are yours alone",
+    d: "Lead sites sell one customer to several contractors. Ours come from ads in your own account and go to you and nobody else.",
+  },
+  {
+    label: "Not an agency",
+    t: "Flat fee, no contract",
+    d: "No retainer, no hourly billing, no fee to leave. You get 21 days of full work before you pay us anything.",
+  },
+  {
+    label: "A managed service",
+    t: "We do the work. You keep the accounts",
+    d: "You don't log in to a tool or manage a campaign. Your ad account, Facebook page, domain and leads stay yours.",
+  },
+];
+
+const planIncludes = [
+  "Facebook and Instagram ads, built from your own work",
+  "A rebuilt website that turns visitors into quote requests",
+  "SEO: service pages, blog posts and links",
+  "ChatGPT and AI search",
+  "A CRM and project tracker, set up for you",
+  "Every lead sent to you and nobody else",
+];
+
+const planFacts = [
+  { t: "Month to month", d: "No contract. Pause or cancel any time." },
+  { t: "No setup fee", d: "The first 21 days are the full work, free." },
+  { t: "Fast start", d: "Ads live in week 1." },
+  { t: "Ad spend is yours", d: "You pay Facebook directly, at least $25 a day." },
 ];
 
 const cases = [
@@ -130,94 +194,175 @@ const cases = [
   },
 ];
 
-const work = [
-  {
-    src: "/work/slickcity.jpg",
-    alt: "Large front-lit exterior sign for Slick City Action Park at dusk",
-    cap: "Slick City Action Park",
-    cls: "col-span-2 h-80 sm:h-[30rem] lg:col-span-1 lg:h-[38rem]",
-  },
-  {
-    src: "/work/luce.jpg",
-    alt: "Halo-lit exterior sign for Luce Avenue Coffee Roasters, glowing at night",
-    cap: "Luce Avenue Coffee Roasters",
-    cls: "h-64 sm:h-96 lg:h-[38rem]",
-  },
-  {
-    src: "/work/karma.jpg",
-    alt: "Dimensional letters for Karma Kolache & Macarons on a brick tower facade",
-    cap: "Karma Kolache & Macarons",
-    cls: "h-64 sm:h-96 lg:h-[38rem]",
-  },
-];
-
-const usualDeal = [
-  "Leads sold to several contractors at once",
-  "You pay before you've seen a single lead",
-  "Often a contract, with a fee to leave",
-  "Often the agency holds your ad account",
-  "The same template for every client",
-];
-
-const youGet = [
-  "Leads that go only to you, from ads in your own account",
-  "21 days of full work before you pay us anything",
-  "No contract. Pause or leave any time",
-  "Your ad account, page and leads stay yours",
-  "Ads built from your own jobs, crew and photos",
-  "One company per trade in each market",
-];
-
-const steps = [
-  { n: "Today", t: "Schedule a call", d: "Two minutes. Pick a time that suits you." },
-  { n: "This week", t: "The call", d: "We check your market together. No payment." },
-  { n: "Week 1", t: "Ads live", d: "Built from your own work. Your trial starts." },
-  { n: "Weeks 1–3", t: "Website, Google, ChatGPT", d: "You review the site before it goes live." },
-  { n: "Day 22", t: "You decide", d: "Keep going, or walk. No contract." },
-];
-
 export default function Home() {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <>
-      {/* Hero */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c") }}
+      />
+
+      {/* Hero: the full offer on the left, what we do with a result on the right */}
       <section className="border-b border-line">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-10 sm:px-6 lg:grid-cols-[1.35fr_1fr] lg:gap-14 lg:py-12">
+        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.15fr_1fr] lg:gap-14 lg:py-16">
           <div>
-            <h1 className="display rise text-6xl sm:text-7xl lg:text-[5.25rem]">
+            <h1 className="display rise text-6xl sm:text-7xl">
               The growth department for{" "}
-              <span className="text-accent">commercial contractors</span>.
+              <span className="text-accent">contractors</span>.
             </h1>
-            <p className="rise-2 mt-5 max-w-xl text-xl text-muted">
-              Leads that go only to you. No contract. Free for your first 21 days.
+            <p className="rise-2 mt-6 max-w-xl text-xl text-muted">
+              We run your Facebook and Instagram ads, rebuild your website, handle your SEO and AI
+              search, and set up your CRM and project tracker. Every lead goes to you and nobody
+              else. All done for you. Free for 21 days, then $1,000 a month. No contract.
             </p>
-            <Link href="/apply" className="btn-primary rise-3 mt-7 text-lg">
-              Schedule a call
-            </Link>
+            <dl className="rise-2 mt-8 grid max-w-xl grid-cols-3 gap-x-6 border-y border-line py-5">
+              {heroStats.map((s) => (
+                <div key={s.l}>
+                  <dd className="display text-4xl sm:text-5xl">{s.n}</dd>
+                  <dt className="mt-1 text-sm text-muted">{s.l}</dt>
+                </div>
+              ))}
+            </dl>
+            <div className="rise-3 mt-8 flex flex-wrap gap-3">
+              <StartButton source="hero" className="btn-primary text-lg" />
+              <Link href="/apply" className="btn-secondary text-lg">
+                Book a call
+              </Link>
+            </div>
             <p className="rise-3 mt-4 text-sm text-muted">
-              You only pay Facebook for your ads.
+              $0 today. You only pay Facebook for your ads. Or call{" "}
+              <a href={PHONE_HREF} className="underline underline-offset-4">
+                {PHONE_DISPLAY}
+              </a>
+              .
             </p>
           </div>
-          <figure className="rise-2">
-            <Image
-              src="/work/copper.jpg"
-              alt="Backlit exterior sign for Copper Espresso Bar, installed above a storefront at dusk"
-              width={1600}
-              height={1200}
-              priority
-              className="h-72 w-full rounded-lg object-cover sm:h-96 lg:h-[36rem]"
-            />
-            <figcaption className="mt-3 text-sm text-muted">
-              Built and installed by Houston Sign Crafters, where we built this system.
-            </figcaption>
-          </figure>
+          <ol className="rise-2 self-start rounded-2xl border border-line bg-panel">
+            {whatWeDo.map((w, i) => (
+              <li
+                key={w.t}
+                className={`grid grid-cols-[2.5rem_1fr] gap-x-2 px-6 py-6 sm:px-8 ${i > 0 ? "border-t border-line" : ""}`}
+              >
+                <p className="display pt-0.5 text-2xl text-muted">0{i + 1}</p>
+                <div>
+                  <h2 className="text-lg font-semibold">{w.t}</h2>
+                  <p className="mt-1 text-muted">{w.d}</p>
+                  {w.chip && (
+                    <p className="mt-3 inline-block rounded-md bg-ink px-2.5 py-1 text-sm font-medium text-white">
+                      {w.chip}
+                    </p>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
-      {/* Three case studies */}
-      <section className="bg-ink text-white">
-        <div className="mx-auto max-w-6xl px-4 pb-16 pt-20 sm:px-6">
+      {/* Franchise names (preview) */}
+      <section className="border-b border-line">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+          <p className="text-center font-medium text-muted">
+            Built for the independents who compete with franchise marketing departments
+          </p>
+          <ul className="mt-8 grid grid-cols-2 items-center gap-x-8 gap-y-7 text-center sm:grid-cols-4">
+            {franchises.map((f) => (
+              <li key={f.n} className={`text-2xl text-foreground/45 sm:text-[1.7rem] ${f.c}`}>
+                {f.n}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* What Leadmill is */}
+      <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+        <h2 className="display max-w-4xl text-5xl sm:text-7xl">
+          A service. Not a lead site, not an agency.
+        </h2>
+        <p className="mt-6 max-w-2xl text-xl text-muted">
+          Shared leads, long contracts and an agency that keeps your accounts. Contractors tell
+          the same story about lead sellers and marketing companies. This is the other deal.
+        </p>
+        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+          {notThis.map((c, i) => (
+            <div
+              key={c.label}
+              className={`rounded-2xl p-8 ${
+                i === 2 ? "bg-ink text-white" : "border border-line bg-panel"
+              }`}
+            >
+              <p className={`font-medium ${i === 2 ? "text-accent-bright" : "text-muted"}`}>
+                {c.label}
+              </p>
+              <h3 className="display mt-3 text-4xl">{c.t}</h3>
+              <p className={`mt-4 text-lg ${i === 2 ? "text-white/80" : "text-muted"}`}>{c.d}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section id="pricing" className="scroll-mt-20 border-y border-line bg-panel">
+        <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+          <h2 className="display max-w-4xl text-5xl sm:text-7xl">One plan. One price.</h2>
+          <p className="mt-6 max-w-2xl text-xl text-muted">
+            A flat monthly fee, fully managed. No setup fee, no hourly billing, no percentage of
+            your jobs.
+          </p>
+          <div className="mt-14 grid gap-6 lg:grid-cols-[1.25fr_1fr]">
+            <div className="rounded-2xl border-2 border-ink bg-background p-8 shadow-[0_18px_50px_-18px_oklch(0.23_0.02_262/0.35)] sm:p-10">
+              <p className="font-medium text-muted">Free for your first 21 days, then</p>
+              <p className="display mt-2 text-7xl sm:text-8xl">
+                $1,000<span className="text-3xl text-muted sm:text-4xl"> a month</span>
+              </p>
+              <ul className="mt-8 grid gap-x-8 gap-y-3.5 border-t border-line pt-7 text-lg sm:grid-cols-2">
+                {planIncludes.map((i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span
+                      aria-hidden
+                      className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent-bright text-[0.65rem] font-bold text-accent-ink"
+                    >
+                      ✓
+                    </span>
+                    {i}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-9 flex flex-wrap gap-3">
+                <StartButton source="pricing" className="btn-primary text-lg" />
+                <Link href="/apply" className="btn-secondary text-lg">
+                  Book a call
+                </Link>
+              </div>
+            </div>
+            <dl className="grid content-start gap-x-8 sm:grid-cols-2 lg:grid-cols-1">
+              {planFacts.map((f) => (
+                <div key={f.t} className="border-t border-ink py-5">
+                  <dt className="text-lg font-semibold">{f.t}</dt>
+                  <dd className="mt-1 text-muted">{f.d}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      {/* Client results */}
+      <section id="results" className="scroll-mt-16 bg-ink text-white">
+        <div className="mx-auto max-w-6xl px-4 pb-8 pt-20 sm:px-6">
           <h2 className="display max-w-4xl text-5xl sm:text-7xl">
-            Three shops. Their numbers.
+            Three companies. Their numbers.
           </h2>
           <div className="mt-14">
             {cases.map((c) => (
@@ -270,134 +415,30 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr]">
-          {work.map((w) => (
-            <figure key={w.src} className={`relative ${w.cls}`}>
-              <Image
-                src={w.src}
-                alt={w.alt}
-                width={1600}
-                height={1000}
-                className="h-full w-full object-cover"
-              />
-              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pb-4 pt-12 font-medium text-white sm:px-6 sm:text-lg">
-                {w.cap}
-              </figcaption>
-            </figure>
-          ))}
-        </div>
       </section>
 
-      {/* The usual deal against ours */}
-      <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
-        <h2 className="display max-w-4xl text-5xl sm:text-7xl">
-          You&apos;ve seen the usual deal. Here&apos;s ours.
-        </h2>
-        <p className="mt-6 max-w-2xl text-xl text-muted">
-          Shared leads, long contracts and an agency that keeps your accounts. Contractors tell
-          the same story about lead sellers and marketing companies.
-        </p>
-        <div className="mt-14 grid gap-6 lg:grid-cols-2">
-          <div className="flex flex-col rounded-2xl border border-line bg-panel p-8 sm:p-10">
-            <h3 className="font-semibold text-muted">The usual deal</h3>
-            <ul className="mt-7 space-y-4 text-lg text-muted">
-              {usualDeal.map((i) => (
-                <li key={i} className="flex items-start gap-3.5">
-                  <span
-                    aria-hidden
-                    className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-panel-2 text-xs"
-                  >
-                    ✕
-                  </span>
-                  {i}
-                </li>
-              ))}
-            </ul>
-            <div className="mt-auto pt-10">
-              <p className="display text-6xl text-muted sm:text-7xl">Pay first</p>
-              <p className="mt-2 text-lg text-muted">and find out later whether it works</p>
-            </div>
-          </div>
-          <div className="flex flex-col rounded-2xl border-2 border-ink bg-background p-8 shadow-[0_18px_50px_-18px_oklch(0.23_0.02_262/0.35)] sm:p-10">
-            <h3 className="font-semibold">With Leadmill</h3>
-            <ul className="mt-7 space-y-4 text-lg">
-              {youGet.map((i) => (
-                <li key={i} className="flex items-start gap-3.5">
-                  <span
-                    aria-hidden
-                    className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent-bright text-xs font-bold text-accent-ink"
-                  >
-                    ✓
-                  </span>
-                  {i}
-                </li>
-              ))}
-            </ul>
-            <div className="mt-auto pt-10">
-              <p className="display text-6xl sm:text-7xl">$0 for 21 days</p>
-              <p className="mt-2 text-lg text-muted">
-                then $1,000 a month, flat, plus your ad spend
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Four places a buyer looks */}
-      <section className="border-y border-line bg-panel">
+      {/* Who we are */}
+      <section className="border-b border-line">
         <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
-          <h2 className="display max-w-4xl text-5xl sm:text-7xl">
-            A buyer looks in four places. We put you in all four.
-          </h2>
-          <ol className="mt-14 border-b border-ink">
-            {buyerPlaces.map((p) => (
-              <li
-                key={p.t}
-                className="grid gap-x-10 gap-y-2 border-t border-ink py-8 lg:grid-cols-[11rem_1fr_1.3fr_auto] lg:items-baseline"
-              >
-                <p className="font-medium text-muted">{p.when}</p>
-                <h3 className="display text-3xl sm:text-4xl">{p.t}</h3>
-                <p className="text-lg text-muted">{p.d}</p>
-                <p className="font-medium lg:w-36 lg:text-right">{p.built}</p>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      {/* What happens next */}
-      <section id="plan" className="scroll-mt-28">
-        <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
-          <h2 className="display max-w-4xl text-5xl sm:text-7xl">
-            What happens after you schedule a call.
-          </h2>
-          <ol className="mt-14 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-5">
-            {steps.map((s) => (
-              <li key={s.t} className="border-t-2 border-ink pt-4">
-                <p className="font-medium text-muted">{s.n}</p>
-                <h3 className="mt-1 text-xl font-semibold">{s.t}</h3>
-                <p className="mt-2 text-muted">{s.d}</p>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      {/* Founder letter */}
-      <section className="border-t border-line bg-panel">
-        <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
-          <h2 className="display max-w-5xl text-5xl sm:text-7xl">
+          <p className="font-medium text-muted">Who we are</p>
+          <h2 className="display mt-3 max-w-5xl text-5xl sm:text-7xl">
             If you&apos;ve been burned by an agency, you should be skeptical of this page.
           </h2>
           <div className="mt-10 grid gap-x-16 gap-y-8 text-lg text-muted lg:grid-cols-[1.4fr_1fr]">
             <div className="space-y-5">
               <p>
-                I didn&apos;t pick your trade off a list. I run the marketing for Houston Sign
-                Crafters, my brother&apos;s sign company, and we use this exact system there
-                every week. That&apos;s why the first 21 days are free.
+                Leadmill started inside a working sign shop. I run the marketing for Houston
+                Sign Crafters, my brother&apos;s sign company, and we built this system there.
+                It still runs there every week.
               </p>
               <p>
-                If your market doesn&apos;t make sense for this, I&apos;ll tell you on the call.
+                In 90 days, that shop&apos;s Facebook leads turned into 11 signed jobs worth
+                $74,799. Then we started running the same system for other contractors: a sign
+                and wrap shop in Pennsylvania, and a window tint company in Houston.
+              </p>
+              <p>
+                That&apos;s why the first 21 days are free. If this doesn&apos;t make sense for
+                your company, I&apos;ll tell you on the call.
               </p>
             </div>
             <div className="flex items-center gap-5 self-start">
@@ -418,17 +459,14 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="border-t border-line">
+      <section id="faq" className="scroll-mt-16">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-24 sm:px-6 lg:grid-cols-[1fr_1.6fr]">
           <h2 className="display text-5xl sm:text-7xl">Straight answers.</h2>
           <Faq items={faqItems} />
         </div>
       </section>
 
-      <CtaSection
-        headline="One company per trade in each market. Is yours open?"
-        sub="If the numbers don't work for your company, we'll say so on the call."
-      />
+      <CtaSection />
     </>
   );
 }

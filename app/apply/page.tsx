@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { ApplyForm } from "@/components/apply-form";
 
 export const metadata: Metadata = {
-  title: "Book a Market Call",
+  title: "Book a Call",
   description:
-    "Book a call about your market. If it's open and the fit is right, we'll walk you through the Leadmill partner model.",
+    "Book a call with Leadmill. We'll look at your company and your area, and walk you through how the first 21 days would work.",
 };
 
 const calendarUrl = process.env.NEXT_PUBLIC_CALENDAR_URL;
@@ -59,10 +59,10 @@ export default function ApplyPage() {
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
-      <h1 className="display text-4xl sm:text-5xl">Check your market</h1>
+      <h1 className="display text-4xl sm:text-5xl">Book a call</h1>
       <p className="mt-4 max-w-xl text-muted">
-        Takes about 2 minutes. We review every application by hand, and partner availability is
-        limited by market. Honest answers get you a faster decision.
+        Takes about 2 minutes. We review every application by hand. Honest answers get you a
+        faster decision.
       </p>
       <div className="mt-10">
         <ApplyForm />

@@ -1,8 +1,9 @@
 import Link from "next/link";
+import { StartButton } from "@/components/start-button";
 
 export function CtaSection({
-  headline = "See if your market is open.",
-  sub = "Tell us about your company. If your market is open and the fit is right, we'll walk you through exactly how the partnership works.",
+  headline = "Try it free for 21 days.",
+  sub = "Start now, or book a call and we'll tell you honestly whether this fits your company.",
 }: {
   headline?: string;
   sub?: string;
@@ -15,13 +16,19 @@ export function CtaSection({
           <p className="mt-4 max-w-xl text-lg text-white/70">{sub}</p>
         </div>
         <div>
-          <Link
-            href="/apply"
-            className="inline-block rounded-[10px] bg-white px-8 py-4 text-lg font-medium text-ink transition hover:opacity-90"
-          >
-            Schedule a call
-          </Link>
-          <p className="mt-3 text-sm text-white/60">About 2 minutes. No payment to book.</p>
+          <div className="flex flex-wrap gap-3">
+            <StartButton
+              source="cta"
+              className="inline-block rounded-[10px] bg-white px-8 py-4 text-lg font-medium text-ink transition hover:opacity-90"
+            />
+            <Link
+              href="/apply"
+              className="inline-block rounded-[10px] border border-white/40 px-8 py-4 text-lg font-medium text-white transition hover:border-white"
+            >
+              Book a call
+            </Link>
+          </div>
+          <p className="mt-3 text-sm text-white/60">$0 today. You only pay Facebook for your ads.</p>
         </div>
       </div>
     </section>

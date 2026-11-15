@@ -4,16 +4,16 @@ import { CtaSection } from "@/components/cta-section";
 export const metadata: Metadata = {
   title: "Who It's For",
   description:
-    "Leadmill is built for established commercial contractors with a crew, someone to answer leads, and room for at least $25 a day in ads.",
+    "Leadmill is built for established contractors with a crew, someone to answer leads, and room for at least $25 a day in ads.",
 };
 
 const goodFit = [
-  ["You sell to other businesses", "Your customers are business owners, property managers or building owners, not only homeowners."],
+  ["Your jobs are worth advertising for", "Installs, remodels, repaints and commercial work, for homeowners or businesses. One job should more than cover a month of ads."],
   ["You have a crew", "You or your subs can take on more work when it comes in."],
   ["Someone answers leads the same day", "A lead that waits until next week has usually hired someone else."],
   ["You can quote and close", "Someone on your side can price a job and follow up until it is signed."],
   ["Room for at least $25 a day in ads", "You pay Facebook directly. Our fee never includes ad spend."],
-  ["You want leads that are yours alone", "The ads run in your own account, and we take one company per trade in each market."],
+  ["You want leads that are yours alone", "The ads run in your own account. No lead is ever sold to another contractor."],
 ];
 
 const poorFit = [
@@ -33,8 +33,8 @@ export default function WhoItsForPage() {
             Built for contractors with a crew and room for more work.
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-muted">
-            We take one company per trade in each market, so we only take companies we think this
-            will work for. Read this before you schedule a call.
+            We only take companies we think this will work for. Read this before you start or book
+            a call.
           </p>
         </div>
       </section>
@@ -70,7 +70,7 @@ export default function WhoItsForPage() {
         </div>
       </section>
 
-      <CtaSection headline="Think you&apos;re a fit?" sub="Schedule a call and we&apos;ll look at your market together. If it isn&apos;t right, we&apos;ll say so." />
+      <CtaSection headline="Think you&apos;re a fit?" sub="Start now, or book a call and we&apos;ll look at your area together. If it isn&apos;t right, we&apos;ll say so." />
     </>
   );
 }

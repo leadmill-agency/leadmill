@@ -252,7 +252,7 @@ export function ApplyForm() {
           disabled={submitting}
           className="btn-primary disabled:opacity-60"
         >
-          {submitting ? "Submitting…" : "Check my market"}
+          {submitting ? "Submitting…" : "Book my call"}
         </button>
       </div>
     </div>

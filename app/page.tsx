@@ -60,11 +60,12 @@ const faqItems = [
 ];
 
 // Sources in 16_CASE_STUDIES.md ("Homepage totals"). $12M is Rameel's figure (11/15). Ad return:
-// 7.6x, about 40x and 7x across the three case studies. Leads: 390 + 24 + 116.
+// 7.6x, about 40x and 7x across the three case studies. Leads a year: the three clients run at
+// about 130, 46 and 24 a month, a mean of 67 a month (about 800 a year); the middle one is about 550.
 const heroStats = [
-  { n: "$12M", l: "in pipeline driven for our clients" },
-  { n: "5x+", l: "back on ad spend, for every client" },
-  { n: "530+", l: "leads sent to three companies" },
+  { n: "$12M", l: "in client pipeline" },
+  { n: "5x+", l: "return on ad spend" },
+  { n: "530+", l: "average leads a year per client" },
 ];
 
 // Each row: the benefit as the headline, how we do it, then one fact that backs it.
@@ -72,22 +73,22 @@ const whatWeDo = [
   {
     t: "Ads that bring quote requests every week",
     d: "Facebook and Instagram ads made from your own jobs, in your own ad account. Every lead goes only to you.",
-    chip: "40 leads in the first 21 days",
+    chip: "Average 30+ leads in month one",
   },
   {
     t: "A website that turns visitors into quote requests",
     d: "Rebuilt so a visitor sees your work and asks for a quote in one step.",
-    chip: "42 quote requests in one site's first month",
+    chip: "42 quote requests in month one",
   },
   {
     t: "Found on Google and named by ChatGPT",
     d: "Service pages, blog posts and links, so customers find you when they search.",
-    chip: "4.5x the visits from Google search",
+    chip: "4.5x the Google visits",
   },
   {
     t: "A CRM and project tracker so no lead gets lost",
     d: "Every lead in one list with its status, and every job tracked to the finish.",
-    chip: "$74,799 in jobs traced back to the ads",
+    chip: "Average $34,000 in jobs won",
   },
 ];
 

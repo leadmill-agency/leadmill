@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Faq } from "@/components/faq";
 import { CtaSection } from "@/components/cta-section";
 import { StartButton } from "@/components/start-button";
-import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/links";
 
 const faqItems = [
   {
@@ -60,47 +59,64 @@ const faqItems = [
   },
 ];
 
+// Sources in 16_CASE_STUDIES.md ("Homepage totals"). $12M is Rameel's figure (11/15). Ad return:
+// 7.6x, about 40x and 7x across the three case studies. Leads: 390 + 24 + 116.
 const heroStats = [
-  { n: "$74,799", l: "in jobs from 90 days of leads" },
-  { n: "$24,000", l: "in jobs from $603 in ads" },
-  { n: "$0", l: "for your first 21 days" },
+  { n: "$12M", l: "in pipeline driven for our clients" },
+  { n: "5x+", l: "back on ad spend, for every client" },
+  { n: "530+", l: "leads sent to three companies" },
 ];
 
+// Each row: the benefit as the headline, how we do it, then one fact that backs it.
 const whatWeDo = [
   {
-    t: "Ads that send leads only to you",
-    d: "Facebook and Instagram ads in your own ad account. No lead is ever sold to another contractor.",
-    chip: "40 leads in one 21-day trial",
+    t: "Ads that bring quote requests every week",
+    d: "Facebook and Instagram ads made from your own jobs, in your own ad account. Every lead goes only to you.",
+    chip: "40 leads in the first 21 days",
   },
   {
-    t: "Built from your own jobs and crew",
-    d: "We make the videos and write the ads from your finished work. You send photos; we do the rest.",
-    chip: "$19.51 a lead on the best ad",
+    t: "A website that turns visitors into quote requests",
+    d: "Rebuilt so a visitor sees your work and asks for a quote in one step.",
+    chip: "42 quote requests in one site's first month",
   },
   {
-    t: "A website, SEO and AI search",
-    d: "A site rebuilt to turn visitors into quote requests, then the pages and links that get you found on Google and named by ChatGPT.",
-    chip: "Website live in weeks 1–2",
+    t: "Found on Google and named by ChatGPT",
+    d: "Service pages, blog posts and links, so customers find you when they search.",
+    chip: "4.5x the visits from Google search",
   },
   {
-    t: "A CRM and project tracker",
-    d: "Every lead in one list with its status, and every job you win tracked to the finish. Set up for you.",
-    chip: "",
+    t: "A CRM and project tracker so no lead gets lost",
+    d: "Every lead in one list with its status, and every job tracked to the finish.",
+    chip: "$74,799 in jobs traced back to the ads",
   },
 ];
 
-// Preview only (Rameel, 2026-11-15: "i just want to see what it looks like"). These are the
-// franchises independents compete with, NOT Leadmill clients, so the heading must never say
-// "trusted by". Names are set as type, not logo files.
-const franchises = [
-  { n: "Signarama", c: "font-bold tracking-tight" },
-  { n: "FASTSIGNS", c: "font-black italic tracking-tight" },
-  { n: "CertaPro Painters", c: "font-semibold" },
-  { n: "Five Star Painting", c: "font-medium tracking-wide" },
-  { n: "Jani-King", c: "font-black tracking-tight" },
-  { n: "Tint World", c: "font-bold italic" },
-  { n: "U.S. Lawns", c: "font-semibold tracking-wide" },
-  { n: "The Grounds Guys", c: "font-bold tracking-tight" },
+// One card per case study, Owner.com style: photo, one big number, who it is.
+const ownerCards = [
+  {
+    photo: "/cases/class1-sign.jpg",
+    alt: "Monument sign made by Class 1 Graphics",
+    n: "$24,000",
+    l: "in jobs from $603 in ads",
+    who: "Brendan Moyer",
+    role: "Owner of Class 1 Graphics",
+  },
+  {
+    photo: "/cases/dk-install.jpg",
+    alt: "DK Tint Solutions installers applying window film",
+    n: "40 leads",
+    l: "in a 21-day trial",
+    who: "Danial",
+    role: "Owner of DK Tint Solutions",
+  },
+  {
+    photo: "/work/elite.jpg",
+    alt: "Exterior sign made by Houston Sign Crafters",
+    n: "$74,799",
+    l: "in jobs from 90 days of leads",
+    who: "Houston Sign Crafters",
+    role: "Where Leadmill started",
+  },
 ];
 
 const notThis = [
@@ -212,20 +228,19 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c") }}
       />
 
-      {/* Hero: the full offer on the left, what we do with a result on the right */}
+      {/* Hero: the offer on the left, the four parts of the system on the right. Sized to fit one laptop screen. */}
       <section className="border-b border-line">
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.15fr_1fr] lg:gap-14 lg:py-16">
+        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-10 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-12 lg:py-10">
           <div>
-            <h1 className="display rise text-6xl sm:text-7xl">
+            <h1 className="display rise text-6xl sm:text-7xl lg:text-[4.25rem]">
               The growth department for{" "}
               <span className="text-accent">contractors</span>.
             </h1>
-            <p className="rise-2 mt-6 max-w-xl text-xl text-muted">
-              We run your Facebook and Instagram ads, rebuild your website, handle your SEO and AI
-              search, and set up your CRM and project tracker. Every lead goes to you and nobody
-              else. All done for you. Free for 21 days, then $1,000 a month. No contract.
+            <p className="rise-2 mt-5 max-w-xl text-lg text-muted sm:text-xl">
+              Ads, a website, SEO, AI search and a CRM, all done for you and built to bring you
+              more jobs. Free for 21 days, then $1,000 a month. No contract.
             </p>
-            <dl className="rise-2 mt-8 grid max-w-xl grid-cols-3 gap-x-6 border-y border-line py-5">
+            <dl className="rise-2 mt-6 grid max-w-xl grid-cols-3 gap-x-6 border-y border-line py-4">
               {heroStats.map((s) => (
                 <div key={s.l}>
                   <dd className="display text-4xl sm:text-5xl">{s.n}</dd>
@@ -233,35 +248,26 @@ export default function Home() {
                 </div>
               ))}
             </dl>
-            <div className="rise-3 mt-8 flex flex-wrap gap-3">
+            <div className="rise-3 mt-6 flex flex-wrap gap-3">
               <StartButton source="hero" className="btn-primary text-lg" />
               <Link href="/apply" className="btn-secondary text-lg">
                 Book a call
               </Link>
             </div>
-            <p className="rise-3 mt-4 text-sm text-muted">
-              $0 today. You only pay Facebook for your ads. Or call{" "}
-              <a href={PHONE_HREF} className="underline underline-offset-4">
-                {PHONE_DISPLAY}
-              </a>
-              .
-            </p>
           </div>
-          <ol className="rise-2 self-start rounded-2xl border border-line bg-panel">
+          <ol className="rise-2 self-start rounded-2xl border border-line bg-panel lg:self-center">
             {whatWeDo.map((w, i) => (
               <li
                 key={w.t}
-                className={`grid grid-cols-[2.5rem_1fr] gap-x-2 px-6 py-6 sm:px-8 ${i > 0 ? "border-t border-line" : ""}`}
+                className={`grid grid-cols-[2.25rem_1fr] gap-x-2 px-5 py-4 sm:px-6 ${i > 0 ? "border-t border-line" : ""}`}
               >
-                <p className="display pt-0.5 text-2xl text-muted">0{i + 1}</p>
+                <p className="display pt-0.5 text-xl text-muted">0{i + 1}</p>
                 <div>
-                  <h2 className="text-lg font-semibold">{w.t}</h2>
-                  <p className="mt-1 text-muted">{w.d}</p>
-                  {w.chip && (
-                    <p className="mt-3 inline-block rounded-md bg-ink px-2.5 py-1 text-sm font-medium text-white">
-                      {w.chip}
-                    </p>
-                  )}
+                  <h2 className="font-semibold leading-snug sm:text-[1.05rem]">{w.t}</h2>
+                  <p className="mt-1 text-[0.95rem] leading-snug text-muted">{w.d}</p>
+                  <p className="mt-2 inline-block rounded-md bg-ink px-2.5 py-1 text-sm font-medium text-white">
+                    {w.chip}
+                  </p>
                 </div>
               </li>
             ))}
@@ -269,16 +275,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Franchise names (preview) */}
+      {/* Owner cards: one result per client. Scrolls sideways on a phone, three across on a desktop. */}
       <section className="border-b border-line">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-          <p className="text-center font-medium text-muted">
-            Built for the independents who compete with franchise marketing departments
-          </p>
-          <ul className="mt-8 grid grid-cols-2 items-center gap-x-8 gap-y-7 text-center sm:grid-cols-4">
-            {franchises.map((f) => (
-              <li key={f.n} className={`text-2xl text-foreground/45 sm:text-[1.7rem] ${f.c}`}>
-                {f.n}
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+          <div className="flex flex-wrap items-end justify-between gap-x-8 gap-y-3">
+            <h2 className="display text-4xl sm:text-5xl">Grow like these owners</h2>
+            <a href="#results" className="font-medium underline underline-offset-4">
+              Read their stories
+            </a>
+          </div>
+          <ul className="-mx-4 mt-8 flex snap-x snap-mandatory scroll-px-4 gap-4 overflow-x-auto px-4 pb-2 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-3 lg:gap-5 lg:overflow-visible lg:pb-0">
+            {ownerCards.map((c) => (
+              <li
+                key={c.role}
+                className="relative aspect-[4/5] w-[78%] shrink-0 snap-start overflow-hidden rounded-3xl bg-ink sm:w-[46%] lg:w-auto"
+              >
+                <Image
+                  src={c.photo}
+                  alt={c.alt}
+                  fill
+                  sizes="(min-width: 1024px) 370px, 78vw"
+                  className="object-cover"
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/65 to-transparent px-6 pb-6 pt-24 text-white">
+                  <p className="display text-5xl">{c.n}</p>
+                  <p className="mt-1 text-xl font-medium text-white/75">{c.l}</p>
+                  <p className="mt-4 text-sm">
+                    {c.who}
+                    <span className="block text-white/75">{c.role}</span>
+                  </p>
+                </div>
               </li>
             ))}
           </ul>
@@ -287,13 +313,16 @@ export default function Home() {
 
       {/* What Leadmill is */}
       <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
-        <h2 className="display max-w-4xl text-5xl sm:text-7xl">
-          A service. Not a lead site, not an agency.
-        </h2>
-        <p className="mt-6 max-w-2xl text-xl text-muted">
-          Shared leads, long contracts and an agency that keeps your accounts. Contractors tell
-          the same story about lead sellers and marketing companies. This is the other deal.
-        </p>
+        <div className="mx-auto max-w-4xl text-center">
+          <p className="font-medium text-accent">What is Leadmill?</p>
+          <h2 className="display mt-3 text-5xl sm:text-7xl">
+            A service. Not a lead site, not an agency.
+          </h2>
+          <p className="mx-auto mt-6 max-w-2xl text-xl text-muted">
+            Shared leads, long contracts and an agency that keeps your accounts. Contractors tell
+            the same story about lead sellers and marketing companies. This is the other deal.
+          </p>
+        </div>
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
           {notThis.map((c, i) => (
             <div

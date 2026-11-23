@@ -32,7 +32,7 @@ export const faqItems = [
   },
   {
     q: "Who owns the website?",
-    a: "Leadmill builds and hosts it as part of the plan, so it stays with Leadmill if you cancel. We can also work alongside the person who already runs your site.",
+    a: "You do. We build it and host it as part of the plan, and if you cancel we hand it over to you. We can also work alongside the person who already runs your site.",
   },
   {
     q: "What does the CRM and project tracker do?",

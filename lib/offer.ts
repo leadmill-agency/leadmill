@@ -8,7 +8,7 @@ export const faqItems = [
   },
   {
     q: "How much does it cost?",
-    a: "Nothing for the first 21 days. Then $1,000 a month, flat. You also pay Facebook directly for your ads, at least $25 a day. There are no setup fees and no hourly billing.",
+    a: "Nothing for the first 21 days. Then $1,000 a month, flat. Your card is charged 21 days after you enter it, unless you cancel by email before then. You also pay Facebook directly for your ads, at least $25 a day. There are no setup fees and no hourly billing.",
   },
   {
     q: "Is there a contract?",
@@ -32,7 +32,7 @@ export const faqItems = [
   },
   {
     q: "Who owns the website?",
-    a: "You do. We build it and host it as part of the plan, and if you cancel we hand it over to you. We can also work alongside the person who already runs your site.",
+    a: "It becomes yours with your first payment after the trial. Until then Leadmill owns the website code and the ads. We host the site as part of the plan, and if you cancel after that we hand it over. We can also work alongside the person who already runs your site.",
   },
   {
     q: "What does the CRM and project tracker do?",

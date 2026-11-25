@@ -4,6 +4,7 @@ import { Faq } from "@/components/faq";
 import { CtaSection } from "@/components/cta-section";
 import { OwnerCards } from "@/components/owner-cards";
 import { StartButton } from "@/components/start-button";
+import { cases } from "@/lib/cases";
 import { faqItems, heroStats, whatWeDo } from "@/lib/offer";
 
 const notThis = [
@@ -38,63 +39,6 @@ const planFacts = [
   { t: "No setup fee", d: "The first 21 days are the full work, free." },
   { t: "Fast start", d: "Ads live in week 1." },
   { t: "Ad spend is yours", d: "You pay Facebook directly, at least $25 a day." },
-];
-
-const cases = [
-  {
-    name: "Class 1 Graphics",
-    photo: "/cases/class1-sign.jpg",
-    photoAlt: "Monument sign for Living Hope Church, made by Class 1 Graphics",
-    logo: "/cases/class1-logo.png",
-    logoW: 700,
-    logoH: 248,
-    what: "Signs and vehicle wraps · Palmyra, Pennsylvania",
-    story:
-      "A four-person shop. The ads brought a $16,000 sign job and about $8,000 in wrap jobs. They brought in so much work that he paused them: he was booked through the end of the year.",
-    quote: "This is the best results we've had so far with advertising… especially for the price.",
-    who: "Brendan Moyer, owner",
-    big: { n: "$24,000", l: "in jobs sold from $603 in ads" },
-    rest: [
-      { n: "24", l: "leads in the first month" },
-      { n: "$19.51", l: "a lead on the best ad" },
-    ],
-  },
-  {
-    name: "DK Tint Solutions",
-    photo: "/cases/dk-install.jpg",
-    photoAlt: "DK Tint Solutions installers applying window film inside a restaurant",
-    logo: "/cases/dk-logo.png",
-    logoW: 400,
-    logoH: 400,
-    what: "Commercial window tinting · Greater Houston",
-    story:
-      "A one-man sales operation. Four jobs inside the free trial brought in $3,271 from about $465 in ads. When he asked for more commercial work, we built a campaign for it: leads at $8.07 each.",
-    quote: "The amount of leads has been crazy bro I love it.",
-    who: "Danial, owner",
-    big: { n: "40 leads", l: "in the 21-day trial, from about $465 in ads" },
-    rest: [
-      { n: "$3,271", l: "from 4 jobs done inside the trial" },
-      { n: "$8.07", l: "a lead on the commercial ad" },
-    ],
-  },
-  {
-    name: "Houston Sign Crafters",
-    photo: "/work/elite.jpg",
-    photoAlt: "Exterior sign for Elite Career Institute of Texas, made by Houston Sign Crafters",
-    logo: "/cases/hsc-logo.png",
-    logoW: 700,
-    logoH: 142,
-    what: "Commercial signs · Houston",
-    story:
-      "This is where Leadmill started. We built the system for this Houston sign company, and it still runs there every week. In 90 days, its Facebook leads turned into 11 signed jobs.",
-    quote: "",
-    who: "",
-    big: { n: "$74,799", l: "in signs sold from 90 days of Facebook leads" },
-    rest: [
-      { n: "144", l: "leads in 30 days" },
-      { n: "~$23", l: "a lead" },
-    ],
-  },
 ];
 
 export default function Home() {

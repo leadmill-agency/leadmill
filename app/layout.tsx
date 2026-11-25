@@ -5,6 +5,8 @@ import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { UtmCapture } from "@/components/utm-capture";
+import { JsonLd } from "@/components/json-ld";
+import { SITE_URL, organizationJsonLd } from "@/lib/site";
 
 const geist = Geist({
   variable: "--font-geist",
@@ -12,6 +14,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Leadmill — The Growth Department for Contractors",
     template: "%s | Leadmill",
@@ -37,6 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geist.variable} ${display.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
+        <JsonLd data={organizationJsonLd} />
         <UtmCapture />
         <SiteHeader />
         <main className="flex-1">{children}</main>

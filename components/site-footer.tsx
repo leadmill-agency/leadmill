@@ -8,8 +8,15 @@ const columns = [
       { href: "/how-it-works", label: "How it works" },
       { href: "/who-its-for", label: "Who it's for" },
       { href: "/#pricing", label: "Pricing" },
-      { href: "/#results", label: "Client results" },
       { href: "/#faq", label: "Questions" },
+    ],
+  },
+  {
+    title: "Client results",
+    links: [
+      { href: "/results/class-1-graphics", label: "Class 1 Graphics" },
+      { href: "/results/dk-tint-solutions", label: "DK Tint Solutions" },
+      { href: "/results/houston-sign-crafters", label: "Houston Sign Crafters" },
     ],
   },
   {
@@ -23,15 +30,12 @@ const columns = [
     ],
   },
   {
-    title: "Get started",
+    title: "Company",
     links: [
+      { href: "/about", label: "About" },
+      { href: "/contact", label: "Contact" },
       { href: "/apply", label: "Book a call" },
       { href: PHONE_HREF, label: `Call ${PHONE_DISPLAY}` },
-    ],
-  },
-  {
-    title: "Legal",
-    links: [
       { href: "/privacy", label: "Privacy policy" },
       { href: "/terms", label: "Terms of service" },
     ],
@@ -42,7 +46,7 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-line bg-panel">
       <div className="hazard" />
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.4fr_3fr]">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1fr_3.4fr]">
         <div>
           <p className="text-xl font-semibold tracking-tight">
             Lead<span className="text-accent">Mill</span>

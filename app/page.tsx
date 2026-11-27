@@ -108,7 +108,6 @@ export default function Home() {
             />
             <figcaption className="absolute bottom-3 left-3 rounded-lg bg-white px-3.5 py-2.5 text-sm leading-snug">
               Channel letters for Slick City Action Park
-              <span className="block text-muted">Houston Sign Crafters, where Leadmill started</span>
             </figcaption>
           </figure>
         </div>
@@ -316,14 +315,14 @@ export default function Home() {
               alt="Lit channel letters on a brick storefront for Karma Kolache and Macarons"
               width={1122}
               height={1402}
-              className="h-56 w-full rounded-2xl object-cover sm:h-72"
+              className="h-56 w-full rounded-2xl object-cover object-[50%_15%] sm:h-72"
             />
             <Image
-              src="/work/nautica.jpg"
-              alt="Channel-letter sign on a brick storefront for Nautical Bowls"
-              width={1122}
-              height={1402}
-              className="mt-8 h-56 w-full rounded-2xl object-cover sm:h-72"
+              src="/work/bridge3.jpg"
+              alt="Lit channel letters for Bridge 3 Mission Ready Learning Lab at dusk"
+              width={1289}
+              height={1600}
+              className="mt-8 h-56 w-full rounded-2xl object-cover object-[50%_15%] sm:h-72"
             />
           </div>
         </div>

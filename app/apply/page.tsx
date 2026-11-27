@@ -158,9 +158,6 @@ export default function ApplyPage() {
                 <div>
                   <h3 className="font-semibold leading-snug sm:text-[1.05rem]">{w.t}</h3>
                   <p className="mt-1 text-[0.95rem] leading-snug text-muted">{w.d}</p>
-                  <p className="mt-2 inline-block rounded-md bg-ink px-2.5 py-1 text-sm font-medium text-white">
-                    {w.chip}
-                  </p>
                 </div>
               </li>
             ))}

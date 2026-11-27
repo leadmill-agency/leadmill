@@ -5,6 +5,7 @@ import { Faq } from "@/components/faq";
 import { CtaSection } from "@/components/cta-section";
 import { OwnerCards } from "@/components/owner-cards";
 import { cases } from "@/lib/cases";
+import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/links";
 import { faqItems, heroStats, whatWeDo } from "@/lib/offer";
 
 const notThis = [
@@ -85,7 +86,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c") }}
       />
 
-      {/* Hero: the offer on the left, the four parts of the system on the right. Sized to fit one laptop screen. */}
+      {/* Hero: the offer on the left, a finished sign on the right. Sized to fit one laptop screen. */}
       <section className="border-b border-line">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-10 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-12 lg:py-10">
           <div>
@@ -105,30 +106,46 @@ export default function Home() {
                 </div>
               ))}
             </dl>
-            <div className="rise-3 mt-6 flex flex-wrap gap-3">
+            <div className="rise-3 mt-6 flex flex-wrap items-center gap-x-5 gap-y-3">
               <Link href="/apply" className="btn-primary text-lg">
                 Book a call
               </Link>
+              <a href={PHONE_HREF} className="font-medium text-accent">
+                Or call {PHONE_DISPLAY}
+              </a>
             </div>
           </div>
-          <ol className="rise-2 self-start rounded-2xl border border-line bg-panel lg:self-center">
-            {whatWeDo.map((w, i) => (
-              <li
-                key={w.t}
-                className={`grid grid-cols-[2.25rem_1fr] gap-x-2 px-5 py-4 sm:px-6 ${i > 0 ? "border-t border-line" : ""}`}
-              >
-                <p className="display pt-0.5 text-xl text-muted">0{i + 1}</p>
-                <div>
-                  <h2 className="font-semibold leading-snug sm:text-[1.05rem]">{w.t}</h2>
-                  <p className="mt-1 text-[0.95rem] leading-snug text-muted">{w.d}</p>
-                  <p className="mt-2 inline-block rounded-md bg-ink px-2.5 py-1 text-sm font-medium text-white">
-                    {w.chip}
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ol>
+          <figure className="rise-2 relative">
+            <Image
+              src="/work/slickcity.jpg"
+              alt="Lit channel letters for Slick City Action Park at dusk"
+              width={1600}
+              height={1194}
+              priority
+              sizes="(min-width: 1024px) 540px, 100vw"
+              className="h-72 w-full rounded-2xl object-cover sm:h-96 lg:h-[32rem]"
+            />
+            <figcaption className="absolute bottom-3 left-3 rounded-lg bg-white px-3.5 py-2.5 text-sm leading-snug">
+              Channel letters for Slick City Action Park
+              <span className="block text-muted">Houston Sign Crafters, where Leadmill started</span>
+            </figcaption>
+          </figure>
         </div>
+      </section>
+
+      {/* The four parts of the plan, one line each. */}
+      <section aria-label="What you get" className="border-b border-line bg-panel">
+        <ol className="mx-auto grid max-w-6xl gap-x-8 gap-y-5 px-4 py-8 sm:grid-cols-2 sm:px-6 lg:grid-cols-4">
+          {whatWeDo.map((w, i) => (
+            <li key={w.t} className="grid grid-cols-[2rem_1fr] gap-x-2">
+              <p className="display pt-0.5 text-xl text-accent">0{i + 1}</p>
+              <div>
+                <h2 className="font-semibold leading-snug">{w.t}</h2>
+                <p className="mt-1 text-[0.95rem] leading-snug text-muted">{w.d}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
       </section>
 
       {/* Owner cards: one result per client. Scrolls sideways on a phone, three across on a desktop. */}
@@ -244,40 +261,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Wholesale fabrication */}
-      <section className="border-b border-line">
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1.2fr_1fr] lg:items-center">
-          <div>
-            <p className="font-medium text-accent">Wholesale fabrication</p>
-            <h2 className="display mt-3 text-5xl sm:text-6xl">Sell more signs than you can build.</h2>
-            <p className="mt-5 max-w-xl text-lg text-muted">
-              Channel letters, halo-lit letters, cabinet signs and monument faces, built at trade
-              price and shipped to you in about 4 weeks. You sell the job under your own name, set
-              the price and install it. Any shop can order.
-            </p>
-            <Link href="/fabrication" className="btn-secondary mt-7 text-lg">
-              See what we build
-            </Link>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src="/work/luce.jpg"
-              alt="Halo-lit exterior sign glowing at night"
-              width={800}
-              height={1000}
-              className="h-56 w-full rounded-2xl object-cover sm:h-72"
-            />
-            <Image
-              src="/work/copper.jpg"
-              alt="Backlit exterior sign above a storefront at dusk"
-              width={800}
-              height={1000}
-              className="mt-8 h-56 w-full rounded-2xl object-cover sm:h-72"
-            />
-          </div>
-        </div>
-      </section>
-
       {/* Client results */}
       <section id="results" className="scroll-mt-16 bg-ink text-white">
         <div className="mx-auto max-w-6xl px-4 pb-8 pt-20 sm:px-6">
@@ -333,6 +316,40 @@ export default function Home() {
                 </div>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Wholesale fabrication */}
+      <section className="border-b border-line">
+        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+          <div>
+            <p className="font-medium text-accent">Wholesale fabrication</p>
+            <h2 className="display mt-3 text-5xl sm:text-6xl">Sell more signs than you can build.</h2>
+            <p className="mt-5 max-w-xl text-lg text-muted">
+              Channel letters, halo-lit letters, cabinet signs and monument faces, built at trade
+              price and shipped to you in about 4 weeks. You sell the job under your own name, set
+              the price and install it. Any shop can order.
+            </p>
+            <Link href="/fabrication" className="btn-secondary mt-7 text-lg">
+              See what we build
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <Image
+              src="/work/luce.jpg"
+              alt="Halo-lit exterior sign glowing at night"
+              width={800}
+              height={1000}
+              className="h-56 w-full rounded-2xl object-cover sm:h-72"
+            />
+            <Image
+              src="/work/copper.jpg"
+              alt="Backlit exterior sign above a storefront at dusk"
+              width={800}
+              height={1000}
+              className="mt-8 h-56 w-full rounded-2xl object-cover sm:h-72"
+            />
           </div>
         </div>
       </section>

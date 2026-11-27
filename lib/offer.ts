@@ -69,27 +69,24 @@ export const heroStats = [
   { n: "750+", l: "leads sent to our clients" },
 ];
 
-// Each row: the benefit as the headline, how we do it, then one fact that backs it.
+// The four parts of the plan, shown as a strip under the hero. Features only, no figures:
+// the numbers live in the hero stats and the owner cards, so each is said once.
 export const whatWeDo = [
   {
-    t: "Found on Google and named by ChatGPT",
-    d: "A page for every sign you make and every town you serve, so buyers find you when they search.",
-    chip: "First page on Google within 3 months",
+    t: "Found on Google and ChatGPT",
+    d: "A page for every sign you make and every town you serve.",
   },
   {
-    t: "A website that turns visitors into sign quotes",
-    d: "Your best signs up front, and a quote request in one step: sign type, size, location and photos.",
-    chip: "Pages for every sign type and town",
+    t: "A website that wins quotes",
+    d: "Your best signs up front, and a quote request in one step.",
   },
   {
-    t: "A CRM and project tracker so no quote gets lost",
-    d: "Every lead in one list with its status, and every job tracked from proof to install.",
-    chip: "$74,799 in won jobs tracked for one shop",
+    t: "A CRM so no quote gets lost",
+    d: "Every lead in one list, every job tracked from proof to install.",
   },
   {
-    t: "Ads that bring sign leads every week (Growth)",
-    d: "Facebook, Instagram and Google ads made from your own signs, in your own ad accounts.",
-    chip: "Average 42 leads in month one",
+    t: "Ads, on Growth",
+    d: "Facebook, Instagram and Google ads made from your own signs.",
   },
 ];
 

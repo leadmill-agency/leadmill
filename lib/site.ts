@@ -26,7 +26,7 @@ export const organizationJsonLd = {
       name: SITE_NAME,
       url: SITE_URL,
       description:
-        "Leadmill is the growth department for contractors and the trades: Facebook and Instagram ads, a rebuilt website, SEO, ChatGPT and AI search, and a CRM and project tracker for one flat fee.",
+        "Leadmill is the marketing department for sign shops: a rebuilt website, SEO, ChatGPT and AI search, and a CRM and project tracker, with Facebook, Instagram and Google ads on the Growth plan.",
       email: EMAIL,
       telephone: "+1-936-261-8323",
       areaServed: "US",

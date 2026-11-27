@@ -4,11 +4,11 @@
 export const faqItems = [
   {
     q: "What does Leadmill do?",
-    a: "Five things for one flat fee: Facebook and Instagram ads, a rebuilt website, SEO, ChatGPT and AI search, and a CRM and project tracker. All five aim at one result: more jobs. It is done for you. You don't log in to anything or manage a campaign.",
+    a: "Marketing for sign shops, done for you. Core is a website that turns visitors into quote requests, SEO, ChatGPT and AI search, and a CRM and project tracker. Growth adds Facebook, Instagram and Google ads. You don't log in to anything or manage a campaign.",
   },
   {
     q: "How much does it cost?",
-    a: "Nothing for the first 21 days. Then $1,000 a month, flat. Your card is charged 21 days after you enter it, unless you cancel by email before then. You also pay Facebook directly for your ads, at least $25 a day. There are no setup fees and no hourly billing.",
+    a: "Nothing for the first 14 days. Then Core is $399 a month, or Growth is $800 a month and includes everything in Core. Your card is charged 14 days after you enter it, unless you cancel by email before then. On Growth you also pay Facebook and Google directly for your ads. There are no setup fees and no hourly billing.",
   },
   {
     q: "Is there a contract?",
@@ -16,15 +16,15 @@ export const faqItems = [
   },
   {
     q: "How fast does it start?",
-    a: "Ads go live in week 1. The website is built in weeks 1 and 2, and you review it before it goes live. SEO and AI search start in week 3.",
+    a: "The website is built in weeks 1 and 2, and you review it before it goes live. SEO and AI search start in week 3. On Growth, ads go live in week 1.",
   },
   {
     q: "Who is it built for?",
-    a: "Contractors and trades with a crew: landscapers, painters, remodelers, fence companies, window tinters, sign companies and others. Your customers can be homeowners, businesses or both.",
+    a: "Sign shops: channel letters, monuments, vehicle wraps, banners and print. Your customers can be businesses, homeowners or both. Leadmill started inside a working sign shop.",
   },
   {
     q: "What do I have to do?",
-    a: "Answer the leads, quote and sell the job, send us photos and videos of finished work, and pay Facebook directly for the ads.",
+    a: "Answer the leads, quote and sell the job, and send us photos and videos of finished signs. On Growth, you pay Facebook and Google directly for the ads.",
   },
   {
     q: "Who owns the leads and the accounts?",
@@ -40,11 +40,11 @@ export const faqItems = [
   },
   {
     q: "What results do clients see?",
-    a: "A four-person sign and wrap shop sold about $24,000 in jobs from $603 in ads. A window tint company got 40 leads in its 21-day trial from about $465 in ads. A Houston sign company sold $74,799 in signs from 90 days of Facebook leads.",
+    a: "A four-person sign and wrap shop sold about $24,000 in jobs from $603 in ads. A window tint company got 40 leads in its trial from about $465 in ads. A Houston sign company sold $74,799 in signs from 90 days of Facebook leads.",
   },
   {
     q: "Do you guarantee closed jobs?",
-    a: "No. Anyone who guarantees closed jobs is lying to you. You get 21 days of full work free, so you can judge the leads before you pay us anything.",
+    a: "No. Anyone who guarantees closed jobs is lying to you. You get 14 days of full work free, so you can judge the leads before you pay us anything.",
   },
   {
     q: "Do you take a percentage of my sale?",
@@ -52,7 +52,7 @@ export const faqItems = [
   },
   {
     q: "I own a franchise location. Can I still work with you?",
-    a: "Yes. Franchise owners use us for Facebook and Instagram ads, alongside what corporate already provides.",
+    a: "Yes. Franchise sign shop owners use us for local ads, alongside what corporate already provides.",
   },
 ];
 
@@ -61,31 +61,31 @@ export const faqItems = [
 // about 130, 46 and 24 a month, a mean of 67 a month (about 800 a year); the middle one is about 550.
 export const heroStats = [
   { n: "$12M", l: "in client pipeline" },
-  { n: "5x+", l: "return on ad spend" },
-  { n: "530+", l: "average leads a year per client" },
+  { n: "7x", l: "return on ad spend" },
+  { n: "750+", l: "leads sent to our clients" },
 ];
 
 // Each row: the benefit as the headline, how we do it, then one fact that backs it.
 export const whatWeDo = [
   {
-    t: "Ads that bring quote requests every week",
-    d: "Facebook and Instagram ads made from your own jobs, in your own ad account. Every lead goes only to you.",
-    chip: "Average 30+ leads in month one",
-  },
-  {
-    t: "A website that turns visitors into quote requests",
-    d: "Rebuilt so a visitor sees your work and asks for a quote in one step.",
-    chip: "42 quote requests in month one",
-  },
-  {
     t: "Found on Google and named by ChatGPT",
-    d: "Service pages, blog posts and links, so customers find you when they search.",
-    chip: "4.5x the Google visits",
+    d: "A page for every sign you make and every town you serve, so buyers find you when they search.",
+    chip: "First page on Google within 3 months",
   },
   {
-    t: "A CRM and project tracker so no lead gets lost",
-    d: "Every lead in one list with its status, and every job tracked to the finish.",
-    chip: "Average $34,000 in jobs won",
+    t: "A website that turns visitors into sign quotes",
+    d: "Your best signs up front, and a quote request in one step: sign type, size, location and photos.",
+    chip: "Pages for every sign type and town",
+  },
+  {
+    t: "A CRM and project tracker so no quote gets lost",
+    d: "Every lead in one list with its status, and every job tracked from proof to install.",
+    chip: "$74,799 in won jobs tracked for one shop",
+  },
+  {
+    t: "Ads that bring sign leads every week (Growth)",
+    d: "Facebook, Instagram and Google ads made from your own signs, in your own ad accounts.",
+    chip: "Average 42 leads in month one",
   },
 ];
 
@@ -103,7 +103,7 @@ export const ownerCards = [
     photo: "/cases/dk-install.jpg",
     alt: "DK Tint Solutions installers applying window film",
     n: "40 leads",
-    l: "in a 21-day trial",
+    l: "in his first 21 days",
     who: "Danial",
     role: "Owner of DK Tint Solutions",
   },
@@ -112,7 +112,7 @@ export const ownerCards = [
     alt: "Exterior sign made by Houston Sign Crafters",
     n: "$74,799",
     l: "in jobs from 90 days of leads",
-    who: "Houston Sign Crafters",
-    role: "Where Leadmill started",
+    who: "Kashir",
+    role: "Houston Sign Crafters",
   },
 ];

@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Faq } from "@/components/faq";
 import { CtaSection } from "@/components/cta-section";
 import { OwnerCards } from "@/components/owner-cards";
-import { StartButton } from "@/components/start-button";
 import { cases } from "@/lib/cases";
 import { faqItems, heroStats, whatWeDo } from "@/lib/offer";
 
@@ -11,34 +10,56 @@ const notThis = [
   {
     label: "Not a lead site",
     t: "Your leads are yours alone",
-    d: "Lead sites sell one customer to several contractors. Ours come from ads in your own account and go to you and nobody else.",
+    d: "Lead sites sell one customer to several shops. Every quote request from your website, your Google listing and your ads goes to you and nobody else.",
   },
   {
     label: "Not an agency",
     t: "Flat fee, no contract",
-    d: "No retainer, no hourly billing, no fee to leave. You get 21 days of full work before you pay us anything.",
+    d: "One monthly price covers your website, SEO and AI search, with ads on Growth. No retainer, no hourly billing, no fee to leave.",
   },
   {
     label: "A managed service",
     t: "We do the work. You keep the accounts",
-    d: "You don't log in to a tool or manage a campaign. Your ad account, Facebook page, domain and leads stay yours.",
+    d: "We build and run your website, SEO, Google listing and ads. You don't log in to a tool. Your domain, Google profile, ad accounts and leads stay yours.",
   },
 ];
 
-const planIncludes = [
-  "Facebook and Instagram ads, built from your own work",
-  "A rebuilt website that turns visitors into quote requests",
-  "SEO: service pages, blog posts and links",
-  "ChatGPT and AI search",
-  "A CRM and project tracker, set up for you",
-  "Every lead sent to you and nobody else",
+const plans = [
+  {
+    name: "Core",
+    price: "$399",
+    blurb: "Get found and turn more visitors into sign quotes.",
+    lead: null as string | null,
+    items: [
+      "A rebuilt website that turns visitors into quote requests",
+      "Hosting and small edits every month",
+      "SEO: a page for every sign type and town you serve",
+      "ChatGPT and AI search",
+      "Google Business Profile kept up to date",
+      "A CRM and project tracker, set up for you",
+    ],
+    featured: false,
+  },
+  {
+    name: "Growth",
+    price: "$800",
+    blurb: "Core, plus ads that bring sign leads every week.",
+    lead: "Everything in Core, plus:",
+    items: [
+      "Facebook and Instagram ads, built from your own signs",
+      "Google Ads for people searching for a sign company",
+      "New ad videos as your work changes",
+      "Every lead sent to you and nobody else",
+    ],
+    featured: true,
+  },
 ];
 
 const planFacts = [
-  { t: "Month to month", d: "No contract. Pause or cancel any time." },
-  { t: "No setup fee", d: "The first 21 days are the full work, free." },
-  { t: "Fast start", d: "Ads live in week 1." },
-  { t: "Ad spend is yours", d: "You pay Facebook directly, at least $25 a day." },
+  { t: "Month to month", d: "No contract. Pause ads or cancel any time." },
+  { t: "No setup fee", d: "The first 14 days are the full work, free." },
+  { t: "Switch any time", d: "Busy season? Drop to Core and keep the website and SEO running." },
+  { t: "Ad spend is yours", d: "On Growth, you pay Facebook and Google directly." },
 ];
 
 export default function Home() {
@@ -64,12 +85,12 @@ export default function Home() {
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-10 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-12 lg:py-10">
           <div>
             <h1 className="display rise text-6xl sm:text-7xl lg:text-[4.25rem]">
-              The growth department for{" "}
-              <span className="text-accent">contractors</span>.
+              The marketing department for{" "}
+              <span className="text-accent">sign shops</span>.
             </h1>
             <p className="rise-2 mt-5 max-w-xl text-lg text-muted sm:text-xl">
-              Ads, a website, SEO, AI search and a CRM, all done for you and built to bring you
-              more jobs. Free for 21 days, then $1,000 a month. No contract.
+              A website that wins quotes, SEO, AI search and a CRM, with ads when you want more.
+              Done for you by people who run a sign shop. Free for 14 days, then from $399 a month.
             </p>
             <dl className="rise-2 mt-6 grid max-w-xl grid-cols-3 gap-x-6 border-y border-line py-4">
               {heroStats.map((s) => (
@@ -80,8 +101,7 @@ export default function Home() {
               ))}
             </dl>
             <div className="rise-3 mt-6 flex flex-wrap gap-3">
-              <StartButton source="hero" className="btn-primary text-lg" />
-              <Link href="/apply" className="btn-secondary text-lg">
+              <Link href="/apply" className="btn-primary text-lg">
                 Book a call
               </Link>
             </div>
@@ -127,8 +147,8 @@ export default function Home() {
             A service. Not a lead site, not an agency.
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-xl text-muted">
-            Shared leads, long contracts and an agency that keeps your accounts. Contractors tell
-            the same story about lead sellers and marketing companies. This is the other deal.
+            Sign shop owners tell the same story about lead sellers and marketing companies. This
+            is the other deal: your website, SEO, AI search and ads, run for you, for one flat price.
           </p>
         </div>
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
@@ -152,46 +172,70 @@ export default function Home() {
       {/* Pricing */}
       <section id="pricing" className="scroll-mt-20 border-y border-line bg-panel">
         <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
-          <h2 className="display max-w-4xl text-5xl sm:text-7xl">One plan. One price.</h2>
+          <h2 className="display max-w-4xl text-5xl sm:text-7xl">Two plans. Flat prices.</h2>
           <p className="mt-6 max-w-2xl text-xl text-muted">
-            A flat monthly fee, fully managed. No setup fee, no hourly billing, no percentage of
-            your jobs.
+            Free for your first 14 days. No setup fee, no hourly billing, no percentage of your
+            jobs.
           </p>
-          <div className="mt-14 grid gap-6 lg:grid-cols-[1.25fr_1fr]">
-            <div className="rounded-2xl border-2 border-ink bg-background p-8 shadow-[0_18px_50px_-18px_oklch(0.23_0.02_262/0.35)] sm:p-10">
-              <p className="font-medium text-muted">Free for your first 21 days, then</p>
-              <p className="display mt-2 text-7xl sm:text-8xl">
-                $1,000<span className="text-3xl text-muted sm:text-4xl"> a month</span>
-              </p>
-              <ul className="mt-8 grid gap-x-8 gap-y-3.5 border-t border-line pt-7 text-lg sm:grid-cols-2">
-                {planIncludes.map((i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span
-                      aria-hidden
-                      className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent-bright text-[0.65rem] font-bold text-accent-ink"
-                    >
-                      ✓
+          <div className="mt-14 grid gap-6 lg:grid-cols-2">
+            {plans.map((p) => (
+              <div
+                key={p.name}
+                className={`flex flex-col rounded-2xl p-8 sm:p-10 ${
+                  p.featured
+                    ? "border-2 border-ink bg-background shadow-[0_18px_50px_-18px_oklch(0.23_0.02_262/0.35)]"
+                    : "border border-line bg-background"
+                }`}
+              >
+                <div className="flex items-center justify-between gap-4">
+                  <h3 className="display text-4xl">{p.name}</h3>
+                  {p.featured && (
+                    <span className="rounded-md bg-ink px-2.5 py-1 text-sm font-medium text-white">
+                      Includes Core
                     </span>
-                    {i}
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-9 flex flex-wrap gap-3">
-                <StartButton source="pricing" className="btn-primary text-lg" />
-                <Link href="/apply" className="btn-secondary text-lg">
-                  Book a call
-                </Link>
-              </div>
-            </div>
-            <dl className="grid content-start gap-x-8 sm:grid-cols-2 lg:grid-cols-1">
-              {planFacts.map((f) => (
-                <div key={f.t} className="border-t border-ink py-5">
-                  <dt className="text-lg font-semibold">{f.t}</dt>
-                  <dd className="mt-1 text-muted">{f.d}</dd>
+                  )}
                 </div>
-              ))}
-            </dl>
+                <p className="mt-2 text-lg text-muted">{p.blurb}</p>
+                <p className="display mt-6 text-7xl">
+                  {p.price}
+                  <span className="text-3xl text-muted"> a month</span>
+                </p>
+                <p className="mt-1 text-sm text-muted">After 14 days free</p>
+                <div className="mt-7 border-t border-line pt-6">
+                  {p.lead && <p className="mb-3 font-semibold">{p.lead}</p>}
+                  <ul className="grid gap-3 text-lg">
+                    {p.items.map((i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <span
+                          aria-hidden
+                          className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent-bright text-[0.65rem] font-bold text-accent-ink"
+                        >
+                          ✓
+                        </span>
+                        {i}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="mt-auto flex flex-wrap gap-3 pt-9">
+                  <Link
+                    href="/apply"
+                    className={`${p.featured ? "btn-primary" : "btn-secondary"} text-lg`}
+                  >
+                    Book a call
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
+          <dl className="mt-10 grid gap-x-8 sm:grid-cols-2 lg:grid-cols-4">
+            {planFacts.map((f) => (
+              <div key={f.t} className="border-t border-ink py-5">
+                <dt className="text-lg font-semibold">{f.t}</dt>
+                <dd className="mt-1 text-muted">{f.d}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 
@@ -270,11 +314,11 @@ export default function Home() {
               </p>
               <p>
                 In 90 days, that shop&apos;s Facebook leads turned into 11 signed jobs worth
-                $74,799. Then we started running the same system for other contractors: a sign
+                $74,799. Then we started running the same system for other companies: a sign
                 and wrap shop in Pennsylvania, and a window tint company in Houston.
               </p>
               <p>
-                That&apos;s why the first 21 days are free. If this doesn&apos;t make sense for
+                That&apos;s why the first 14 days are free. If this doesn&apos;t make sense for
                 your company, I&apos;ll tell you on the call.
               </p>
             </div>

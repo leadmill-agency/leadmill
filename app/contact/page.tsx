@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { StartButton } from "@/components/start-button";
 import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/links";
 import { EMAIL } from "@/lib/site";
 
@@ -50,8 +49,10 @@ export default function ContactPage() {
           </div>
         </dl>
         <div className="mt-10 flex flex-wrap items-center gap-4">
-          <StartButton source="contact" className="btn-primary text-lg" />
-          <p className="text-muted">Free for 21 days, then $1,000 a month. No contract.</p>
+          <Link href="/apply" className="btn-primary text-lg">
+            Book a call
+          </Link>
+          <p className="text-muted">Free for 14 days, then from $399 a month. No contract.</p>
         </div>
       </section>
     </>

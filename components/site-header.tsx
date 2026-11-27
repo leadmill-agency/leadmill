@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { StartButton } from "@/components/start-button";
 import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/links";
 
 const nav = [
@@ -32,14 +31,10 @@ export function SiteHeader() {
           </a>
           <Link
             href="/apply"
-            className="hidden rounded-[10px] border border-line px-3 py-2 text-sm font-medium transition hover:border-foreground sm:inline-block sm:px-4"
+            className="inline-block rounded-[10px] bg-ink px-3 py-2 text-sm font-medium text-white transition hover:opacity-90 sm:px-4"
           >
             Book a call
           </Link>
-          <StartButton
-            source="header"
-            className="rounded-[10px] bg-ink px-3 py-2 text-sm font-medium text-white transition hover:opacity-90 sm:px-4"
-          />
         </div>
       </div>
     </header>

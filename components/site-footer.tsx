@@ -52,8 +52,8 @@ export function SiteFooter() {
             Lead<span className="text-accent">Mill</span>
           </p>
           <p className="mt-3 max-w-xs text-sm text-muted">
-            The growth department for contractors. Ads, website, SEO, AI search, and a CRM and
-            project tracker for one flat fee. Free for 21 days, then $1,000 a month. No contract.
+            The marketing department for sign shops. Website, SEO, AI search and a CRM from $399
+            a month, with ads on Growth. Free for 14 days. No contract.
           </p>
         </div>
         <div className="grid grid-cols-2 gap-8 text-sm sm:grid-cols-4">

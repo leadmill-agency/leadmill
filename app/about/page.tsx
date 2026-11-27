@@ -10,7 +10,7 @@ import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/links";
 import { AUTHOR, EMAIL, SITE_URL, UPDATED } from "@/lib/site";
 
 const description =
-  "Leadmill is run by Rameel Sheikh. It started inside Houston Sign Crafters, his brother's sign company, and now runs the same marketing system for other contractors and trades.";
+  "Leadmill is run by Rameel Sheikh. It started inside Houston Sign Crafters, his brother's sign company, and now runs the same marketing system for other sign shops.";
 
 export const metadata: Metadata = {
   title: "About Leadmill: who runs it and where it started",
@@ -29,22 +29,22 @@ const sections = [
   {
     h: "What does Leadmill do?",
     p: [
-      "Leadmill does five things for one flat fee: Facebook and Instagram ads, a rebuilt website, SEO, ChatGPT and AI search, and a CRM and project tracker. All five aim at one result, which is more jobs.",
+      "Leadmill is marketing for sign shops, done for you. Core is a rebuilt website, SEO, ChatGPT and AI search, and a CRM and project tracker. Growth adds Facebook, Instagram and Google ads. All of it aims at one result, which is more jobs.",
       "It is done for you. You don't log in to a tool or manage a campaign.",
     ],
   },
   {
     h: "How does Leadmill work with a company?",
     p: [
-      "The ads run in your own ad account, and every lead goes to you and nobody else. Your ad account, Facebook page, domain and leads stay yours. The website becomes yours with your first payment after the trial.",
-      "The first 21 days are free, and they are the full work. After that it is $1,000 a month, with no contract. You pay Facebook directly for your ads, at least $25 a day.",
+      "Every lead goes to you and nobody else. Your domain, Google profile, ad accounts and leads stay yours. The website becomes yours with your first payment after the trial.",
+      "The first 14 days are free, and they are the full work. After that it is $399 a month for Core, or $800 a month for Growth with ads, with no contract. On Growth you pay Facebook and Google directly for your ads.",
     ],
   },
   {
-    h: "Why are the first 21 days free?",
+    h: "Why are the first 14 days free?",
     p: [
-      "If you have been burned by an agency, you should be skeptical of a page like this one. The free 21 days let you judge the work before you pay us anything.",
-      "If this doesn't make sense for your company, I'll tell you on the call.",
+      "If you have been burned by an agency, you should be skeptical of a page like this one. The free 14 days let you judge the work before you pay us anything.",
+      "If this doesn't make sense for your shop, I'll tell you on the call.",
     ],
   },
 ];
@@ -73,8 +73,8 @@ export default function AboutPage() {
             <p className="mt-6 max-w-2xl text-lg text-muted sm:text-xl">
               Leadmill is run by Rameel Sheikh. I started it inside a working sign shop: I run the
               marketing for Houston Sign Crafters, my brother&apos;s sign company, and we built this
-              system there. Leadmill now runs the same system for other contractors and trades, as
-              one done-for-you plan for a flat fee.
+              system there. Leadmill now runs the same system for other sign shops, as a
+              done-for-you plan for a flat fee.
             </p>
             <div className="mt-7">
               <Byline />

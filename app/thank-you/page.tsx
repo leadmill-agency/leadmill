@@ -22,7 +22,7 @@ export default async function ThankYouPage({
           <h1 className="display mt-2 text-4xl sm:text-5xl">Good news — you look like a fit.</h1>
           <p className="mt-4 text-muted">
             Your company matches what we look for. The next step is a 20–30 minute call
-            where we look at your market, the numbers, and how the first 21 days would work for
+            where we look at your market, the numbers, and how the first 14 days would work for
             your company.
           </p>
           {calendarUrl ? (

@@ -9,7 +9,7 @@ import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/links";
 export const metadata: Metadata = {
   title: "Book a Call",
   description:
-    "Ads, a website, SEO, AI search and a CRM for contractors, all done for you. Free for 21 days, then $1,000 a month, no contract. Book a call to see if it fits your company.",
+    "A website, SEO, AI search and a CRM for sign shops, with ads on Growth, all done for you. Free for 14 days, then from $399 a month, no contract. Book a call to see if it fits your shop.",
 };
 
 const calendarUrl = process.env.NEXT_PUBLIC_CALENDAR_URL;
@@ -24,15 +24,15 @@ const embedUrl =
 
 // The offer in four lines, so nobody books a call without knowing the price.
 const offerFacts = [
-  { t: "Free for 21 days", d: "The full work, not a sample." },
-  { t: "Then $1,000 a month", d: "No contract. Cancel any time." },
-  { t: "You pay Facebook for the ads", d: "At least $25 a day, on your own card." },
+  { t: "Free for 14 days", d: "The full work, not a sample." },
+  { t: "Then $399 a month", d: "Or $800 with ads. No contract." },
+  { t: "On Growth, you pay for the ads", d: "Facebook and Google, on your own card." },
   { t: "Every lead is yours", d: "Sent to you and nobody else." },
 ];
 
 const onTheCall = [
-  "We look at your company and your area.",
-  "We show you how your first 21 days would work.",
+  "We look at your shop and your area.",
+  "We show you how your first 14 days would work.",
   "We tell you honestly whether it fits.",
 ];
 
@@ -55,11 +55,11 @@ export default function ApplyPage() {
           <div className="lg:sticky lg:top-24 lg:self-start">
             <p className="font-medium text-accent">Book a call</p>
             <h1 className="display mt-3 text-5xl sm:text-6xl">
-              Your growth department, free for 21 days.
+              Your marketing department, free for 14 days.
             </h1>
             <p className="mt-5 max-w-xl text-lg text-muted">
-              Ads, a website, SEO, AI search and a CRM for contractors. All done for you and built
-              to bring you more jobs.
+              A website, SEO, AI search and a CRM for sign shops, with ads when you want more. All
+              done for you and built to bring you more jobs.
             </p>
             {/* The wrapper hides it on a desktop: .btn-primary sets its own display. */}
             <div className="mt-6 lg:hidden">
@@ -143,7 +143,7 @@ export default function ApplyPage() {
         </div>
       </section>
 
-      {/* What the $1,000 a month covers */}
+      {/* What the plans cover */}
       <section className="border-b border-line bg-panel">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
           <h2 className="display text-4xl sm:text-5xl">What we do for you</h2>

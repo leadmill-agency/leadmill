@@ -126,7 +126,7 @@ export default async function ResultPage({ params }: { params: Promise<{ slug: s
           <Link href={trade.href} className="font-medium underline underline-offset-4">
             {trade.label}
           </Link>
-          <span className="text-muted">: what we do, what it costs and how the first 21 days go.</span>
+          <span className="text-muted">: what we do, what it costs and how the first 14 days go.</span>
         </p>
       </section>
 

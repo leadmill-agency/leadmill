@@ -1,9 +1,8 @@
 import Link from "next/link";
-import { StartButton } from "@/components/start-button";
 
 export function CtaSection({
-  headline = "Try it free for 21 days.",
-  sub = "Start now, or book a call and we'll tell you honestly whether this fits your company.",
+  headline = "Try it free for 14 days.",
+  sub = "Book a call and we'll tell you honestly whether this fits your shop.",
 }: {
   headline?: string;
   sub?: string;
@@ -17,18 +16,14 @@ export function CtaSection({
         </div>
         <div>
           <div className="flex flex-wrap gap-3">
-            <StartButton
-              source="cta"
-              className="inline-block rounded-[10px] bg-white px-8 py-4 text-lg font-medium text-ink transition hover:opacity-90"
-            />
             <Link
               href="/apply"
-              className="inline-block rounded-[10px] border border-white/40 px-8 py-4 text-lg font-medium text-white transition hover:border-white"
+              className="inline-block rounded-[10px] bg-white px-8 py-4 text-lg font-medium text-ink transition hover:opacity-90"
             >
               Book a call
             </Link>
           </div>
-          <p className="mt-3 text-sm text-white/60">$0 today. You only pay Facebook for your ads.</p>
+          <p className="mt-3 text-sm text-white/60">No contract. Core from $399 a month after 14 days.</p>
         </div>
       </div>
     </section>

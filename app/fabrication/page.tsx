@@ -118,7 +118,7 @@ export default function FabricationPage() {
       <section className="border-b border-line">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[1.2fr_1fr] lg:items-center">
           <div>
-            <p className="font-medium text-accent">Sell the sign. We build it.</p>
+            <p className="font-medium text-accent-text">Sell the sign. We build it.</p>
             <h1 className="display mt-3 text-5xl sm:text-7xl">Wholesale sign fabrication for sign shops.</h1>
             <p className="mt-6 max-w-xl text-lg text-muted sm:text-xl">
               Wholesale channel letters, cabinet signs and monument faces at trade price. You sell

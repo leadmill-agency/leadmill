@@ -9,10 +9,10 @@ export function FaqList({ items }: { items: FaqItem[] }) {
         <details key={item.q} className="group">
           <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-medium transition hover:bg-panel-2 [&::-webkit-details-marker]:hidden">
             <h3>{item.q}</h3>
-            <span aria-hidden className="text-xl font-medium text-accent group-open:hidden">
+            <span aria-hidden className="text-xl font-medium text-accent-text group-open:hidden">
               +
             </span>
-            <span aria-hidden className="hidden text-xl font-medium text-accent group-open:inline">
+            <span aria-hidden className="hidden text-xl font-medium text-accent-text group-open:inline">
               –
             </span>
           </summary>

@@ -52,7 +52,7 @@ export default async function ResultPage({ params }: { params: Promise<{ slug: s
 
       <section className="border-b border-line">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
-          <p className="font-medium text-accent">
+          <p className="font-medium text-accent-text">
             {c.slug === "houston-sign-crafters" ? "Where Leadmill started" : "Client result"} · {c.what}
           </p>
           <h1 className="display mt-3 max-w-4xl text-5xl sm:text-6xl">{page.question}</h1>

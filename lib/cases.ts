@@ -41,7 +41,7 @@ export const cases: CaseStudy[] = [
     logoH: 248,
     what: "Signs and vehicle wraps · Palmyra, Pennsylvania",
     story:
-      "A four-person shop. The ads brought a $16,000 sign job and about $8,000 in wrap jobs. They brought in so much work that he paused them: he was booked through the end of the year.",
+      "The ads brought this four-person shop a $16,000 sign job and about $8,000 in wrap jobs. He paused them once he was booked through the end of the year.",
     quote: "This is the best results we've had so far with advertising… especially for the price.",
     who: "Brendan Moyer, owner",
     big: { n: "$24,000", l: "in jobs sold from $603 in ads" },
@@ -117,7 +117,7 @@ export const cases: CaseStudy[] = [
     logoH: 400,
     what: "Commercial window tinting · Greater Houston",
     story:
-      "A one-man sales operation. Four jobs inside the free trial brought in $3,271 from about $465 in ads. When he asked for more commercial work, we built a campaign for it: leads at $8.07 each.",
+      "Four jobs inside the free trial brought in $3,271 from about $465 in ads. When he asked for more commercial work, we built a campaign for it, with leads at $8.07 each.",
     quote: "The amount of leads has been crazy bro I love it.",
     who: "Danial, owner",
     big: { n: "40 leads", l: "in the 21-day trial, from about $465 in ads" },
@@ -192,7 +192,7 @@ export const cases: CaseStudy[] = [
     logoH: 142,
     what: "Commercial signs · Houston",
     story:
-      "This is where Leadmill started. We built the system for this Houston sign company, and it still runs there every week. In 90 days, its Facebook leads turned into 11 signed jobs.",
+      "Leadmill started here: we built the system for this Houston sign company. In 90 days, its Facebook leads turned into 11 signed jobs.",
     quote: "",
     who: "",
     big: { n: "$74,799", l: "in signs sold from 90 days of Facebook leads" },

@@ -68,7 +68,7 @@ export default function AboutPage() {
       <section className="border-b border-line">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[1.5fr_1fr] lg:items-center">
           <div>
-            <p className="font-medium text-accent">About Leadmill</p>
+            <p className="font-medium text-accent-text">About Leadmill</p>
             <h1 className="display mt-3 text-5xl sm:text-6xl lg:text-7xl">Who runs Leadmill?</h1>
             <p className="mt-6 max-w-2xl text-lg text-muted sm:text-xl">
               Leadmill is run by Rameel Sheikh. I started it inside a working sign shop: I run the

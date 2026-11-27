@@ -10,6 +10,7 @@
   --muted: oklch(0.39 0.022 262);
   --accent: oklch(0.6 0.145 62); /* deep amber — passes 3:1 for large text on white */
   --accent-bright: oklch(0.82 0.155 75); /* brand amber #ffb020 — surfaces, never text */
+  --accent-text: oklch(0.47 0.115 58); /* amber for small text: passes 4.5:1 on white */
   --accent-ink: oklch(0.25 0.05 70);
   --ink: oklch(0.23 0.02 262);
   --danger: oklch(0.55 0.19 25);
@@ -24,6 +25,7 @@
   --color-muted: var(--muted);
   --color-accent: var(--accent);
   --color-accent-bright: var(--accent-bright);
+  --color-accent-text: var(--accent-text);
   --color-accent-ink: var(--accent-ink);
   --color-ink: var(--ink);
   --color-danger: var(--danger);
@@ -59,7 +61,7 @@ body {
 .eyebrow {
   font-weight: 600;
   font-size: 0.95rem;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 /* Primary action: dark ink pill, Wonderly-style. */

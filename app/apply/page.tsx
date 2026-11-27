@@ -54,7 +54,7 @@ export default function ApplyPage() {
       <section className="border-b border-line">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-10 sm:px-6 lg:grid-cols-[1fr_1.1fr] lg:gap-12 lg:py-12">
           <div className="lg:sticky lg:top-24 lg:self-start">
-            <p className="font-medium text-accent">Book a call</p>
+            <p className="font-medium text-accent-text">Book a call</p>
             <h1 className="display mt-3 text-5xl sm:text-6xl">
               Your marketing department, free for 14 days.
             </h1>
@@ -89,7 +89,7 @@ export default function ApplyPage() {
             </div>
             <p className="mt-5 text-muted">
               Rather talk now?{" "}
-              <a href={PHONE_HREF} className="font-medium text-accent">
+              <a href={PHONE_HREF} className="font-medium text-accent-text">
                 Call {PHONE_DISPLAY}
               </a>
             </p>
@@ -110,7 +110,7 @@ export default function ApplyPage() {
                     Calendar not loading?{" "}
                     <a
                       href={calendarUrl}
-                      className="font-medium text-accent"
+                      className="font-medium text-accent-text"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -158,6 +158,9 @@ export default function ApplyPage() {
                 <div>
                   <h3 className="font-semibold leading-snug sm:text-[1.05rem]">{w.t}</h3>
                   <p className="mt-1 text-[0.95rem] leading-snug text-muted">{w.d}</p>
+                  <p className="mt-2 inline-block rounded-md bg-ink px-2.5 py-1 text-sm font-medium text-white">
+                    {w.chip}
+                  </p>
                 </div>
               </li>
             ))}

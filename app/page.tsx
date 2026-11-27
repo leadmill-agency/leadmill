@@ -8,29 +8,12 @@ import { cases } from "@/lib/cases";
 import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/links";
 import { faqItems, heroStats, whatWeDo } from "@/lib/offer";
 
-const notThis = [
-  {
-    label: "Not a lead site",
-    t: "Your leads are yours alone",
-    d: "Lead sites sell one customer to several shops. Every quote request from your website, your Google listing and your ads goes to you and nobody else.",
-  },
-  {
-    label: "Not an agency",
-    t: "Flat fee, no contract",
-    d: "One monthly price covers your website, SEO and AI search, with ads on Growth. No retainer, no hourly billing, no fee to leave.",
-  },
-  {
-    label: "A managed service",
-    t: "We do the work. You keep the accounts",
-    d: "We build and run your website, SEO, Google listing and ads. You don't log in to a tool. Your domain, Google profile, ad accounts and leads stay yours.",
-  },
-];
-
 const plans = [
   {
     name: "Core",
     price: "$399",
     blurb: "Get found and turn more visitors into sign quotes.",
+    spend: null as string | null,
     lead: null as string | null,
     items: [
       "A rebuilt website that turns visitors into quote requests",
@@ -46,6 +29,7 @@ const plans = [
     name: "Growth",
     price: "$800",
     blurb: "Core, plus ads that bring sign leads every week.",
+    spend: "Plus your ad spend, at least $25 a day, paid to Facebook and Google",
     lead: "Everything in Core, plus:",
     items: [
       "Facebook and Instagram ads, built from your own signs",
@@ -59,11 +43,8 @@ const plans = [
 
 const planFacts = [
   { t: "Month to month", d: "No contract. Pause ads or cancel any time." },
-  { t: "No setup fee", d: "The first 14 days are the full work, free." },
   { t: "Switch any time", d: "Busy season? Drop to Core and keep the website and SEO running." },
-  { t: "Ad spend is yours", d: "On Growth, you pay Facebook and Google directly." },
 ];
-
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
@@ -110,7 +91,7 @@ export default function Home() {
               <Link href="/apply" className="btn-primary text-lg">
                 Book a call
               </Link>
-              <a href={PHONE_HREF} className="font-medium text-accent">
+              <a href={PHONE_HREF} className="font-medium text-accent-text">
                 Or call {PHONE_DISPLAY}
               </a>
             </div>
@@ -133,21 +114,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* The four parts of the plan, one line each. */}
-      <section aria-label="What you get" className="border-b border-line bg-panel">
-        <ol className="mx-auto grid max-w-6xl gap-x-8 gap-y-5 px-4 py-8 sm:grid-cols-2 sm:px-6 lg:grid-cols-4">
-          {whatWeDo.map((w, i) => (
-            <li key={w.t} className="grid grid-cols-[2rem_1fr] gap-x-2">
-              <p className="display pt-0.5 text-xl text-accent">0{i + 1}</p>
-              <div>
-                <h2 className="font-semibold leading-snug">{w.t}</h2>
-                <p className="mt-1 text-[0.95rem] leading-snug text-muted">{w.d}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
-      </section>
-
       {/* Owner cards: one result per client. Scrolls sideways on a phone, three across on a desktop. */}
       <section className="border-b border-line">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
@@ -161,33 +127,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What Leadmill is */}
-      <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
-        <div className="mx-auto max-w-4xl text-center">
-          <p className="font-medium text-accent">What is Leadmill?</p>
-          <h2 className="display mt-3 text-5xl sm:text-7xl">
-            A service. Not a lead site, not an agency.
-          </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-xl text-muted">
-            Sign shop owners tell the same story about lead sellers and marketing companies. This
-            is the other deal: your website, SEO, AI search and ads, run for you, for one flat price.
-          </p>
-        </div>
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
-          {notThis.map((c, i) => (
-            <div
-              key={c.label}
-              className={`rounded-2xl p-8 ${
-                i === 2 ? "bg-ink text-white" : "border border-line bg-panel"
-              }`}
-            >
-              <p className={`font-medium ${i === 2 ? "text-accent-bright" : "text-muted"}`}>
-                {c.label}
-              </p>
-              <h3 className="display mt-3 text-4xl">{c.t}</h3>
-              <p className={`mt-4 text-lg ${i === 2 ? "text-white/80" : "text-muted"}`}>{c.d}</p>
-            </div>
-          ))}
+      {/* What you get: the four parts of the plan, each with a label. */}
+      <section className="border-b border-line">
+        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_1.15fr] lg:gap-14">
+          <div className="lg:sticky lg:top-24 lg:self-start">
+            <p className="font-medium text-accent-text">What is Leadmill?</p>
+            <h2 className="display mt-3 text-5xl sm:text-6xl">
+              A service. Not a lead site, not an agency.
+            </h2>
+            <p className="mt-5 max-w-lg text-lg text-muted sm:text-xl">
+              Your website, SEO, AI search and ads, run for you for one flat price. Every lead goes
+              to you and nobody else, and your domain, Google profile and ad accounts stay yours.
+            </p>
+          </div>
+          <ol className="self-start rounded-2xl border border-line bg-panel">
+            {whatWeDo.map((w, i) => (
+              <li
+                key={w.t}
+                className={`grid grid-cols-[2.25rem_1fr] gap-x-2 px-5 py-5 sm:px-7 ${i > 0 ? "border-t border-line" : ""}`}
+              >
+                <p className="display pt-0.5 text-xl text-muted">0{i + 1}</p>
+                <div>
+                  <h3 className="font-semibold leading-snug sm:text-[1.1rem]">{w.t}</h3>
+                  <p className="mt-1 leading-snug text-muted">{w.d}</p>
+                  <p className="mt-2.5 inline-block rounded-md bg-ink px-2.5 py-1 text-sm font-medium text-white">
+                    {w.chip}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
@@ -205,25 +174,27 @@ export default function Home() {
                 key={p.name}
                 className={`flex flex-col rounded-2xl p-8 sm:p-10 ${
                   p.featured
-                    ? "border-2 border-ink bg-background shadow-[0_18px_50px_-18px_oklch(0.23_0.02_262/0.35)]"
+                    ? "bg-ink text-white shadow-[0_18px_50px_-18px_oklch(0.23_0.02_262/0.45)]"
                     : "border border-line bg-background"
                 }`}
               >
                 <div className="flex items-center justify-between gap-4">
                   <h3 className="display text-4xl">{p.name}</h3>
                   {p.featured && (
-                    <span className="rounded-md bg-ink px-2.5 py-1 text-sm font-medium text-white">
+                    <span className="rounded-md bg-accent-bright px-2.5 py-1 text-sm font-semibold text-accent-ink">
                       Includes Core
                     </span>
                   )}
                 </div>
-                <p className="mt-2 text-lg text-muted">{p.blurb}</p>
+                <p className={`mt-2 text-lg ${p.featured ? "text-white/75" : "text-muted"}`}>{p.blurb}</p>
                 <p className="display mt-6 text-7xl">
                   {p.price}
-                  <span className="text-3xl text-muted"> a month</span>
+                  <span className={`text-3xl ${p.featured ? "text-white/70" : "text-muted"}`}> a month</span>
                 </p>
-                <p className="mt-1 text-sm text-muted">After 14 days free</p>
-                <div className="mt-7 border-t border-line pt-6">
+                <p className={`mt-1 text-sm ${p.featured ? "text-white/70" : "text-muted"}`}>
+                  {p.spend ?? "After 14 days free"}
+                </p>
+                <div className={`mt-7 border-t pt-6 ${p.featured ? "border-white/20" : "border-line"}`}>
                   {p.lead && <p className="mb-3 font-semibold">{p.lead}</p>}
                   <ul className="grid gap-3 text-lg">
                     {p.items.map((i) => (
@@ -242,7 +213,11 @@ export default function Home() {
                 <div className="mt-auto flex flex-wrap gap-3 pt-9">
                   <Link
                     href="/apply"
-                    className={`${p.featured ? "btn-primary" : "btn-secondary"} text-lg`}
+                    className={
+                      p.featured
+                        ? "inline-block rounded-[10px] bg-white px-8 py-4 text-lg font-medium text-ink transition hover:opacity-90"
+                        : "btn-secondary text-lg"
+                    }
                   >
                     Book a call
                   </Link>
@@ -250,7 +225,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <dl className="mt-10 grid gap-x-8 sm:grid-cols-2 lg:grid-cols-4">
+          <dl className="mt-10 grid gap-x-8 sm:grid-cols-2">
             {planFacts.map((f) => (
               <div key={f.t} className="border-t border-ink py-5">
                 <dt className="text-lg font-semibold">{f.t}</dt>
@@ -324,7 +299,7 @@ export default function Home() {
       <section className="border-b border-line">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1.2fr_1fr] lg:items-center">
           <div>
-            <p className="font-medium text-accent">Wholesale fabrication</p>
+            <p className="font-medium text-accent-text">Wholesale fabrication</p>
             <h2 className="display mt-3 text-5xl sm:text-6xl">Sell more signs than you can build.</h2>
             <p className="mt-5 max-w-xl text-lg text-muted">
               Channel letters, halo-lit letters, cabinet signs and monument faces, built at trade
@@ -337,17 +312,17 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <Image
-              src="/work/luce.jpg"
-              alt="Halo-lit exterior sign glowing at night"
-              width={800}
-              height={1000}
+              src="/work/karma.jpg"
+              alt="Lit channel letters on a brick storefront for Karma Kolache and Macarons"
+              width={1122}
+              height={1402}
               className="h-56 w-full rounded-2xl object-cover sm:h-72"
             />
             <Image
-              src="/work/copper.jpg"
-              alt="Backlit exterior sign above a storefront at dusk"
-              width={800}
-              height={1000}
+              src="/work/nautica.jpg"
+              alt="Channel-letter sign on a brick storefront for Nautical Bowls"
+              width={1122}
+              height={1402}
               className="mt-8 h-56 w-full rounded-2xl object-cover sm:h-72"
             />
           </div>

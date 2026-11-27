@@ -21,7 +21,7 @@ export function Faq({ items }: { items: FaqItem[] }) {
             }}
           >
             {item.q}
-            <span className="text-xl font-medium text-accent">{open === i ? "–" : "+"}</span>
+            <span className="text-xl font-medium text-accent-text">{open === i ? "–" : "+"}</span>
           </button>
           {open === i && <p className="px-5 pb-5 text-sm leading-relaxed text-muted">{item.a}</p>}
         </div>

@@ -239,6 +239,40 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Wholesale fabrication */}
+      <section className="border-b border-line">
+        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+          <div>
+            <p className="font-medium text-accent">Wholesale fabrication</p>
+            <h2 className="display mt-3 text-5xl sm:text-6xl">Sell more signs than you can build.</h2>
+            <p className="mt-5 max-w-xl text-lg text-muted">
+              Channel letters, halo-lit letters, cabinet signs and monument faces, built at trade
+              price and shipped to you. You sell the job under your own name, set the price and
+              install it. Quoted per job.
+            </p>
+            <Link href="/fabrication" className="btn-secondary mt-7 text-lg">
+              See what we build
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <Image
+              src="/work/luce.jpg"
+              alt="Halo-lit exterior sign glowing at night"
+              width={800}
+              height={1000}
+              className="h-56 w-full rounded-2xl object-cover sm:h-72"
+            />
+            <Image
+              src="/work/copper.jpg"
+              alt="Backlit exterior sign above a storefront at dusk"
+              width={800}
+              height={1000}
+              className="mt-8 h-56 w-full rounded-2xl object-cover sm:h-72"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Client results */}
       <section id="results" className="scroll-mt-16 bg-ink text-white">
         <div className="mx-auto max-w-6xl px-4 pb-8 pt-20 sm:px-6">

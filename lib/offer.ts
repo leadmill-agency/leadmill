@@ -47,6 +47,10 @@ export const faqItems = [
     a: "No. Anyone who guarantees closed jobs is lying to you. You get 14 days of full work free, so you can judge the leads before you pay us anything.",
   },
   {
+    q: "Do you build signs too?",
+    a: "Yes. Wholesale fabrication is quoted per job: channel letters, halo-lit letters, cabinet signs and monument faces. You sell the sign under your own name, set the price and install it. We build it and ship it to you.",
+  },
+  {
     q: "Do you take a percentage of my sale?",
     a: "No. The customer, the price and every dollar of the job are yours.",
   },

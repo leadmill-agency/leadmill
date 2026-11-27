@@ -4,6 +4,7 @@ import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/links";
 const nav = [
   { href: "/how-it-works", label: "How it works" },
   { href: "/#pricing", label: "Pricing" },
+  { href: "/fabrication", label: "Fabrication" },
   { href: "/#results", label: "Results" },
   { href: "/who-its-for", label: "Who it's for" },
 ];

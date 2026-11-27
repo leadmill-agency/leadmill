@@ -27,6 +27,7 @@ const columns = [
       { href: "/how-it-works", label: "SEO" },
       { href: "/how-it-works", label: "ChatGPT and AI search" },
       { href: "/how-it-works", label: "CRM and project tracker" },
+      { href: "/fabrication", label: "Wholesale fabrication" },
     ],
   },
   {

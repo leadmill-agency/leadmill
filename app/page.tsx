@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Faq } from "@/components/faq";
@@ -61,6 +62,10 @@ const planFacts = [
   { t: "Switch any time", d: "Busy season? Drop to Core and keep the website and SEO running." },
   { t: "Ad spend is yours", d: "On Growth, you pay Facebook and Google directly." },
 ];
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   const faqJsonLd = {
@@ -247,8 +252,8 @@ export default function Home() {
             <h2 className="display mt-3 text-5xl sm:text-6xl">Sell more signs than you can build.</h2>
             <p className="mt-5 max-w-xl text-lg text-muted">
               Channel letters, halo-lit letters, cabinet signs and monument faces, built at trade
-              price and shipped to you. You sell the job under your own name, set the price and
-              install it. Quoted per job.
+              price and shipped to you in about 4 weeks. You sell the job under your own name, set
+              the price and install it. Any shop can order.
             </p>
             <Link href="/fabrication" className="btn-secondary mt-7 text-lg">
               See what we build

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | Leadmill",
   },
   description:
-    "Leadmill is the marketing department for sign shops: a website that wins quotes, SEO, ChatGPT and AI search, and a CRM and project tracker, with Facebook, Instagram and Google ads on Growth. Built in a working sign shop. Free for 14 days, then $399 a month, or $800 a month with ads. No contract.",
+    "Marketing for sign shops, done for you: a website that wins quotes, SEO, AI search and a CRM, with ads on Growth. Free for 14 days, then from $399 a month.",
 };
 
 const display = Barlow_Condensed({

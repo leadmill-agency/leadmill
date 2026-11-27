@@ -48,7 +48,7 @@ export const faqItems = [
   },
   {
     q: "Do you build signs too?",
-    a: "Yes. Wholesale fabrication is quoted per job: channel letters, halo-lit letters, cabinet signs and monument faces. You sell the sign under your own name, set the price and install it. We build it and ship it to you.",
+    a: "Yes. Any sign shop can order wholesale fabrication: channel letters, halo-lit letters, cabinet signs and monument faces. Each job is quoted on its own, with a 50% deposit and about 4 weeks from the approved proof. You sell the sign under your own name, set the price and install it.",
   },
   {
     q: "Do you take a percentage of my sale?",

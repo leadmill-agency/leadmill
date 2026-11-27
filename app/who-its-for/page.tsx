@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { CtaSection } from "@/components/cta-section";
 
 export const metadata: Metadata = {
-  title: "Who It's For",
+  title: "Who Leadmill Is For: Sign Shops With a Crew",
   description:
     "Leadmill is built for established sign shops with a crew, someone to answer leads, and room to take on more work.",
+  alternates: { canonical: "/who-its-for" },
 };
 
 const goodFit = [

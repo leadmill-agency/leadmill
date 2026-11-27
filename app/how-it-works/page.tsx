@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { CtaSection } from "@/components/cta-section";
 
 export const metadata: Metadata = {
-  title: "How It Works",
+  title: "How Leadmill Works for Sign Shops",
   description:
-    "How Leadmill works for sign shops: a website that wins quotes, SEO, ChatGPT and AI search, and a CRM and project tracker, with Facebook, Instagram and Google ads on Growth. The full work is free for 14 days, then from $399 a month.",
+    "What happens after you book a call: website rebuild, SEO, AI search and a CRM, with ads on Growth. Free for 14 days, then from $399 a month.",
+  alternates: { canonical: "/how-it-works" },
 };
 
 const steps = [

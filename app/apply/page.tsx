@@ -8,8 +8,9 @@ import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/links";
 
 export const metadata: Metadata = {
   title: "Book a Call",
+  alternates: { canonical: "/apply" },
   description:
-    "A website, SEO, AI search and a CRM for sign shops, with ads on Growth, all done for you. Free for 14 days, then from $399 a month, no contract. Book a call to see if it fits your shop.",
+    "Book a 30-minute call. A website, SEO, AI search and a CRM for sign shops, with ads on Growth. Free for 14 days, then from $399 a month.",
 };
 
 const calendarUrl = process.env.NEXT_PUBLIC_CALENDAR_URL;
